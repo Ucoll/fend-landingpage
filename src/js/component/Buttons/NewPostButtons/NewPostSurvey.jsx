@@ -3,13 +3,16 @@ import { Icon } from "@iconify/react";
 
 /**
  * ! Creates the NewPostSurvey Button
+ * * OvidioSantoro
  * * 2022-02-02
  * @returns React Component
  */
-export const NewPostSurvey = () => {
+const NewPostSurvey = () => {
   return (
     <div className="button-new">
       <Icon className="button-icon" icon="fluent:poll-16-regular" />
     </div>
   );
 };
+
+export default NewPostSurvey;

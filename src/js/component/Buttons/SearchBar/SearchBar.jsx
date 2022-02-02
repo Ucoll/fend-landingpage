@@ -5,10 +5,11 @@ import "./SearchBar.css";
 
 /**
  * ! Creates the SearchBar Button
+ * * OvidioSantoro
  * * 2022-02-01
  * @returns React Component
  */
-export const SearchBar = () => {
+const SearchBar = () => {
   return (
     <div class="button-feed searchbar">
       <Icon
@@ -20,3 +21,5 @@ export const SearchBar = () => {
     </div>
   );
 };
+
+export default SearchBar;

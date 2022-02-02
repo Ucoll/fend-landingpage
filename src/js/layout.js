@@ -7,6 +7,13 @@ import injectContext from "./store/appContext";
 
 import { NewPostVideo } from "./component/Buttons/NewPostButtons/NewPostVideo.jsx";
 import LikeButton from "./component/Buttons/Like/LikeButton.jsx";
+import NewPostVideo from "./component/Buttons/NewPostButtons/NewPostVideo.jsx";
+import NewPostLink from "./component/Buttons/NewPostButtons/NewPostLink.jsx";
+import NewPostSurvey from "./component/Buttons/NewPostButtons/NewPostSurvey.jsx";
+import NewPostText from "./component/Buttons/NewPostButtons/NewPostText.jsx";
+import SearchBar from "./component/Buttons/SearchBar/SearchBar.jsx";
+import NewPost from "./component/Buttons/NewPost/NewPost.jsx";
+import Share from "./component/Buttons/Share/Share.jsx";
 
 //create your first component
 const Layout = () => {
@@ -17,8 +24,18 @@ const Layout = () => {
   return (
     <div>
       <BrowserRouter basename={basename}>
-		  <NewPostVideo/>
+	  <LikeButton/>
+		<NewPostVideo/>
         <LikeButton/>
+        <ScrollToTop>
+          <NewPostVideo />
+          <NewPostLink />
+          <NewPostSurvey />
+          <NewPostText />
+          <NewPost />
+          <SearchBar />
+          <Share />
+        </ScrollToTop>
       </BrowserRouter>
     </div>
   );
