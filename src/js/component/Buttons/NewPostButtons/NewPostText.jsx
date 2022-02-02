@@ -6,10 +6,12 @@ import { Icon } from "@iconify/react";
  * * 2022-02-02
  * @returns React Component
  */
-export const NewPostText = () => {
+const NewPostText = () => {
   return (
     <div className="button-new">
       <Icon className="button-icon" icon="bi:file-text" />
     </div>
   );
 };
+
+export default NewPostText;

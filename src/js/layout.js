@@ -10,7 +10,13 @@ import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
-import { NewPostVideo } from "./component/Buttons/NewPostButtons/NewPostVideo.jsx";
+import NewPostVideo from "./component/Buttons/NewPostButtons/NewPostVideo.jsx";
+import NewPostLink from "./component/Buttons/NewPostButtons/NewPostLink.jsx";
+import NewPostSurvey from "./component/Buttons/NewPostButtons/NewPostSurvey.jsx";
+import NewPostText from "./component/Buttons/NewPostButtons/NewPostText.jsx";
+import SearchBar from "./component/Buttons/SearchBar/SearchBar.jsx";
+import NewPost from "./component/Buttons/NewPost/NewPost.jsx";
+import Share from "./component/Buttons/Share/Share.jsx";
 
 //create your first component
 const Layout = () => {
@@ -22,23 +28,13 @@ const Layout = () => {
     <div>
       <BrowserRouter basename={basename}>
         <ScrollToTop>
-          <Navbar />
           <NewPostVideo />
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route exact path="/demo">
-              <Demo />
-            </Route>
-            <Route exact path="/single/:theid">
-              <Single />
-            </Route>
-            <Route>
-              <h1>Not found!</h1>
-            </Route>
-          </Switch>
-          <Footer />
+          <NewPostLink />
+          <NewPostSurvey />
+          <NewPostText />
+          <NewPost />
+          <SearchBar />
+          <Share />
         </ScrollToTop>
       </BrowserRouter>
     </div>

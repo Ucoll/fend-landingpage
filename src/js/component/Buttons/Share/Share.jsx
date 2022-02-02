@@ -6,6 +6,8 @@ import { Icon } from "@iconify/react";
  * * 2022-02-02
  * @returns React Component
  */
-export const Share = () => {
+const Share = () => {
   return <Icon className="button-coll" icon="fa-solid:share" />;
 };
+
+export default Share;

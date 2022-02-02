@@ -6,10 +6,12 @@ import { Icon } from "@iconify/react";
  * * 2022-02-02
  * @returns React Component
  */
-export const NewPostVideo = () => {
+const NewPostVideo = () => {
   return (
     <div className="button-new icon-video">
       <Icon className="button-icon" icon="et:video" width="32" height="32" />
     </div>
   );
 };
+
+export default NewPostVideo;

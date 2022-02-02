@@ -6,10 +6,12 @@ import { Icon } from "@iconify/react";
  * * 2022-02-01
  * @returns React Component
  */
-export const NewPost = () => {
+const NewPost = () => {
   return (
     <div className="button-feed">
       <Icon className="button-icon" icon="akar-icons:plus" />
     </div>
   );
 };
+
+export default NewPost;
