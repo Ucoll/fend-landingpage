@@ -1,3 +1,19 @@
+.button-coll {
+  height: 20px;
+  width: 25px;
+  color: rgba(206, 188, 181, 1);
+  stroke: rgba(3, 63, 89, 1);
+  stroke-width: 20px;
+}
+
+.button-coll:hover {
+  color: rgba(3, 63, 89, 0.6);
+}
+
+.button-coll:active {
+  color: rgba(3, 63, 89, 1);
+}
+
 .button-feed {
   height: 52px;
   width: 52px;
