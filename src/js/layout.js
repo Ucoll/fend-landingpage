@@ -10,7 +10,7 @@ import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
-import { NewPostLink } from "./component/Buttons/NewPostButtons/NewPostLink.jsx";
+import { NewPostSurvey } from "./component/Buttons/NewPostButtons/NewPostSurvey.jsx";
 
 //create your first component
 const Layout = () => {
@@ -23,7 +23,7 @@ const Layout = () => {
       <BrowserRouter basename={basename}>
         <ScrollToTop>
           <Navbar />
-          <NewPostLink />
+          <NewPostSurvey />
           <Switch>
             <Route exact path="/">
               <Home />
