@@ -24,9 +24,7 @@ const Layout = () => {
     <div>
       <BrowserRouter basename={basename}>
 	  <LikeButton/>
-		<NewPostVideo/>
-        <LikeButton/>
-        <ScrollToTop>
+		<NewPostVideo/>        
           <NewPostVideo />
           <NewPostLink />
           <NewPostSurvey />
@@ -34,7 +32,7 @@ const Layout = () => {
           <NewPost />
           <SearchBar />
           <Share />
-        </ScrollToTop>
+        
       </BrowserRouter>
     </div>
   );

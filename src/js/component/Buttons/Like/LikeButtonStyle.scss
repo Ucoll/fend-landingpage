@@ -10,10 +10,22 @@
   
   .button-like:hover {
     background-color: rgba(115, 115, 115, 0.25);
+    animation-name: like-hover;
+    animation-duration:0.5s;
     height: 70px;
     width: 70px;
   }
-  
+  @keyframes like-hover {
+    from {
+      height: 52px;
+      width: 52px;
+    }
+    to {
+      height: 70px;
+      width: 70px;
+    }
+  }
+
   .button-like:active {
     background-color: rgba(115, 115, 115, 0.75);
   }
