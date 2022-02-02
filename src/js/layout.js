@@ -5,7 +5,6 @@ import injectContext from "./store/appContext";
 
 
 
-import { NewPostVideo } from "./component/Buttons/NewPostButtons/NewPostVideo.jsx";
 import LikeButton from "./component/Buttons/Like/LikeButton.jsx";
 import NewPostVideo from "./component/Buttons/NewPostButtons/NewPostVideo.jsx";
 import NewPostLink from "./component/Buttons/NewPostButtons/NewPostLink.jsx";
