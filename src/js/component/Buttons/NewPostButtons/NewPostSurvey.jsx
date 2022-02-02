@@ -2,7 +2,7 @@ import React from "react";
 import { Icon } from "@iconify/react";
 
 /**
- * ! Creates the NewPostLink Button
+ * ! Creates the NewPostSurvey Button
  * * 2022-02-02
  * @returns React Component
  */
