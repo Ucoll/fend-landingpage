@@ -1,6 +1,5 @@
 import React from "react";
 import { Icon } from "@iconify/react";
-import "./NewPost.css";
 
 /**
  * ! Creates the NewPost Button
