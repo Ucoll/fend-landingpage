@@ -20,6 +20,7 @@ import NewPost from "./component/Buttons/NewPost/NewPost.jsx";
 import Share from "./component/Buttons/Share/Share.jsx";
 import Comment from "./component/Buttons/Comment/Comment.jsx";
 import Collapse from "./component/Buttons/Collapse/Collapse.jsx";
+import Thread from "./component/Buttons/Thread/Thread.jsx";
 
 //create your first component
 const Layout = () => {
@@ -39,6 +40,7 @@ const Layout = () => {
           <NewPost />
           <SearchBar />
           <Share />
+          <Thread />
           <Comment />
           <Collapse />
         </ScrollToTop>
