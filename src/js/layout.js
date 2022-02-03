@@ -10,9 +10,13 @@ import NewPostVideo from "./component/Buttons/NewPostButtons/NewPostVideo.jsx";
 import NewPostLink from "./component/Buttons/NewPostButtons/NewPostLink.jsx";
 import NewPostSurvey from "./component/Buttons/NewPostButtons/NewPostSurvey.jsx";
 import NewPostText from "./component/Buttons/NewPostButtons/NewPostText.jsx";
+import NewPostDocument from "./component/Buttons/NewPostButtons/NewPostDocument.jsx";
 import SearchBar from "./component/Buttons/SearchBar/SearchBar.jsx";
 import NewPost from "./component/Buttons/NewPost/NewPost.jsx";
 import Share from "./component/Buttons/Share/Share.jsx";
+import Comment from "./component/Buttons/Comment/Comment.jsx";
+import Collapse from "./component/Buttons/Collapse/Collapse.jsx";
+
 
 //create your first component
 const Layout = () => {
@@ -23,16 +27,18 @@ const Layout = () => {
   return (
     <div>
       <BrowserRouter basename={basename}>
-	  <LikeButton/>
-		<NewPostVideo/>        
+        <LikeButton/>
+        <NewPostVideo/>        
           <NewPostVideo />
+          <NewPostDocument />
           <NewPostLink />
           <NewPostSurvey />
           <NewPostText />
           <NewPost />
           <SearchBar />
           <Share />
-        
+          <Comment />
+          <Collapse />
       </BrowserRouter>
     </div>
   );
