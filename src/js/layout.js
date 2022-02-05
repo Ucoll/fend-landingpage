@@ -17,12 +17,12 @@ import NewPostText from "./component/Buttons/NewPostButtons/NewPostText.jsx";
 import NewPostDocument from "./component/Buttons/NewPostButtons/NewPostDocument.jsx";
 import SearchBar from "./component/Buttons/SearchBar/SearchBar.jsx";
 import NewPost from "./component/Buttons/NewPost/NewPost.jsx";
+import FeedGlobal from "./component/Buttons/Feed/FeedGlobal.jsx";
 import Settings from "./component/Buttons/Settings/Settings.jsx";
 import Share from "./component/Buttons/Share/Share.jsx";
 import Comment from "./component/Buttons/Comment/Comment.jsx";
 import Collapse from "./component/Buttons/Collapse/Collapse.jsx";
 import Thread from "./component/Buttons/Thread/Thread.jsx";
-import Coll from "./component/Coll/Coll.jsx";
 
 //create your first component
 const Layout = () => {
@@ -40,13 +40,13 @@ const Layout = () => {
           <NewPostSurvey />
           <NewPostText />
           <NewPost />
+          <FeedGlobal />
           <Settings />
           <SearchBar />
           <Share />
           <Thread />
           <Comment />
           <Collapse />
-          <Coll />
         </ScrollToTop>
       </BrowserRouter>
     </div>
