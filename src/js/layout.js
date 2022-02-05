@@ -18,6 +18,7 @@ import NewPostDocument from "./component/Buttons/NewPostButtons/NewPostDocument.
 import SearchBar from "./component/Buttons/SearchBar/SearchBar.jsx";
 import NewPost from "./component/Buttons/NewPost/NewPost.jsx";
 import FeedGlobal from "./component/Buttons/Feed/FeedGlobal.jsx";
+import FeedClass from "./component/Buttons/Feed/FeedClass.jsx";
 import Settings from "./component/Buttons/Settings/Settings.jsx";
 import Share from "./component/Buttons/Share/Share.jsx";
 import Comment from "./component/Buttons/Comment/Comment.jsx";
@@ -41,6 +42,7 @@ const Layout = () => {
           <NewPostText />
           <NewPost />
           <FeedGlobal />
+          <FeedClass />
           <Settings />
           <SearchBar />
           <Share />
