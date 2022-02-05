@@ -19,6 +19,7 @@ import SearchBar from "./component/Buttons/SearchBar/SearchBar.jsx";
 import NewPost from "./component/Buttons/NewPost/NewPost.jsx";
 import FeedGlobal from "./component/Buttons/Feed/FeedGlobal.jsx";
 import FeedClass from "./component/Buttons/Feed/FeedClass.jsx";
+import FeedCollege from "./component/Buttons/Feed/FeedCollege.jsx";
 import Settings from "./component/Buttons/Settings/Settings.jsx";
 import Share from "./component/Buttons/Share/Share.jsx";
 import Comment from "./component/Buttons/Comment/Comment.jsx";
@@ -43,6 +44,7 @@ const Layout = () => {
           <NewPost />
           <FeedGlobal />
           <FeedClass />
+          <FeedCollege />
           <Settings />
           <SearchBar />
           <Share />
