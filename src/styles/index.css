@@ -1,7 +1,6 @@
 /**
  * ! Global Styles for the buttons
- * * OvidioSantoro
- * * 2022-02-01
+ * * OvidioSantoro - 2022-02-01
  */
 .button-coll {
   height: 20px;
@@ -13,6 +12,7 @@
 
 .button-coll:hover {
   color: rgba(3, 63, 89, 0.6);
+  cursor: pointer;
 }
 
 .button-coll:active {
@@ -34,6 +34,7 @@
 
 .button-feed:hover {
   background-color: rgba(115, 115, 115, 0.25);
+  cursor: pointer;
 }
 
 .button-feed:active {
@@ -56,6 +57,7 @@
 
 .button-new:hover {
   background-color: rgba(115, 115, 115, 0.25);
+  cursor: pointer;
 }
 
 .button-new:active {

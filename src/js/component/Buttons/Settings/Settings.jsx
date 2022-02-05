@@ -4,8 +4,7 @@ import "./Settings.css";
 
 /**
  * ! Creates the Settings & Options Button
- * * OvidioSantoro
- * * 2022-02-03
+ * * OvidioSantoro - 2022-02-03
  * @returns React Component
  */
 const Settings = () => {

@@ -1,3 +1,8 @@
+/**
+ * ! Settings & Options styles
+ * * OvidioSantoro - 2022-02-03
+ * @returns React Component
+ */
 .button-settings {
   height: 52px;
   width: 52px;
@@ -14,6 +19,7 @@
 
 .button-settings:hover {
   background-color: rgba(115, 115, 115, 0.25);
+  cursor: pointer;
 }
 
 .button-settings:active {

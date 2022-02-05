@@ -5,8 +5,7 @@ import "./SearchBar.css";
 
 /**
  * ! Creates the SearchBar Button
- * * OvidioSantoro
- * * 2022-02-01
+ * * OvidioSantoro - 2022-02-01
  * @returns React Component
  */
 const SearchBar = () => {

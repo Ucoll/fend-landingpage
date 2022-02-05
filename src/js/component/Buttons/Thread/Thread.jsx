@@ -4,8 +4,7 @@ import "./Thread.css";
 
 /**
  * ! Creates the Thread Button
- * * OvidioSantoro
- * * 2022-02-03
+ * * OvidioSantoro - 2022-02-03
  * @returns React Component
  */
 const Thread = () => {

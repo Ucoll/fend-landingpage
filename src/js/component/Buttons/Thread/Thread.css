@@ -6,6 +6,7 @@
 
 .button-thread:hover {
   color: #033f59;
+  cursor: pointer;
 }
 
 .button-thread:active {

@@ -22,6 +22,7 @@ import Share from "./component/Buttons/Share/Share.jsx";
 import Comment from "./component/Buttons/Comment/Comment.jsx";
 import Collapse from "./component/Buttons/Collapse/Collapse.jsx";
 import Thread from "./component/Buttons/Thread/Thread.jsx";
+import Coll from "./component/Coll/Coll.jsx";
 
 //create your first component
 const Layout = () => {
@@ -45,6 +46,7 @@ const Layout = () => {
           <Thread />
           <Comment />
           <Collapse />
+          <Coll />
         </ScrollToTop>
       </BrowserRouter>
     </div>

@@ -1,4 +1,14 @@
+/**
+ * ! Collapse Button styles
+ * * OvidioSantoro - 2022-02-03
+ * @returns React Component
+ */
+
 .button-collapse {
   height: 20px;
   width: 25px;
+}
+
+.button-collapse:hover {
+  cursor: pointer;
 }
