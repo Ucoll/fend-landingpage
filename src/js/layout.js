@@ -15,6 +15,7 @@ import Share from "./component/Buttons/Share/Share.jsx";
 
 import Favorite from "./component/Buttons/Favorite/Favorite.jsx";
 import UCollLogo from "./component/Buttons/UCollLogo/UCollLogo.jsx";
+import ProfileSideMenu from "./component/HoverCollapsable/ProfileSideMenu/ProfileSideMenu.jsx";
 
 
 //create your first component
@@ -35,6 +36,7 @@ const Layout = () => {
 				<Share />	
 				<Favorite />				
 				<UCollLogo />
+				<ProfileSideMenu />
 			</BrowserRouter>
 		</div>
 	);
