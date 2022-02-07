@@ -6,6 +6,9 @@ import injectContext from "./store/appContext";
 
 
 import LikeButton from "./component/Buttons/Like/LikeButton.jsx";
+
+
+
 import NewPostVideo from "./component/Buttons/NewPostButtons/NewPostVideo.jsx";
 import NewPostLink from "./component/Buttons/NewPostButtons/NewPostLink.jsx";
 import NewPostSurvey from "./component/Buttons/NewPostButtons/NewPostSurvey.jsx";
@@ -23,37 +26,44 @@ import Collapse from "./component/Buttons/Collapse/Collapse.jsx";
 import DislikeButton from "./component/Buttons/Dislike/DislikeButton.jsx";
 
 import Thread from "./component/Buttons/Thread/Thread.jsx";
+import Favorite from "./component/Buttons/Favorite/Favorite.jsx";
+import UCollLogo from "./component/Buttons/UCollLogo/UCollLogo.jsx";
+
+
 
 //create your first component
 const Layout = () => {
-  //the basename is used when your project is published in a subdirectory and not in the root of the domain
-  // you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
-  const basename = process.env.BASENAME || "";
+	//the basename is used when your project is published in a subdirectory and not in the root of the domain
+	// you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
+	const basename = process.env.BASENAME || "";
 
   return (
     <div>
       <BrowserRouter basename={basename}>
-        <LikeButton/>
-        <DislikeButton/>
-        <NewPostVideo/>        
-          <NewPostVideo />
-          <NewPostDocument />
-          <NewPostLink />
-          <NewPostSurvey />
-          <NewPostText />
-          <NewPost />
-          <FeedGlobal />
-          <FeedClass />
-          <FeedCollege />
-          <Settings />
-          <SearchBar />
-          <Share />
-          <Thread />
-          <Comment />
-          <Collapse />
+        <LikeButton />
+        <DislikeButton />
+        <NewPostVideo />
+        <NewPostVideo />
+        <NewPostDocument />
+        <NewPostLink />
+        <NewPostSurvey />
+        <NewPostText />
+        <NewPost />
+        <FeedGlobal />
+        <FeedClass />
+        <FeedCollege />
+        <Settings />
+        <SearchBar />
+        <Share />
+        <Thread />
+        <Comment />
+        <Collapse />
+        <UCollLogo />
+        <Favorite />
       </BrowserRouter>
     </div>
   );
-};
+
+  }
 
 export default injectContext(Layout);
