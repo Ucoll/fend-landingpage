@@ -1,7 +1,8 @@
 import React from "react";
+
 import dislikeSleptPNG from "../../../../img/icons/dislike/DislikeSlept.png";
 import dislikeAwakenPNG from "../../../../img/icons/dislike/DislikeAwaken.png";
-import wow2 from "../../../../img/icons/dislike/WOW 2.png";
+
 import "./DislikeButtonStyle.scss";
 
 /**
@@ -28,7 +29,6 @@ const DislikeButton = () => {
           height="52"
           width="52"
         />
-        {/* <img src={wow2} alt="Aw!" className="wow2" height="52" width="52" /> */}
       </div>
     </>
   );
