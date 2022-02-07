@@ -1,0 +1,26 @@
+.button-favorite {
+  height: 20px;
+  width: 25px;
+}
+
+.favorite-golden {    
+  display: none;
+  position: relative;
+}
+
+.button-favorite:hover { 
+  .favorite-golden {
+    display: inline;
+  }
+  .favorite-out {
+    display: none;
+  }
+}
+
+.button-favorite:active {
+  .favorite-golden {
+  position: absolute;
+  display: inline;  
+  }
+  
+}
