@@ -2,6 +2,7 @@ import React from "react";
 import likeSleptPNG from "../../../../img/icons/like/LikeSlept.png";
 import likeAwakenPNG from "../../../../img/icons/like/LikeAwaken.png";
 import wow1 from "../../../../img/icons/like/WOW 1.png";
+
 import "./LikeButtonStyle.scss";
 
 /**
@@ -28,8 +29,6 @@ const LikeButton = () => {
           height="52"
           width="52"
         />
-        <img src={wow1} alt="YAY!" className="wow1" height="52"
-          width="52" />
 
       </div>
     </>

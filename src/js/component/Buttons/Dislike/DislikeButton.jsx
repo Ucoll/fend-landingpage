@@ -28,7 +28,7 @@ const DislikeButton = () => {
           height="52"
           width="52"
         />
-        <img src={wow2} alt="Aw!" className="wow2" height="52" width="52" />
+        {/* <img src={wow2} alt="Aw!" className="wow2" height="52" width="52" /> */}
       </div>
     </>
   );
