@@ -26,8 +26,9 @@ import Collapse from "./component/Buttons/Collapse/Collapse.jsx";
 import DislikeButton from "./component/Buttons/Dislike/DislikeButton.jsx";
 
 import Thread from "./component/Buttons/Thread/Thread.jsx";
-import Favorite from "./component/Buttons/Favorite/Favorite.jsx";
+import FavoriteOut from "./component/Buttons/Favorite/FavoriteOut/FavoriteOut.jsx";
 import UCollLogo from "./component/Buttons/UCollLogo/UCollLogo.jsx";
+import FavoriteGolden from "./component/Buttons/Favorite/FavoriteGolden/FavoriteGolden.jsx";
 
 
 
