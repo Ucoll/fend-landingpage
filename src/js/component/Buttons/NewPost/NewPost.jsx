@@ -3,8 +3,7 @@ import { Icon } from "@iconify/react";
 
 /**
  * ! Creates the NewPost Button
- * * OvidioSantoro
- * * 2022-02-01
+ * * OvidioSantoro - 2022-02-01
  * @returns React Component
  */
 const NewPost = () => {

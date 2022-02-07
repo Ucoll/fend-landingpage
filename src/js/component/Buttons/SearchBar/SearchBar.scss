@@ -1,7 +1,6 @@
 /**
  * ! Searchbar Styles
- * * OvidioSantoro
- * * 2022-02-03
+ * * OvidioSantoro - 2022-02-03
  */
 .searchbar {
   display: inline-flex;
@@ -23,6 +22,7 @@
 
 .searchbar:hover .searchbar-input {
   display: block;
+  cursor: pointer;
   animation-name: input-expand;
   animation-duration: 1s;
 }

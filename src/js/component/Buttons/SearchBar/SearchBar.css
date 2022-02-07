@@ -27,6 +27,7 @@
 
 .searchbar:hover .searchbar-input {
   display: block;
+  cursor: pointer;
   -webkit-animation-name: input-expand;
           animation-name: input-expand;
   -webkit-animation-duration: 1s;

@@ -4,8 +4,7 @@ import "./Collapse.css";
 
 /**
  * ! Creates the Collapse Button for the lateral menus
- * * OvidioSantoro
- * * 2022-02-03
+ * * OvidioSantoro - 2022-02-03
  * @returns React Component
  */
 const Collapse = () => {
