@@ -1,0 +1,73 @@
+/**
+ * ! Styles for the Coll component
+ * * OvidioSantoro - 2022-02-09
+ */
+
+.test {
+  margin: auto;
+}
+
+.coll-container {
+  height: 44.72vh;
+  width: 37vw;
+  border-radius: 3%;
+  padding: 2%;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 3.5fr 1.25fr;
+  grid-template-rows: 1fr 1fr 2fr 1fr 0.5fr;
+  grid-template-areas:
+    "avatar name title menu"
+    ". text text text"
+    "like text text text"
+    ". text text text"
+    ". thread comment share";
+  border: 1px solid black;
+}
+
+.coll-avatar {
+  // Placeholder until the avatar is fixed
+  grid-area: avatar;
+  justify-self: center;
+}
+
+.coll-name {
+  grid-area: name;
+  font-size: 15%;
+  align-self: center;
+}
+
+.coll-name p {
+  margin: 0;
+}
+
+.coll-title {
+  grid-area: title;
+}
+
+.coll-menu {
+  grid-area: menu;
+}
+
+.coll-like {
+  grid-area: like;
+}
+
+.coll-text {
+  grid-area: text;
+}
+
+.coll-text p {
+  margin-bottom: 5%;
+}
+
+.coll-thread {
+  grid-area: thread;
+}
+
+.coll-comment {
+  grid-area: comment;
+}
+
+.coll-share {
+  grid-area: share;
+}
