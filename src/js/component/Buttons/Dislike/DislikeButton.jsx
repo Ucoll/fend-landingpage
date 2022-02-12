@@ -1,7 +1,7 @@
 import React from "react";
 
-import dislikeSleptPNG from "../../../../img/icons/dislike/DislikeSlept.png";
-import dislikeAwakenPNG from "../../../../img/icons/dislike/DislikeAwaken.png";
+import dislikeSleptPNG from "./img/DislikeSlept.png";
+import dislikeAwakenPNG from "./img/DislikeAwaken.png";
 
 import "./DislikeButtonStyle.scss";
 

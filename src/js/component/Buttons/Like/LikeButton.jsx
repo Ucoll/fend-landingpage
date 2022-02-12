@@ -1,7 +1,7 @@
 import React from "react";
 
-import likeSleptPNG from "../../../../img/icons/like/LikeSlept.png";
-import likeAwakenPNG from "../../../../img/icons/like/LikeAwaken.png";
+import likeSleptPNG from "./img/LikeSlept.png";
+import likeAwakenPNG from "./img/LikeAwaken.png";
 
 import "./LikeButtonStyle.scss";
 
