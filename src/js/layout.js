@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import injectContext from "./store/appContext";
 
+<<<<<<< HEAD
 import LikeButton from "./component/Buttons/Like/LikeButton.jsx";
 
 import NewPostVideo from "./component/Buttons/NewPostButtons/NewPostVideo.jsx";
@@ -25,6 +26,9 @@ import Coll from "./component/Coll/Coll.jsx";
 import Thread from "./component/Buttons/Thread/Thread.jsx";
 import FavoriteOut from "./component/Buttons/Favorite/FavoriteOut/FavoriteOut.jsx";
 import UCollLogo from "./component/Buttons/UCollLogo/UCollLogo.jsx";
+=======
+import LikeButtons from "./component/Buttons/Like/LikeButtons.jsx";
+>>>>>>> 7fff05312f217570a87219a97cacf4c42cc09fcc
 
 //create your first component
 const Layout = () => {
@@ -35,7 +39,11 @@ const Layout = () => {
   return (
     <div>
       <BrowserRouter basename={basename}>
+<<<<<<< HEAD
         <Coll />
+=======
+        <LikeButtons />
+>>>>>>> 7fff05312f217570a87219a97cacf4c42cc09fcc
       </BrowserRouter>
     </div>
   );
