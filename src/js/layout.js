@@ -3,28 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import injectContext from "./store/appContext";
 
-import LikeButton from "./component/Buttons/Like/LikeButton.jsx";
-
-import NewPostVideo from "./component/Buttons/NewPostButtons/NewPostVideo.jsx";
-import NewPostLink from "./component/Buttons/NewPostButtons/NewPostLink.jsx";
-import NewPostSurvey from "./component/Buttons/NewPostButtons/NewPostSurvey.jsx";
-import NewPostText from "./component/Buttons/NewPostButtons/NewPostText.jsx";
-import NewPostDocument from "./component/Buttons/NewPostButtons/NewPostDocument.jsx";
-import SearchBar from "./component/Buttons/SearchBar/SearchBar.jsx";
-import NewPost from "./component/Buttons/NewPost/NewPost.jsx";
-import FeedGlobal from "./component/Buttons/Feed/FeedGlobal.jsx";
-import FeedClass from "./component/Buttons/Feed/FeedClass.jsx";
-import FeedCollege from "./component/Buttons/Feed/FeedCollege.jsx";
-import Settings from "./component/Buttons/Settings/Settings.jsx";
-import Share from "./component/Buttons/Share/Share.jsx";
-import Comment from "./component/Buttons/Comment/Comment.jsx";
-import Collapse from "./component/Buttons/Collapse/Collapse.jsx";
-import DislikeButton from "./component/Buttons/Dislike/DislikeButton.jsx";
-
-import Thread from "./component/Buttons/Thread/Thread.jsx";
-import FavoriteOut from "./component/Buttons/Favorite/FavoriteOut/FavoriteOut.jsx";
-import UCollLogo from "./component/Buttons/UCollLogo/UCollLogo.jsx";
-import FavoriteGolden from "./component/Buttons/Favorite/FavoriteGolden/FavoriteGolden.jsx";
+import LikeButtons from "./component/Buttons/Like/LikeButtons.jsx";
 
 //create your first component
 const Layout = () => {
@@ -35,25 +14,7 @@ const Layout = () => {
   return (
     <div>
       <BrowserRouter basename={basename}>
-        <LikeButton />
-        <DislikeButton />
-        <NewPostVideo />
-        <NewPostVideo />
-        <NewPostDocument />
-        <NewPostLink />
-        <NewPostSurvey />
-        <NewPostText />
-        <NewPost />
-        <FeedGlobal />
-        <FeedClass />
-        <FeedCollege />
-        <Settings />
-        <SearchBar />
-        <Share />
-        <Thread />
-        <Comment />
-        <Collapse />
-        <UCollLogo />
+        <LikeButtons />
       </BrowserRouter>
     </div>
   );
