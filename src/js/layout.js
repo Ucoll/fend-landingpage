@@ -20,7 +20,7 @@ import Share from "./component/Buttons/Share/Share.jsx";
 import Comment from "./component/Buttons/Comment/Comment.jsx";
 import Collapse from "./component/Buttons/Collapse/Collapse.jsx";
 import DislikeButton from "./component/Buttons/Dislike/DislikeButton.jsx";
-import Coll from "./component/Coll/Coll";
+import Coll from "./component/Coll/Coll.jsx";
 
 import Thread from "./component/Buttons/Thread/Thread.jsx";
 import FavoriteOut from "./component/Buttons/Favorite/FavoriteOut/FavoriteOut.jsx";

@@ -10,7 +10,8 @@
   height: 44.72vh;
   width: 37vw;
   border-radius: 3%;
-  padding: 2%;
+  padding: 1%;
+  background-color: #ecf5ea;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1.5fr 3.5fr 1.25fr;
@@ -18,22 +19,23 @@
   -ms-grid-rows: 1fr 1fr 2fr 1fr 0.5fr;
       grid-template-rows: 1fr 1fr 2fr 1fr 0.5fr;
       grid-template-areas: "avatar name title menu" ". text text text" "like text text text" ". text text text" ". thread comment share";
-  border: 1px solid black;
 }
 
 .coll-avatar {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: avatar;
+  aspect-ratio: 1/1;
   -ms-grid-column-align: center;
       justify-self: center;
+  background-color: green;
+  border-radius: 100%;
 }
 
 .coll-name {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: name;
-  font-size: 15%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -47,18 +49,21 @@
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: title;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 1.2rem;
 }
 
 .coll-menu {
   -ms-grid-row: 1;
   -ms-grid-column: 4;
   grid-area: menu;
-}
-
-.coll-like {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: like;
+  width: 33%;
+  height: 80%;
+  border-radius: 5%;
+  margin: auto;
+  background-color: black;
 }
 
 .coll-text {
@@ -67,6 +72,14 @@
   -ms-grid-column: 2;
   -ms-grid-column-span: 3;
   grid-area: text;
+  border-radius: 3%;
+  background-color: #fafafa;
+}
+
+.coll-like {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: like;
 }
 
 .coll-text p {
