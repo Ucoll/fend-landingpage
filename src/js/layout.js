@@ -24,11 +24,11 @@ import Share from "./component/Buttons/Share/Share.jsx";
 import Comment from "./component/Buttons/Comment/Comment.jsx";
 import Collapse from "./component/Buttons/Collapse/Collapse.jsx";
 import DislikeButton from "./component/Buttons/Dislike/DislikeButton.jsx";
-
 import Thread from "./component/Buttons/Thread/Thread.jsx";
 import FavoriteOut from "./component/Buttons/Favorite/FavoriteOut/FavoriteOut.jsx";
 import UCollLogo from "./component/Buttons/UCollLogo/UCollLogo.jsx";
 import FavoriteGolden from "./component/Buttons/Favorite/FavoriteGolden/FavoriteGolden.jsx";
+import ProfileSideMenu from "./component/HoverCollapsable/ProfileSideMenu.jsx";
 
 
 
@@ -42,8 +42,7 @@ const Layout = () => {
     <div>
       <BrowserRouter basename={basename}>
         <LikeButton />
-        <DislikeButton />
-        <NewPostVideo />
+        <DislikeButton />        
         <NewPostVideo />
         <NewPostDocument />
         <NewPostLink />
@@ -60,7 +59,9 @@ const Layout = () => {
         <Comment />
         <Collapse />
         <UCollLogo />
-        <Favorite />
+        <FavoriteOut />
+        <FavoriteGolden /> 
+        <ProfileSideMenu />
       </BrowserRouter>
     </div>
   );
