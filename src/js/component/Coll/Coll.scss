@@ -5,6 +5,7 @@
 
 .test {
   margin: auto;
+  margin-top: 10vh;
 }
 
 .coll-container {
@@ -28,7 +29,9 @@
   // Placeholder until the avatar component is fixed
   grid-area: avatar;
   aspect-ratio: 1/1;
+  width: 80%;
   justify-self: center;
+  align-self: center;
   background-color: green;
   border-radius: 100%;
 }
@@ -42,14 +45,23 @@
   margin: 0;
 }
 
+.coll-secondary {
+  font-size: 0.7rem;
+  color: gray;
+}
+
 .coll-title {
   grid-area: title;
   align-self: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .coll-menu {
   grid-area: menu;
+}
+
+.coll-postit {
   width: 33%;
   height: 80%;
   border-radius: 5%;
@@ -65,20 +77,42 @@
 
 .coll-like {
   grid-area: like;
-}
-
-.coll-text p {
-  margin-bottom: 5%;
+  align-self: center;
+  margin-left: 12%;
 }
 
 .coll-thread {
   grid-area: thread;
+  align-self: end;
 }
 
 .coll-comment {
   grid-area: comment;
+  width: 100%;
+  display: inline-flex;
+  align-items: flex-end;
+  place-content: flex-end;
+  padding-right: 2%;
+}
+
+.coll-comments {
+  cursor: pointer;
+}
+
+.coll-favs {
+  display: flex;
+  margin-left: 0.5rem;
+}
+
+.coll-favers {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  align-self: center;
 }
 
 .coll-share {
   grid-area: share;
+  cursor: default;
+  align-self: flex-end;
+  text-align: center;
 }
