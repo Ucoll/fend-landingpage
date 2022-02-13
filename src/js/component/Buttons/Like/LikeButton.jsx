@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-import likeSleptPNG from "../../../../img/icons/like/LikeSlept.png";
-import likeAwakenPNG from "../../../../img/icons/like/LikeAwaken.png";
-
 import "./LikeButtonStyle.scss";
 
 /**
@@ -14,7 +11,6 @@ import "./LikeButtonStyle.scss";
  */
 const LikeButton = () => {
   const [liked, setLiked] = useState([""]);
-  let likedClass = false;
 
   // TODO: On component load, send a Fetch request to get the actual value. Remove the hard-coded "unliked"
   useEffect(() => {
@@ -51,8 +47,8 @@ const LikeButton = () => {
           fill="#CEBCB5"
           className={liked + "-hand"}
           stroke="#033F59"
-          stroke-width="20"
-          stroke-miterlimit="10"
+          strokeWidth="20"
+          strokeMiterlimit="10"
         />
       </svg>
     </div>
