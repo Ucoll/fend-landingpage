@@ -5,13 +5,14 @@ import propTypes from 'propTypes';
  * ! Side Menu -> Colleagues
  * * AslanSN - 2022-02-14
  * 
- * @returns 
+ * @params props {props}
  */
 const ColleaguesSideMenu = () => {
+    
     return (
         <>
         <div className="colleagues-side-menu">
-        
+            
         </div>
         </>
     )
