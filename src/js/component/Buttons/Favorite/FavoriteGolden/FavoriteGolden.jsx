@@ -1,6 +1,5 @@
 import React from "react";
-import GoldenFavorite from "../../../../../img/icons/favorite/GoldenFavorite.png";
-// import "./Favorite.scss";
+import GoldenFavorite from "../../../../../js/component/Buttons/Favorite/img/GoldenFavorite.png";
 
 /**
  * ! Creates the Favorite Button

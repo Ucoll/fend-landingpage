@@ -3,11 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import injectContext from "./store/appContext";
 
-
-
 import LikeButton from "./component/Buttons/Like/LikeButton.jsx";
-
-
 
 import NewPostVideo from "./component/Buttons/NewPostButtons/NewPostVideo.jsx";
 import NewPostLink from "./component/Buttons/NewPostButtons/NewPostLink.jsx";
@@ -29,43 +25,22 @@ import FavoriteOut from "./component/Buttons/Favorite/FavoriteOut/FavoriteOut.js
 import UCollLogo from "./component/Buttons/UCollLogo/UCollLogo.jsx";
 import FavoriteGolden from "./component/Buttons/Favorite/FavoriteGolden/FavoriteGolden.jsx";
 import ProfileSideMenu from "./component/HoverCollapsable/ProfileSideMenu.jsx";
-
+import Coll from "./component/Coll/Coll.jsx";
 
 
 //create your first component
 const Layout = () => {
-	//the basename is used when your project is published in a subdirectory and not in the root of the domain
-	// you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
-	const basename = process.env.BASENAME || "";
+  //the basename is used when your project is published in a subdirectory and not in the root of the domain
+  // you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
+  const basename = process.env.BASENAME || "";
 
   return (
     <div>
       <BrowserRouter basename={basename}>
-        <LikeButton />
-        <DislikeButton />        
-        <NewPostVideo />
-        <NewPostDocument />
-        <NewPostLink />
-        <NewPostSurvey />
-        <NewPostText />
-        <NewPost />
-        <FeedGlobal />
-        <FeedClass />
-        <FeedCollege />
-        <Settings />
-        <SearchBar />
-        <Share />
-        <Thread />
-        <Comment />
-        <Collapse />
-        <UCollLogo />
-        <FavoriteOut />
-        <FavoriteGolden /> 
-        <ProfileSideMenu />
+       
       </BrowserRouter>
     </div>
   );
-
-  }
+};
 
 export default injectContext(Layout);

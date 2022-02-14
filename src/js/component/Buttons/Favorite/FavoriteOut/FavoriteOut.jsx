@@ -1,6 +1,5 @@
 import React from "react";
-import OutFavorite from "../../../../../img/icons/favorite/OutFavorite.png";
-// import "./Favorite.scss";
+import OutFavorite from "../../../../../js/component/Buttons/Favorite/img/OutFavorite.png";
 
 /**
  * ! Creates the Favorite Button
