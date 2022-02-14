@@ -11,9 +11,10 @@
 .coll-container {
   height: 44.72vh;
   width: 37vw;
-  border-radius: 3%;
+  border-radius: 1rem;
   padding: 1%;
   background-color: #ecf5ea;
+  filter: drop-shadow(0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25));
   display: grid;
   grid-template-columns: 1fr 1.5fr 3.5fr 1.25fr;
   grid-template-rows: 1fr 1fr 2fr 1fr 0.5fr;
@@ -67,7 +68,7 @@
 .coll-postit {
   width: 33%;
   height: 80%;
-  border-radius: 5%;
+  border-radius: 1rem;
   margin: auto;
   background-color: black;
 }
@@ -76,12 +77,18 @@
   grid-area: text;
   border-radius: 3%;
   background-color: #fafafa;
+  padding: 5%;
+  overflow: scroll;
+  cursor: pointer;
+}
+.coll-text::-webkit-scrollbar {
+  display: none;
 }
 
 .coll-like {
   grid-area: like;
   align-self: center;
-  margin-left: 12%;
+  margin-left: 15%;
 }
 
 .coll-thread {
@@ -101,6 +108,7 @@
 
 .coll-comments {
   cursor: pointer;
+  margin-right: 4%;
 }
 
 .coll-favs {
@@ -111,7 +119,6 @@
 .coll-favers {
   cursor: pointer;
   margin-left: 0.5rem;
-  align-self: center;
 }
 
 .coll-share {
