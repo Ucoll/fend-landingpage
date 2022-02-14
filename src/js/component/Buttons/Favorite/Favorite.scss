@@ -1,0 +1,19 @@
+// Favorite button styles
+.button-favorite {
+  width: min-content;
+  height: min-content;
+  transition: transform 0.35s;
+
+  .unfavorited-star {
+    fill: #cebcb5;
+  }
+
+  .favorited-star {
+    fill: #ffc737;
+  }
+}
+
+.button-favorite:hover {
+  width: min-content;
+  transform: scale(1.3, 1.3);
+}
