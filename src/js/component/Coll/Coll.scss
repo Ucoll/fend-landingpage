@@ -34,11 +34,13 @@
   align-self: center;
   background-color: green;
   border-radius: 100%;
+  cursor: pointer;
 }
 
 .coll-name {
   grid-area: name;
   align-self: center;
+  cursor: default;
 }
 
 .coll-name p {
@@ -55,6 +57,7 @@
   align-self: center;
   font-size: 1rem;
   font-weight: bold;
+  cursor: default;
 }
 
 .coll-menu {
@@ -83,6 +86,7 @@
 
 .coll-thread {
   grid-area: thread;
+  cursor: default;
   align-self: end;
 }
 
