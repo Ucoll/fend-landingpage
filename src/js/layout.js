@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import injectContext from "./store/appContext";
 
-import LikeButtons from "./component/Buttons/Like/LikeButtons.jsx";
+import Coll from "./component/Coll/Coll.jsx";
 
 //create your first component
 const Layout = () => {
@@ -14,7 +14,7 @@ const Layout = () => {
   return (
     <div>
       <BrowserRouter basename={basename}>
-        <LikeButtons />
+        <Coll />
       </BrowserRouter>
     </div>
   );
