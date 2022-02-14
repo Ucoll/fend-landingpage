@@ -1,6 +1,6 @@
 import React from "react";
 import { Icon } from "@iconify/react";
-import "./Thread.css";
+import "./Thread.scss";
 
 /**
  * ! Creates the Thread Button
