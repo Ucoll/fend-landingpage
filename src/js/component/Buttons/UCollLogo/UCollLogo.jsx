@@ -1,5 +1,5 @@
 import React from "react";
-import UCollLogoLogoVertical from "../../../../img/icons/ucoll-logo/UCollLogoVertical.png";
+import UCollLogoLogoVertical from "../../../../static/icons/ucoll-logo/UCollLogoVertical.png";
 import "./UCollLogo.scss";
 
 /**
