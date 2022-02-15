@@ -3,7 +3,9 @@ import { BrowserRouter } from "react-router-dom";
 
 import injectContext from "./store/appContext";
 
-import Coll from "./component/Coll/Coll.jsx";
+import ColleaguesSideMenu from "./component/Menus/ColleaguesSideMenu/ColleaguesSideMenu.jsx";
+
+
 
 //create your first component
 const Layout = () => {
@@ -14,7 +16,7 @@ const Layout = () => {
   return (
     <div>
       <BrowserRouter basename={basename}>
-        <Coll />
+        <ColleaguesSideMenu/>
       </BrowserRouter>
     </div>
   );

@@ -1,0 +1,66 @@
+.colleagues-side-menu {
+  background-color: #ffeac7;
+  width: 15.75rem;
+  height: 24.375rem;
+  border-radius: 0.5rem;
+  text-align: center;
+
+ 
+}
+
+.colleagues-collapse {
+    position: fixed;
+    transform: translate(10rem, 2rem) scale(2);
+    
+}
+
+h3 {
+  letter-spacing: 0.3em;
+  font-size: 1.5rem;
+  font-family: "Fandwood Text";
+  font-weight: normal;
+}
+
+h4 {
+    margin: 0.25rem;
+  font-size: 0.875rem;
+  font-family: "Quicksand";
+}
+
+.colleagues {
+  overflow: hidden;
+  height: min-content;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #053539 transparent;
+  font: -webkit-small-control;
+  margin-bottom: 0.1rem;
+
+}
+
+.colleagues ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.colleagues::-webkit-scrollbar {
+ height: 0.35rem;
+ 
+}
+
+.colleagues::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.colleagues::-webkit-scrollbar-thumb {
+  background-color: #053539;
+  border-radius: 1.25rem;
+  border: none;
+}
+
+hr {
+  width: 14.75rem;
+  margin: auto;
+  margin-left: 0.5rem;
+}

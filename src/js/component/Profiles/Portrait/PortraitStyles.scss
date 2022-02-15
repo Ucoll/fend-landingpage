@@ -1,0 +1,19 @@
+.circular-portrait{
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: rgb(64, 93, 95);
+    margin: 0.25rem;
+}
+
+.circular-portrait img.portrait-img{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    border-radius: 50%;
+}
