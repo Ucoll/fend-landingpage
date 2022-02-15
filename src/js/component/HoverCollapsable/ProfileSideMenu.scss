@@ -3,61 +3,73 @@
  * * Keikeka - 2022-02-13
  */
 
+  
+.profilesidemenu-container {
+  height: 24.188rem;
+  width: 15.75rem;
+  border-radius: 0.80rem;
+  padding: 1%;
+  margin-top: 8rem;
+  background-color: #FFEAC7;  
+ }
  
-.test {
-    margin: auto;
-  }
-  
-  .profilesidemenu-container {
-    height: 44.72vh;
-    width: 575rem;
-    border-radius: 3%;
-    padding: 1%;
-    background-color: #FFEAC7;
-    display: grid;
-  }
-  
-  .profilesidemenu-avatar {
-    // Placeholder until the avatar component is fixed
-    grid-area: avatar;
-    aspect-ratio: 1/1;
-    justify-self: center;
-    background-color: green;
-    border-radius: 100%;
-  }
-  
-  .profile-name {
-    grid-area: name;
-    align-self: center;
-  }
-  
-  .profile-name h2 {
-    margin: 0;
-  }
+.collapse-menu{
+  float: right;
+  cursor: pointer; 
+}
 
-  .profile-college h4 {
-    margin: 0;
-  }
-  
-  .profile-description {
-    grid-area: title;
-    align-self: center;
-    font-size: 1.2rem;
-  }
-  
-  .profile-secondsection {
-    grid-area: menu;
-    width: 33%;
-    height: 80%;
-    border-radius: 5%;
-    margin: auto;
-    background-color: black;
-  }
-  
-  .profile- {
-    grid-area: text;
-    border-radius: 3%;
-    background-color: #fafafa;
-  }
+.profilesidemenu-avatar {  
+  border-radius: 100%;  
+  width: 9rem;
+  height: 9rem;   
+  background-color: rgb(71, 71, 71);  
+  margin: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  padding: 2%;
+  cursor: pointer;   
+}
 
-  
+.profilesidemenu-firstsection {
+  text-align: center;  
+}
+
+.profile-name {    
+  margin: 0;
+  font-size: 1.2rem;    
+  font-family: Fanwood Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25rem;
+  cursor: default;
+}
+
+.profile-college {
+  margin: 0;
+  font-size: 0.80rem;
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.80rem;  
+  cursor: default;
+}
+
+.profile-description {
+  margin: 0;  
+  font-size: 0.60rem;
+  padding: 2%;
+  font-family: Poppins;
+  font-style: normal;
+  font-size: 0.60rem;
+  letter-spacing: -0.011em;
+  cursor: default;
+}
+
+.profile-secondsection {  
+  border-radius: 3%; 
+  font-family: Poppins;
+  font-style: normal;
+  font-size: 0.80rem;
+  letter-spacing: -0.011em; 
+  text-align: center;
+}
