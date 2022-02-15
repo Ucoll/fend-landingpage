@@ -3,11 +3,12 @@
  * * OvidioSantoro - 2022-02-01
  */
 .button-coll {
-  height: 20px;
-  width: 25px;
+  height: 30px;
+  width: 35px;
   color: rgba(206, 188, 181, 1);
   stroke: rgba(3, 63, 89, 1);
   stroke-width: 20px;
+  align-self: end;
 }
 
 .button-coll:hover {
