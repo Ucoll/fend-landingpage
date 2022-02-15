@@ -4,7 +4,8 @@ import { BrowserRouter } from "react-router-dom";
 import injectContext from "./store/appContext";
 
 import Coll from "./component/Coll/Coll.jsx";
-import Resource from "./component/ResourcES/Resource.jsx";
+import Resource from "./component/Resources/Resource.jsx";
+import ResourcesMenu from "./component/Resources/ResourcesMenu.jsx";
 
 //create your first component
 const Layout = () => {
@@ -15,8 +16,11 @@ const Layout = () => {
   return (
     <div>
       <BrowserRouter basename={basename}>
-        <Coll />
-        <Resource />
+        <div className="testing-div">
+          <Coll />
+          <Resource />
+          <ResourcesMenu />
+        </div>
       </BrowserRouter>
     </div>
   );
