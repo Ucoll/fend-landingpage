@@ -1,5 +1,5 @@
 /**
- * ! Styles for the Coll component
+ * ! Styles for the Profile Side Menu component
  * * Keikeka - 2022-02-13
  */
 
@@ -8,5 +8,56 @@
     margin: auto;
   }
   
+  .profilesidemenu-container {
+    height: 44.72vh;
+    width: 575rem;
+    border-radius: 3%;
+    padding: 1%;
+    background-color: #FFEAC7;
+    display: grid;
+  }
+  
+  .profilesidemenu-avatar {
+    // Placeholder until the avatar component is fixed
+    grid-area: avatar;
+    aspect-ratio: 1/1;
+    justify-self: center;
+    background-color: green;
+    border-radius: 100%;
+  }
+  
+  .profile-name {
+    grid-area: name;
+    align-self: center;
+  }
+  
+  .profile-name h2 {
+    margin: 0;
+  }
+
+  .profile-college h4 {
+    margin: 0;
+  }
+  
+  .profile-description {
+    grid-area: title;
+    align-self: center;
+    font-size: 1.2rem;
+  }
+  
+  .profile-secondsection {
+    grid-area: menu;
+    width: 33%;
+    height: 80%;
+    border-radius: 5%;
+    margin: auto;
+    background-color: black;
+  }
+  
+  .profile- {
+    grid-area: text;
+    border-radius: 3%;
+    background-color: #fafafa;
+  }
 
   
