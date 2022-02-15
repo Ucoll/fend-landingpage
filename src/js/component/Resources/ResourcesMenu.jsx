@@ -18,7 +18,7 @@ const ResourcesMenu = () => {
       </div>
       <span className="resources-title">Resources</span>
       <hr />
-      {/* Change hard-coded Resources. It shoul dynamically generate them from the data in the back */}
+      {/* TODO: Change hard-coded Resources. It shoul dynamically generate them from the data in the back */}
       <div className="resources-container">
         <div className="resources-list">
           <Resource />
