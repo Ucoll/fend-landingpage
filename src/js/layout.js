@@ -8,6 +8,7 @@ import ColleaguesSideMenu from "./component/Menus/ColleaguesSideMenu/ColleaguesS
 
 import Navbar from "./component/Navbar/Navbar.jsx";
 import Coll from "./component/Coll/Coll.jsx";
+import CompressedColl from "./component/Coll/CompressedColl.jsx";
 import Resource from "./component/Resources/Resource.jsx";
 import ResourcesMenu from "./component/Resources/ResourcesMenu.jsx";
 
@@ -20,7 +21,12 @@ const Layout = () => {
   return (
     <div>
       <BrowserRouter basename={basename}>
-        <ColleaguesSideMenu/>
+        <div className="testing-div">
+          <Coll />
+          <CompressedColl />
+          <Resource />
+          <ResourcesMenu />
+        </div>
       </BrowserRouter>
     </div>
   );
