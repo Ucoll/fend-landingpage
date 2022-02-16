@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import injectContext from "./store/appContext";
 
+import Navbar from "./component/Navbar/Navbar.jsx";
 import Coll from "./component/Coll/Coll.jsx";
 
 //create your first component
@@ -14,6 +15,7 @@ const Layout = () => {
   return (
     <div>
       <BrowserRouter basename={basename}>
+        <Navbar />
         <Coll />
       </BrowserRouter>
     </div>
