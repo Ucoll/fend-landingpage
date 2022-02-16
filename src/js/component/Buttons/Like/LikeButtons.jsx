@@ -40,8 +40,8 @@ const LikeButtons = () => {
     <div className="likes-container">
       <div className="button-like" onClick={switchLike}>
         <svg
-          width="52"
-          height="52"
+          width="45"
+          height="45"
           viewBox="0 0 538 530"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -70,8 +70,8 @@ const LikeButtons = () => {
       {/* <div className="like-score">{propTypes.score}</div> */}
       <div className="button-dislike" onClick={switchDislike}>
         <svg
-          width="52"
-          height="52"
+          width="42"
+          height="42"
           viewBox="0 0 543 535"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
