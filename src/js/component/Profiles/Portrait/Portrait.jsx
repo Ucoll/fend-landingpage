@@ -1,5 +1,6 @@
 import React from 'react';
 import portrait from './NewFaceNewEdition.png';
+import './PortraitStyles.scss';
 
 /**
  * ! Circular display for a Portrait

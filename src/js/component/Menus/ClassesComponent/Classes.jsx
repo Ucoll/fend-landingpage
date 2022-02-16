@@ -13,6 +13,7 @@ import Portrait from '../../Profiles/Portrait/Portrait.jsx';
 const ClassesPreview = () => {
     return (
       <div className="classes-container">
+        <span>Biology</span>
         <ul>
           <li>
             <Portrait className="classes-portrait" />

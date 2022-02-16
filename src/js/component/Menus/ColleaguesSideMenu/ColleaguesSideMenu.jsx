@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 // import propTypes from 'propTypes';
 import "./ColleaguesSideMenuStyles.scss";
-import profileImage from "./NewFaceNewEdition.png"
-import PortraitWithName from '../../Profiles/PortraitWithName/PortraitWithName.jsx';
+import profileImage from "./NewFaceNewEdition.png";
+import PortraitWithName from "../../Profiles/PortraitWithName/PortraitWithName.jsx";
 import Collapse from "../../Buttons/Collapse/Collapse.jsx";
 import Classes from "../ClassesComponent/Classes.jsx";
 
@@ -37,7 +37,38 @@ const ColleaguesSideMenu = () => {
         </div>
         <hr />
         <div className="classes">
-          <Classes />
+          <ul>
+            <li>
+              <Classes />
+            </li>
+            <li>
+              <Classes />
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Classes />
+            </li>
+            <li>
+              <Classes />
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Classes />
+            </li>
+            <li>
+              <Classes />
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Classes />
+            </li>
+            <li>
+              <Classes />
+            </li>
+          </ul>
         </div>
         <hr />
       </div>
