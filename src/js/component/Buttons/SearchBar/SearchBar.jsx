@@ -1,7 +1,7 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 
-import "./SearchBar.css";
+import "./SearchBar.scss";
 
 /**
  * ! Creates the SearchBar Button
