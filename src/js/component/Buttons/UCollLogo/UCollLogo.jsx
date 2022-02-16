@@ -10,15 +10,9 @@ import "./UCollLogo.scss";
 
 const UCollLogo = () => {
   return (
-    <>
     <div className="button-ucolllogo">
-       <img        
-       src={UCollLogoLogoVertical} 
-       alt="Image ucolllogo Button" 
-       height="100"
-       width="auto"/>  
+      <img src={UCollLogoLogoVertical} alt="Image ucolllogo Button" />
     </div>
-    </>
   );
 };
 
