@@ -7,6 +7,8 @@ import Navbar from "./component/Navbar/Navbar.jsx";
 import Coll from "./component/Coll/Coll.jsx";
 import Resource from "./component/Resources/Resource.jsx";
 import ResourcesMenu from "./component/Resources/ResourcesMenu.jsx";
+import MyColls from "./component/Buttons/MyColls/MyColls.jsx";
+import ProfileFavorite from "./component/Buttons/ProfileFavorite/ProfileFavorite.jsx";
 
 //create your first component
 const Layout = () => {
@@ -17,10 +19,8 @@ const Layout = () => {
   return (
     <div>
       <BrowserRouter basename={basename}>
-        <div className="testing-div">
-          <Coll />
-          <Resource />
-          <ResourcesMenu />
+        <div className="testing-div">           
+          <ProfileFavorite />        
         </div>
       </BrowserRouter>
     </div>
