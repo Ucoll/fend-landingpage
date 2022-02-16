@@ -11,6 +11,8 @@ import Coll from "./component/Coll/Coll.jsx";
 import CompressedColl from "./component/Coll/CompressedColl.jsx";
 import Resource from "./component/Resources/Resource.jsx";
 import ResourcesMenu from "./component/Resources/ResourcesMenu.jsx";
+import MyColls from "./component/Buttons/MyColls/MyColls.jsx";
+import ProfileFavorite from "./component/Buttons/ProfileFavorite/ProfileFavorite.jsx";
 
 //create your first component
 const Layout = () => {
