@@ -5,6 +5,7 @@ import injectContext from "./store/appContext";
 
 import Navbar from "./component/Navbar/Navbar.jsx";
 import Coll from "./component/Coll/Coll.jsx";
+import Resource from "./component/ResourcES/Resource.jsx";
 
 //create your first component
 const Layout = () => {
@@ -17,6 +18,7 @@ const Layout = () => {
       <BrowserRouter basename={basename}>
         <Navbar />
         <Coll />
+        <Resource />
       </BrowserRouter>
     </div>
   );
