@@ -8,9 +8,12 @@ import ColleaguesSideMenu from "./component/Menus/ColleaguesSideMenu/ColleaguesS
 
 import Navbar from "./component/Navbar/Navbar.jsx";
 import Coll from "./component/Coll/Coll.jsx";
+import CompressedColl from "./component/Coll/CompressedColl.jsx";
 import Resource from "./component/Resources/Resource.jsx";
 import ResourcesMenu from "./component/Resources/ResourcesMenu.jsx";
+
 import Cover from "./component/Cover/Cover.jsx";
+
 
 //create your first component
 const Layout = () => {

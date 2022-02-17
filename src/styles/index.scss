@@ -67,8 +67,18 @@
 .button-new:hover {
   background-color: rgba(115, 115, 115, 0.25);
   cursor: pointer;
+
+  .new-photo-plus {
+    fill: rgba(206, 188, 181, 1);
+  }
 }
 
 .button-new:active {
   background-color: rgba(115, 115, 115, 0.75);
+}
+
+.button-new .new-photo-plus {
+  stroke: black;
+  stroke-width: 1;
+  fill: white;
 }

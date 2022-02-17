@@ -3,7 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 //include your index.scss file into the bundle
-import "../styles/index.css";
+import "../styles/index.scss";
 
 import Quicksand from "../static/Fonts/Quicksand-VariableFont_wght.ttf";
 import Fandwood from "../static/Fonts/FanwoodText-Regular.ttf";
