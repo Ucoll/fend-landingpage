@@ -3,11 +3,16 @@ import { BrowserRouter } from "react-router-dom";
 
 import injectContext from "./store/appContext";
 
+import ColleaguesSideMenu from "./component/Menus/ColleaguesSideMenu/ColleaguesSideMenu.jsx";
+
+
 import Navbar from "./component/Navbar/Navbar.jsx";
 import Coll from "./component/Coll/Coll.jsx";
+import CompressedColl from "./component/Coll/CompressedColl.jsx";
 import Resource from "./component/Resources/Resource.jsx";
 import ResourcesMenu from "./component/Resources/ResourcesMenu.jsx";
 import TicketPostIt from "./component/Buttons/TicketPost-It/TicketPostIt.jsx";
+
 
 //create your first component
 const Layout = () => {
