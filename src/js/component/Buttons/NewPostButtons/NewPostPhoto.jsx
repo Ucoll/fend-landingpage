@@ -9,13 +9,7 @@ import { Icon } from "@iconify/react";
 const NewPostPhoto = () => {
   return (
     <div className="button-new">
-      <svg
-        width="32"
-        height="32"
-        viewBox="0 0 52 52"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_503_402)">
           <rect
             x="6.67578"
