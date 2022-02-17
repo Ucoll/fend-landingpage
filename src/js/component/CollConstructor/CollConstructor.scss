@@ -1,6 +1,6 @@
 /**
  * ! Styles for the Coll component
- * * OvidioSantoro - 2022-02-09
+ * * OvidioSantoro - 2022-02-17
  */
 
 .test {
@@ -12,7 +12,7 @@
   height: 47.25rem;
   width: 76.5rem;
   border-radius: 1rem;
-  padding: 1%;
+  padding: 2rem;
   background-color: #e1c5d9;
   filter: drop-shadow(0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25));
   display: grid;
@@ -25,19 +25,55 @@
 }
 
 .coll-constructor-title {
+  grid-area: title;
+  width: 100%;
+  height: fit-content;
+  align-self: center;
+  margin: 0.5rem;
+
+  input {
+    width: 47.25rem;
+    height: 3.75rem;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0 2rem 0 2rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
 }
 
 .coll-constructor-selector {
+  grid-area: selector;
+  width: 100%;
+  height: fit-content;
+  align-self: center;
+  margin: 0.5rem;
+
+  select {
+    width: 15.875rem;
+    height: 3.75rem;
+    border-radius: 0.5rem;
+    border: none;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
 }
 
 .coll-constructor-buttons {
+  grid-area: buttons;
+  width: 4.25rem;
+  height: 29.5rem;
 }
 
 .coll-constructor-content {
+  grid-area: content;
 }
 
 .coll-constructor-cancel {
+  grid-area: cancel;
 }
 
 .coll-constructor-send {
+  grid-area: send;
 }
