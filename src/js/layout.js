@@ -12,6 +12,7 @@ import CompressedColl from "./component/Coll/CompressedColl.jsx";
 import Resource from "./component/Resources/Resource.jsx";
 import ResourcesMenu from "./component/Resources/ResourcesMenu.jsx";
 import TicketPostIt from "./component/Buttons/TicketPost-It/TicketPostIt.jsx";
+import ProfileEditButton from "./component/Buttons/ProfileEditButton/ProfileEditButton.jsx";
 
 
 
@@ -25,8 +26,7 @@ const Layout = () => {
     <div>
       <BrowserRouter basename={basename}>
         <div className="testing-div">
-          <TicketPostIt />
-          <Coll />
+          <ProfileEditButton />                 
         </div>
       </BrowserRouter>
     </div>
