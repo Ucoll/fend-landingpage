@@ -10,6 +10,7 @@ import Navbar from "./component/Navbar/Navbar.jsx";
 import Coll from "./component/Coll/Coll.jsx";
 import Resource from "./component/Resources/Resource.jsx";
 import ResourcesMenu from "./component/Resources/ResourcesMenu.jsx";
+import Cover from "./component/Cover/Cover.jsx";
 
 //create your first component
 const Layout = () => {
@@ -20,7 +21,7 @@ const Layout = () => {
   return (
     <div>
       <BrowserRouter basename={basename}>
-        <ColleaguesSideMenu/>
+        <Cover/>
       </BrowserRouter>
     </div>
   );
