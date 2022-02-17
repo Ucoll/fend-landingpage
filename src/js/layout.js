@@ -11,8 +11,8 @@ import Coll from "./component/Coll/Coll.jsx";
 import CompressedColl from "./component/Coll/CompressedColl.jsx";
 import Resource from "./component/Resources/Resource.jsx";
 import ResourcesMenu from "./component/Resources/ResourcesMenu.jsx";
+import TicketPostIt from "./component/Buttons/TicketPost-It/TicketPostIt.jsx";
 
-import Cover from "./component/Cover/Cover.jsx";
 
 
 //create your first component
@@ -24,7 +24,10 @@ const Layout = () => {
   return (
     <div>
       <BrowserRouter basename={basename}>
-        <Cover/>
+        <div className="testing-div">
+          <TicketPostIt />
+          <Coll />
+        </div>
       </BrowserRouter>
     </div>
   );
