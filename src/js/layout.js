@@ -7,6 +7,7 @@ import Navbar from "./component/Navbar/Navbar.jsx";
 import Coll from "./component/Coll/Coll.jsx";
 import Resource from "./component/Resources/Resource.jsx";
 import ResourcesMenu from "./component/Resources/ResourcesMenu.jsx";
+import TicketPostIt from "./component/Buttons/TicketPost-It/TicketPostIt.jsx";
 
 //create your first component
 const Layout = () => {
@@ -18,9 +19,8 @@ const Layout = () => {
     <div>
       <BrowserRouter basename={basename}>
         <div className="testing-div">
+          <TicketPostIt />
           <Coll />
-          <Resource />
-          <ResourcesMenu />
         </div>
       </BrowserRouter>
     </div>
