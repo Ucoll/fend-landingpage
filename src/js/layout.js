@@ -11,8 +11,9 @@ import Coll from "./component/Coll/Coll.jsx";
 import CompressedColl from "./component/Coll/CompressedColl.jsx";
 import Resource from "./component/Resources/Resource.jsx";
 import ResourcesMenu from "./component/Resources/ResourcesMenu.jsx";
-import MyColls from "./component/Buttons/MyColls/MyColls.jsx";
-import ProfileFavorite from "./component/Buttons/ProfileFavorite/ProfileFavorite.jsx";
+
+import Cover from "./component/Cover/Cover.jsx";
+
 
 //create your first component
 const Layout = () => {
@@ -23,12 +24,7 @@ const Layout = () => {
   return (
     <div>
       <BrowserRouter basename={basename}>
-        <div className="testing-div">
-          <Coll />
-          <CompressedColl />
-          <Resource />
-          <ResourcesMenu />
-        </div>
+        <Cover/>
       </BrowserRouter>
     </div>
   );

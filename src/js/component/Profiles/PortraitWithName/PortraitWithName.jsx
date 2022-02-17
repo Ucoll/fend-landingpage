@@ -1,6 +1,6 @@
 import React from 'react';
 // import propTypes from 'prop-types';
-import portrait from '../../Menus/ColleaguesSideMenu/NewFaceNewEdition.png'
+import portrait from '../../Menus/ColleaguesSideMenu/Ellipse.png'
 import './PortraitWithNameStyles.scss';
 
 const PortraitWithName = () => {

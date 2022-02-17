@@ -1,5 +1,5 @@
 import React from 'react';
-import portrait from './NewFaceNewEdition.png';
+import portrait from './Ellipse.png';
 import './PortraitStyles.scss';
 
 /**
