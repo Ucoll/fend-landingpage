@@ -8,122 +8,36 @@
   margin-top: 10vh;
 }
 
-.coll-container {
-  height: 29.97rem;
-  width: 44.4rem;
+.coll-constructor {
+  height: 47.25rem;
+  width: 76.5rem;
   border-radius: 1rem;
   padding: 1%;
-  background-color: #ecf5ea;
+  background-color: #e1c5d9;
   filter: drop-shadow(0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25));
   display: grid;
-  grid-template-columns: 1fr 1.5fr 3.5fr 1.25fr;
-  grid-template-rows: 1fr 1fr 2fr 1fr 0.5fr;
+  grid-template-columns: 1fr 5.25fr 2.1fr;
+  grid-template-rows: 1fr 3.5fr 1fr;
   grid-template-areas:
-    "avatar name title menu"
-    ". text text text"
-    "like text text text"
-    ". text text text"
-    ". thread comment share";
+    ". title selector"
+    "buttons content content"
+    ". cancel send";
 }
 
-.coll-avatar {
-  // Placeholder until the avatar component is fixed
-  grid-area: avatar;
-  aspect-ratio: 1/1;
-  width: 80%;
-  justify-self: center;
-  align-self: center;
-  background-color: green;
-  border-radius: 100%;
-  cursor: pointer;
+.coll-constructor-title {
 }
 
-.coll-name {
-  grid-area: name;
-  align-self: center;
-  cursor: default;
+.coll-constructor-selector {
 }
 
-.coll-name p {
-  margin: 0;
+.coll-constructor-buttons {
 }
 
-.coll-secondary {
-  font-size: 0.7rem;
-  color: gray;
+.coll-constructor-content {
 }
 
-.coll-title {
-  grid-area: title;
-  align-self: center;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: default;
+.coll-constructor-cancel {
 }
 
-.coll-menu {
-  grid-area: menu;
-}
-
-.coll-postit {
-  width: 33%;
-  height: 80%;
-  border-radius: 1rem;
-  margin: auto;
-  background-color: black;
-}
-
-.coll-text {
-  grid-area: text;
-  border-radius: 1rem;
-  background-color: #fafafa;
-  padding: 5%;
-  overflow: scroll;
-  cursor: pointer;
-}
-.coll-text::-webkit-scrollbar {
-  display: none;
-}
-
-.coll-like {
-  grid-area: like;
-  align-self: center;
-  margin-left: 15%;
-}
-
-.coll-thread {
-  grid-area: thread;
-  cursor: default;
-  align-self: end;
-}
-
-.coll-comment {
-  grid-area: comment;
-  width: 100%;
-  display: inline-flex;
-  align-items: flex-end;
-  place-content: flex-end;
-  padding-right: 2%;
-}
-
-.coll-comments {
-  cursor: pointer;
-  margin-right: 4%;
-}
-
-.coll-favs {
-  display: flex;
-  margin-left: 0.5rem;
-}
-
-.coll-favers {
-  cursor: pointer;
-  margin-left: 0.5rem;
-}
-
-.coll-share {
-  grid-area: share;
-  cursor: default;
-  align-self: flex-end;
-  text-align: center;
+.coll-constructor-send {
 }
