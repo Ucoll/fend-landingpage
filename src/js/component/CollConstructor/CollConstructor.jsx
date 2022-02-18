@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import ContentText from "./ContentArea/ContentText/ContentText.jsx";
 import ContentFile from "./ContentArea/ContentFile/ContentFile.jsx";
@@ -18,6 +18,25 @@ import "./CollConstructor.scss";
  * @returns React Component
  */
 const CollConstructor = () => {
+  const contentTypes = {
+    link: "",
+    photo: <ContentFile fileTypes={["JPG", "PNG", "GIF"]} />,
+    video: <ContentFile fileTypes={["MP4", "AVI", "WEBM", "MOV", "MKV"]} />,
+    text: <ContentText />,
+    survey: "",
+    file: <ContentFile fileTypes={["DOC", "TXT", "PDF", "XLS", "ODT"]} />,
+  };
+
+  const [contentType, setContentType] = useState();
+
+  useEffect(() => {
+    setContentType(contentTypes.text);
+  }, []);
+
+  const TestConst = () => {
+    console.log("TEST");
+  };
+
   // TODO: Delete Test class (Margin to view the component better)
   return (
     <form action="" className="coll-constructor test">
@@ -39,25 +58,32 @@ const CollConstructor = () => {
         </select>
       </div>
       <div className="coll-constructor-buttons">
-        <NewPostLink />
-        <NewPostPhoto />
-        <NewPostVideo />
-        <NewPostText />
-        <NewPostSurvey />
-        <NewPostDocument />
+        <div onClick={() => TestConst()}>
+          <NewPostLink />
+        </div>
+        <div onClick={() => TestConst()}>
+          <NewPostPhoto />
+        </div>
+        <div onClick={() => TestConst()}>
+          <NewPostVideo />
+        </div>
+        <div onClick={() => TestConst()}>
+          <NewPostText />
+        </div>
+        <div onClick={() => TestConst()}>
+          <NewPostSurvey />
+        </div>
+        <div onClick={() => TestConst()}>
+          <NewPostDocument />
+        </div>
       </div>
       <div
         className="coll-constructor-content"
         name="collContent"
         id="collContent"
       >
-        {/* <ContentText /> */}
-        <ContentFile fileTypes={["JPG", "PNG", "GIF"]} />
+        {contentType}
       </div>
-      {/* TODO: Think whether it's better to use a div or an actual button */}
-      {/* TODO: The alineation is not the same from the design but this one is easier to implent */}
-      {/* TODO: (cont.) and I think I like it better. If you don't, we can change it later */}
-      {/* TODO: Onclick -> Close the modal */}
       <div className="coll-constructor-cancel">CANCEL</div>
       {/* Onclick -> Submit the form */}
       <div className="coll-constructor-send">SEND</div>
