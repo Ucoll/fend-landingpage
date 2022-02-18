@@ -13,6 +13,7 @@ import Resource from "./component/Resources/Resource.jsx";
 import ResourcesMenu from "./component/Resources/ResourcesMenu.jsx";
 import TicketPostIt from "./component/Buttons/TicketPost-It/TicketPostIt.jsx";
 import ProfileEditButton from "./component/Buttons/ProfileEditButton/ProfileEditButton.jsx";
+import ProfileCareerDescription from "./component/ProfileCareerDescription/ProfileCareerDescription.jsx";
 
 
 
@@ -25,8 +26,8 @@ const Layout = () => {
   return (
     <div>
       <BrowserRouter basename={basename}>
-        <div className="testing-div">
-          <ProfileEditButton />                 
+        <div className="testing-div">          
+          <ProfileCareerDescription />                   
         </div>
       </BrowserRouter>
     </div>
