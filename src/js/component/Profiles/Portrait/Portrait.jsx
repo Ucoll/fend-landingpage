@@ -1,4 +1,6 @@
 import React from 'react';
+
+import portrait from './Ellipse.png';
 import './PortraitStyles.scss';
 
 /**
@@ -9,7 +11,7 @@ import './PortraitStyles.scss';
 const Portrait = () => {
     return (
       <div className="circular-portrait">
-        {/* <img src="" alt="portrait" className="portrait-img" /> */}
+        <img src={portrait} alt="portrait" className="portrait-img" />
       </div>
     );
 }
