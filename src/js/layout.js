@@ -14,6 +14,7 @@ import ResourcesMenu from "./component/Resources/ResourcesMenu.jsx";
 import TicketPostIt from "./component/Buttons/TicketPost-It/TicketPostIt.jsx";
 import ProfileEditButton from "./component/Buttons/ProfileEditButton/ProfileEditButton.jsx";
 import ProfileCareerDescription from "./component/ProfileCareerDescription/ProfileCareerDescription.jsx";
+import ProfileClasses from "./component/ProfileClasses/ProfileClasses.jsx";
 
 
 
@@ -26,8 +27,8 @@ const Layout = () => {
   return (
     <div>
       <BrowserRouter basename={basename}>
-        <div className="testing-div">          
-          <ProfileCareerDescription />                   
+        <div className="testing-div">              
+        <ProfileClasses />                   
         </div>
       </BrowserRouter>
     </div>
