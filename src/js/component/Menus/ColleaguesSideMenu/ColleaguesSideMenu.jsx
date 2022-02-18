@@ -4,7 +4,7 @@ import "./ColleaguesSideMenuStyles.scss";
 import profileImage from "./Ellipse.png";
 import PortraitWithName from "../../Profiles/PortraitWithName/PortraitWithName.jsx";
 import Collapse from "../../Buttons/Collapse/Collapse.jsx";
-import Classes from "../ClassesComponent/Classes.jsx";
+import Classes from "./ClassesComponent/Classes.jsx";
 
 /**
  * ! Side Menu -> Colleagues
