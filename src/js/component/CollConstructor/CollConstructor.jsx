@@ -1,5 +1,6 @@
 import React from "react";
-import { Icon } from "@iconify/react";
+
+import ContentText from "./ContentArea/ContentText/ContentText.jsx";
 
 import NewPostLink from "../Buttons/NewPostButtons/NewPostLink.jsx";
 import NewPostPhoto from "../Buttons/NewPostButtons/NewPostPhoto.jsx";
@@ -44,11 +45,13 @@ const CollConstructor = () => {
         <NewPostSurvey />
         <NewPostDocument />
       </div>
-      <textarea
+      <div
         className="coll-constructor-content"
         name="collContent"
         id="collContent"
-      ></textarea>
+      >
+        <ContentText />
+      </div>
       {/* TODO: Think whether it's better to use a div or an actual button */}
       {/* TODO: The alineation is not the same from the design but this one is easier to implent */}
       {/* TODO: (cont.) and I think I like it better. If you don't, we can change it later */}
