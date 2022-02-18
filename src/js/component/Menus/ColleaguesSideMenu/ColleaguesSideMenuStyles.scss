@@ -8,12 +8,12 @@
   position: relative;
 }
 
-.button-collapse {
+.colleagues-side-menu .button-collapse {
   position: absolute;
   transform: translate(6.15rem, .3rem) scale(1.5);
 }
 
-h3 {
+.colleagues-side-menu h3 {
   margin-top: 0.5rem;
   letter-spacing: 0.3em;
   font-size: 1.5rem;
@@ -21,13 +21,13 @@ h3 {
   font-weight: normal;
 }
 
-h4 {
+.colleagues-side-menu h4 {
   margin: 0.25rem;
   font-size: 0.875rem;
   font-family: "Quicksand";
 }
 
-.colleagues {
+.colleagues-side-menu .colleagues {
   height: min-content;
   max-height: 32%;
   overflow-x: scroll;
@@ -38,7 +38,7 @@ h4 {
   overflow-y: hidden;
 }
 
-ul {
+ ul {
   list-style: none;
   display: flex;
   padding: 0;
@@ -58,37 +58,37 @@ ul {
   border: none;
 }
 
-hr {
+.colleagues-side-menu hr {
   width: 14.75rem;
   margin: auto;
   margin-left: 0.5rem;
 }
 
-.classes {
+.colleagues-side-menu .classes {
     overflow-y: scroll;
     max-height: 43.5%;
 }
 
-.classes::-webkit-scrollbar {
+.colleagues-side-menu .classes::-webkit-scrollbar {
   width: 0.35rem;
 }
 
-.classes::-webkit-scrollbar-track {
+.colleagues-side-menu .classes::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.classes::-webkit-scrollbar-thumb {
+.colleagues-side-menu .classes::-webkit-scrollbar-thumb {
   background-color: #053539;
   border-radius: 1.25rem;
   border: none;
 }
 
-.classes ul {
+.colleagues-side-menu .classes ul {
   margin: auto;
   margin-left: 0.35rem;
 }
 
-.classes ul+ul {
+.colleagues-side-menu .classes ul+ul {
   margin-top: 1rem;
 }
 

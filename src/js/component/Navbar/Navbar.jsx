@@ -9,6 +9,7 @@ import NewPost from "../Buttons/NewPost/NewPost.jsx";
 import SearchBar from "../Buttons/SearchBar/SearchBar.jsx";
 
 import "./Navbar.scss";
+import Portrait from "../Profiles/Portrait/Portrait.jsx";
 
 /**
  * ! Creates the Navbar component
@@ -34,7 +35,9 @@ const Navbar = () => {
         {/* TODO: Fix the Searchbar animation */}
         <SearchBar />
       </div>
-      <div className="navbar-avatar"></div>
+      <div className="navbar-avatar">
+        <Portrait/>
+      </div>
     </div>
   );
 };
