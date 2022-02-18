@@ -33,8 +33,8 @@ const CollConstructor = () => {
     setContentType(contentTypes.text);
   }, []);
 
-  const TestConst = () => {
-    console.log("TEST");
+  const switchContent = (fileType) => {
+    setContentType(contentTypes[fileType]);
   };
 
   // TODO: Delete Test class (Margin to view the component better)
@@ -58,22 +58,22 @@ const CollConstructor = () => {
         </select>
       </div>
       <div className="coll-constructor-buttons">
-        <div onClick={() => TestConst()}>
-          <NewPostLink />
-        </div>
-        <div onClick={() => TestConst()}>
-          <NewPostPhoto />
-        </div>
-        <div onClick={() => TestConst()}>
-          <NewPostVideo />
-        </div>
-        <div onClick={() => TestConst()}>
+        <div onClick={() => switchContent("text")}>
           <NewPostText />
         </div>
-        <div onClick={() => TestConst()}>
+        <div onClick={() => switchContent("link")}>
+          <NewPostLink />
+        </div>
+        <div onClick={() => switchContent("photo")}>
+          <NewPostPhoto />
+        </div>
+        <div onClick={() => switchContent("video")}>
+          <NewPostVideo />
+        </div>
+        <div onClick={() => switchContent("survey")}>
           <NewPostSurvey />
         </div>
-        <div onClick={() => TestConst()}>
+        <div onClick={() => switchContent("file")}>
           <NewPostDocument />
         </div>
       </div>
