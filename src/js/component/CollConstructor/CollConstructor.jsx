@@ -1,6 +1,7 @@
 import React from "react";
 
 import ContentText from "./ContentArea/ContentText/ContentText.jsx";
+import ContentFile from "./ContentArea/ContentFile/ContentFile.jsx";
 
 import NewPostLink from "../Buttons/NewPostButtons/NewPostLink.jsx";
 import NewPostPhoto from "../Buttons/NewPostButtons/NewPostPhoto.jsx";
@@ -50,7 +51,8 @@ const CollConstructor = () => {
         name="collContent"
         id="collContent"
       >
-        <ContentText />
+        {/* <ContentText /> */}
+        <ContentFile fileTypes={["JPG", "PNG", "GIF"]} />
       </div>
       {/* TODO: Think whether it's better to use a div or an actual button */}
       {/* TODO: The alineation is not the same from the design but this one is easier to implent */}
