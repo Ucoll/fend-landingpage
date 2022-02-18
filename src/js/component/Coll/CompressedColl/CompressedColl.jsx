@@ -8,6 +8,7 @@ import Favorite from "../../Buttons/Favorite/Favorite.jsx";
 import Share from "../../Buttons/Share/Share.jsx";
 
 import "./CompressedColl.scss";
+import Portrait from "../../Profiles/Portrait/Portrait.jsx";
 
 /**
  * ! Creates the Compressed Coll component
@@ -17,7 +18,7 @@ import "./CompressedColl.scss";
 const CompressedColl = () => {
   return (
     <div className="compressed-container test">
-      <div className="compressed-avatar"> </div>
+      <div className="compressed-avatar"> <Portrait/> </div>
       <div className="compressed-name">
         <p>OvidioSantoro</p>
         <p className="compressed-secondary">Estudios Literarios</p>

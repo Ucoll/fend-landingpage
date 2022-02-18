@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 
 import "./ProfileSideMenu.scss";
+import Portrait from "../../Profiles/Portrait/Portrait.jsx";
 
 /**
  * ! Create the side menu of the profile. Hover/Collapsible
@@ -20,7 +21,7 @@ const ProfileSideMenu = () => {
     <div className="button-collapse-menu"> 
         <div className="collapse-menu"> <Icon icon="prime:window-minimize"/></div>
      </div>
-    <div className="profilesidemenu-avatar"></div>
+    <div className="profilesidemenu-avatar"> <Portrait/> </div>
       <div className="profilesidemenu-firstsection">              
         <p className="profile-name">Keili Rosales Ramirez</p>
         <p className="profile-college">Universidad Alejandro de Humbold</p>

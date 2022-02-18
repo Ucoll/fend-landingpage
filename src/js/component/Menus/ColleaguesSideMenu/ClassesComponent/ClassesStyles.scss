@@ -5,7 +5,7 @@ $elements: 4;
   margin: 0.25rem;
   width: 7rem;
   height: 2.5rem;
-  background-color: red;
+  background-color: rgb(250, 124, 124);
   border-radius: 0.3rem;
   cursor: pointer;
   list-style: none;
@@ -40,11 +40,9 @@ $elements: 4;
   
 }
 
-
-
 @for $i from 1 through $elements {
   .classes-container li:nth-child(#{$i}) {
-    transform: translateX(4.65rem / ($elements) * ($i - 1));
+    transform: translateX(4.54rem / ($elements) * ($i - 1));
     z-index: 10 * $i;
     
   }

@@ -34,7 +34,16 @@ const HomeView = () => {
             <CompressedColl />
           </li>
           <li className="coll">
+            <CompressedColl />
+          </li>
+          <li className="coll">
             <Coll />
+          </li>
+          <li className="coll">
+            <Coll />
+          </li>
+          <li className="coll">
+            <CompressedColl />
           </li>
         </ul>
         <ul className="right-collapsables">

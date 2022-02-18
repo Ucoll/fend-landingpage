@@ -26,9 +26,22 @@
   width: 90%;
   justify-self: center;
   align-self: center;
-  background-color: green;
+  background-color: transparent;
   border-radius: 100%;
   cursor: pointer;
+}
+
+.compressed-avatar .circular-portrait {
+     width: 4.8rem;
+  height: 4.8rem;
+  margin: 0;
+  background-color: transparent;
+}
+
+.compressed-avatar .circular-portrait img.portrait-img{
+    width: 4.8rem;
+  height: 4.8rem;
+  margin: 0;
 }
 
 .compressed-name {

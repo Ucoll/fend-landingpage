@@ -57,6 +57,10 @@ li.coll + li.coll {
   margin-top: 2rem;
 }
 
+li.coll:last-child {
+    margin-bottom: 1rem;
+}
+
 .right-collapsables {
   display: block;
   position: relative;
@@ -70,5 +74,4 @@ li.coll + li.coll {
 
 .right-collapsables li.menu:last-child {
   border-radius: 0.8rem;
-  // margin-top: 35rem;
 }

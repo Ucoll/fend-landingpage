@@ -5,12 +5,11 @@
     position: relative;
     overflow: hidden;
     border-radius: 50%;
-    background-color: rgb(64, 93, 95);
-    margin: 0.25rem;
+    background-color:transparent;
+    margin: 0rem;
 }
 
 .circular-portrait img.portrait-img{
     width: 3rem;
     height: max-content;
-    cursor: pointer;
 }

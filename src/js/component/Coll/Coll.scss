@@ -28,10 +28,24 @@
   width: 80%;
   justify-self: center;
   align-self: center;
-  background-color: green;
+  background-color: transparent;
   border-radius: 100%;
   cursor: pointer;
 }
+
+.coll-avatar .circular-portrait {
+  width: 4.8rem;
+  height: 4.8rem;
+  margin: 0;
+  background-color: transparent;
+}
+
+.coll-avatar .circular-portrait img.portrait-img{
+  width: 4.8rem;
+  height: 4.8rem;
+  margin: 0;
+}
+
 
 .coll-name {
   grid-area: name;
