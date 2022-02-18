@@ -8,6 +8,8 @@ import Favorite from "../Buttons/Favorite/Favorite.jsx";
 import Share from "../Buttons/Share/Share.jsx";
 
 import "./Coll.scss";
+import Portrait from "../Profiles/Portrait/Portrait.jsx";
+import TicketPostIt from "../Buttons/TicketPost-It/TicketPostIt.jsx";
 
 /**
  * ! Creates the Coll component
@@ -17,7 +19,7 @@ import "./Coll.scss";
 const Coll = () => {
   return (
     <div className="coll-container test">
-      <div className="coll-avatar"> </div>
+      <div className="coll-avatar"> <Portrait/> </div>
       <div className="coll-name">
         <p>OvidioSantoro</p>
         <p className="coll-secondary">Estudios Literarios</p>
@@ -28,7 +30,7 @@ const Coll = () => {
       </div>
       <div className="coll-menu">
         <div className="coll-postit">
-          <Icon icon="charm:menu-meatball" />
+          <TicketPostIt />
         </div>
       </div>
       <div className="coll-text">
