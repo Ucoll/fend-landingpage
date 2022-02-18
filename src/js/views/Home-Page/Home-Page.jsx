@@ -1,14 +1,14 @@
 import React from "react";
 
 import Navbar from "../../component/Navbar/Navbar.jsx";
-import Coll from "../../component/Coll/Coll.jsx";
+import Coll from "../../component/Home-Page/Menus/Coll/Coll.jsx";
 import ProfileSideMenu from "../../component/Menus/ProfileSideMenu/ProfileSideMenu.jsx";
 import ColleaguesSideMenu from "../../component/Menus/ColleaguesSideMenu/ColleaguesSideMenu.jsx";
 import ResourcesMenu from "../../component/Menus/Resources/ResourcesMenu.jsx";
 import DemoCalendar from "./CalendarSideMenuDemo.png";
 
 import './Home-Page.scss';
-import CompressedColl from "../../component/Coll/CompressedColl/CompressedColl.jsx";
+import CompressedColl from "../../component/Home-Page/Menus/Coll/CompressedColl/CompressedColl.jsx";
 /**
  * ! View -> Home-Page
  * * AslanSN - 2022-02-18
