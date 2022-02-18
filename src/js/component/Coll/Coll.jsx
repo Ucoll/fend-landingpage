@@ -9,6 +9,7 @@ import Share from "../Buttons/Share/Share.jsx";
 
 import "./Coll.scss";
 import Portrait from "../Profiles/Portrait/Portrait.jsx";
+import TicketPostIt from "../Buttons/TicketPost-It/TicketPostIt.jsx";
 
 /**
  * ! Creates the Coll component
@@ -29,7 +30,7 @@ const Coll = () => {
       </div>
       <div className="coll-menu">
         <div className="coll-postit">
-          <Icon icon="charm:menu-meatball" />
+          <TicketPostIt />
         </div>
       </div>
       <div className="coll-text">

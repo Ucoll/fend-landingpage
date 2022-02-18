@@ -9,6 +9,7 @@ import Share from "../../Buttons/Share/Share.jsx";
 
 import "./CompressedColl.scss";
 import Portrait from "../../Profiles/Portrait/Portrait.jsx";
+import TicketPostIt from "../../Buttons/TicketPost-It/TicketPostIt.jsx";
 
 /**
  * ! Creates the Compressed Coll component
@@ -29,7 +30,7 @@ const CompressedColl = () => {
       </div>
       <div className="compressed-menu">
         <div className="compressed-postit">
-          <Icon icon="charm:menu-meatball" />
+          <TicketPostIt/>
         </div>
       </div>
       <div className="compressed-text"></div>

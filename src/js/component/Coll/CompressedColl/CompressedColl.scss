@@ -73,11 +73,11 @@
 }
 
 .compressed-postit {
-  width: 33%;
-  height: 80%;
+  position: absolute;
   border-radius: 1rem;
-  margin: auto;
-  background-color: black;
+  margin: 0;
+  background-color: transparent;
+  transform: translate(1.3125rem, -1.875rem);
 }
 
 .compressed-text {
