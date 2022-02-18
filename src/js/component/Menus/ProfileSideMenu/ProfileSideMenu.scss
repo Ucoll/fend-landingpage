@@ -1,0 +1,86 @@
+/**
+ * ! Styles for the Profile Side Menu component
+ * * Keikeka - 2022-02-13
+ */
+
+.profilesidemenu-container {
+  height: 24.188rem;
+  width: 15.75rem;
+  border-radius: 0.8rem;
+  padding: 1%;
+  background-color: #ffeac7;
+}
+
+.collapse-menu {
+  float: right;
+  cursor: pointer;
+}
+
+.profilesidemenu-avatar {
+  border-radius: 100%;
+  width: 9rem;
+  height: 9rem;
+  background-color: transparent;
+  margin: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  padding: 0;
+  cursor: pointer;
+}
+
+.profilesidemenu-avatar .circular-portrait {
+  width: 9rem;
+  height: 9rem;
+  aspect-ratio: 1/1;
+  background-color: transparent;
+}
+
+.profilesidemenu-avatar .circular-portrait img.portrait-img {
+  width: 9rem;
+  height: max-content;
+  aspect-ratio: 1/1;
+}
+
+.profilesidemenu-firstsection {
+  text-align: center;
+}
+
+.profile-name {
+  margin: 0;
+  font-size: 1.2rem;
+  font-family: Fanwood Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25rem;
+  cursor: default;
+}
+
+.profile-college {
+  margin: 0;
+  font-size: 0.8rem;
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.8rem;
+  cursor: default;
+}
+
+.profile-description {
+  margin: 0;
+  font-size: 0.6rem;
+  padding: 2%;
+  font-family: Poppins;
+  font-style: normal;
+  font-size: 0.6rem;
+  letter-spacing: -0.011em;
+  cursor: default;
+}
+
+.profile-secondsection {
+  border-radius: 3%;
+  font-family: Poppins;
+  font-style: normal;
+  font-size: 0.8rem;
+  letter-spacing: -0.011em;
+  text-align: center;
+}
