@@ -1,11 +1,11 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 
-import LikeButtons from "../Buttons/Like/LikeButtons.jsx";
-import Thread from "../Buttons/Thread/Thread.jsx";
-import Comment from "../Buttons/Comment/Comment.jsx";
-import Favorite from "../Buttons/Favorite/Favorite.jsx";
-import Share from "../Buttons/Share/Share.jsx";
+import LikeButtons from "../../Buttons/Like/LikeButtons.jsx";
+import Thread from "../../Buttons/Thread/Thread.jsx";
+import Comment from "../../Buttons/Comment/Comment.jsx";
+import Favorite from "../../Buttons/Favorite/Favorite.jsx";
+import Share from "../../Buttons/Share/Share.jsx";
 
 import "./CompressedColl.scss";
 

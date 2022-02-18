@@ -1,6 +1,6 @@
 import React from "react";
 
-import Resource from "./Resource.jsx";
+import Resource from "./Components/Resource.jsx";
 import Collapse from "../../Buttons/Collapse/Collapse.jsx";
 
 import "./ResourcesMenu.scss";
