@@ -1,14 +1,14 @@
 import React from "react";
 
 import CoverBackground from "./Cover Background.jpg";
-import Portrait from "../Profiles/Portrait/Portrait.jsx";
+import Portrait from "../../StaticComponents/Portraits/Portrait/Portrait.jsx";
 
 import './Cover.scss';
 
 /**
  * ! Cover with Portrait 
  * * AslanSN - 2022-02-16
- * TODO:////@params props {props}
+ * TODO: @params props {props}
  */
 const Cover = () => {
   return (

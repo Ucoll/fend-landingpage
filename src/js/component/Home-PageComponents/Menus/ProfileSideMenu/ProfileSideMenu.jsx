@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 
 import "./ProfileSideMenu.scss";
-import Portrait from "../../Profiles/Portrait/Portrait.jsx";
+import Portrait from "../../../StaticComponents/Portraits/Portrait/Portrait.jsx";
 
 /**
  * ! Create the side menu of the profile. Hover/Collapsible

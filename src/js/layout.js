@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import injectContext from "./store/appContext";
 
 import HomePage from "./views/Home-Page/Home-Page.jsx";
+import Profile from "./views/Profile/Profile.jsx";
+import ScrapProfile from "./views/Profile/ScrapProfileView/ScrapProfile.jsx";
 
 
 /**
@@ -21,7 +23,9 @@ const Layout = () => {
       <BrowserRouter basename="/">
         <div>
           <Switch>
-            <Route exact path="/" component={HomePage} />
+            {/* <Route exact path="/" component={HomePage} /> */}
+            {/* TODO: <Route exact path="/profile" component={Profile} /> */}
+            <ScrapProfile/>
           </Switch>
         </div>
       </BrowserRouter>
