@@ -29,6 +29,7 @@ const CollConstructor = () => {
 
   const [contentType, setContentType] = useState();
 
+  // TODO: This might be received via props in order to use this for the "Edit Coll" option
   useEffect(() => {
     setContentType(contentTypes.text);
   }, []);
@@ -85,7 +86,7 @@ const CollConstructor = () => {
         {contentType}
       </div>
       <div className="coll-constructor-cancel">CANCEL</div>
-      {/* Onclick -> Submit the form */}
+      {/* TODO:  Onclick -> Submit the form */}
       <div className="coll-constructor-send">SEND</div>
     </form>
   );
