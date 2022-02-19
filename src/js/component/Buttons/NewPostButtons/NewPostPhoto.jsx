@@ -1,5 +1,4 @@
 import React from "react";
-import { Icon } from "@iconify/react";
 
 /**
  * ! Creates the Button to create a New Photo Coll

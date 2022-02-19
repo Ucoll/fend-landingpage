@@ -101,6 +101,34 @@
       margin-left: 24rem;
     }
   }
+
+  .content-link {
+    width: 100%;
+    height: 4rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    border: 1.5px dashed blue;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+
+  iframe,
+  .contentlink-nolink {
+    margin-left: 11.47rem;
+    width: 41.25rem;
+    height: 23.25rem;
+    font-size: 2rem;
+    border: 1.5px dashed blue;
+    text-align: center;
+
+    div {
+      padding-top: 7rem;
+    }
+
+    svg {
+      font-size: 6rem;
+    }
+  }
 }
 
 .coll-constructor-cancel {

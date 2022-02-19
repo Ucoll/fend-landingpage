@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import ContentText from "./ContentArea/ContentText/ContentText.jsx";
 import ContentFile from "./ContentArea/ContentFile/ContentFile.jsx";
+import ContentLink from "./ContentArea/ContentLink/ContentLink.jsx";
 
 import NewPostLink from "../Buttons/NewPostButtons/NewPostLink.jsx";
 import NewPostPhoto from "../Buttons/NewPostButtons/NewPostPhoto.jsx";
@@ -19,7 +20,7 @@ import "./CollConstructor.scss";
  */
 const CollConstructor = () => {
   const contentTypes = {
-    link: "",
+    link: <ContentLink />,
     photo: <ContentFile fileTypes={["JPG", "PNG", "GIF"]} />,
     video: <ContentFile fileTypes={["MP4", "AVI", "WEBM", "MOV", "MKV"]} />,
     text: <ContentText />,

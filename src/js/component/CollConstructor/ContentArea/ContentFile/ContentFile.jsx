@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 
 import { FileUploader } from "react-drag-drop-files";
 
-// const fileTypes = ["JPG", "PNG", "GIF"];
-
 function ContentFile(props) {
   const [file, setFile] = useState(null);
   const handleChange = (file) => {
