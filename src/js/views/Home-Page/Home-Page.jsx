@@ -1,7 +1,7 @@
 import React from "react";
 
-import Navbar from "../../component/Navbar/Navbar.jsx";
-import Coll from "../../component/Home-Page/Menus/Coll/Coll.jsx";
+import Navbar from "../../component/StaticComponents/Navbar/Navbar.jsx";
+import Coll from "../../component/Home-PageComponents/Coll/Coll.jsx";
 import ProfileSideMenu from "../../component/Menus/ProfileSideMenu/ProfileSideMenu.jsx";
 import ColleaguesSideMenu from "../../component/Menus/ColleaguesSideMenu/ColleaguesSideMenu.jsx";
 import ResourcesMenu from "../../component/Menus/Resources/ResourcesMenu.jsx";
