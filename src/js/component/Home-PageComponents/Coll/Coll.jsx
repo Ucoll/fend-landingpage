@@ -1,15 +1,15 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 
-import LikeButtons from "../../../Buttons/Like/LikeButtons.jsx";
-import Thread from "../../../Buttons/Thread/Thread.jsx";
-import Comment from "../../../Buttons/Comment/Comment.jsx";
-import Favorite from "../../../Buttons/Favorite/Favorite.jsx";
-import Share from "../../../Buttons/Share/Share.jsx";
+import LikeButtons from "../../StaticComponents/Buttons/Like/LikeButtons.jsx";
+import Thread from "../../StaticComponents/Buttons/Thread/Thread.jsx";
+import Comment from "../../StaticComponents/Buttons/Comment/Comment.jsx";
+import Favorite from "../../StaticComponents/Buttons/Favorite/Favorite.jsx";
+import Share from "../../StaticComponents/Buttons/Share/Share.jsx";
+import Portrait from "../../StaticComponents/Portraits/Portrait/Portrait.jsx";
+import TicketPostIt from "../../StaticComponents/Buttons/TicketPost-It/TicketPostIt.jsx";
 
 import "./Coll.scss";
-import Portrait from "../../../Portraits/Portrait/Portrait.jsx";
-import TicketPostIt from "../../../Buttons/TicketPost-It/TicketPostIt.jsx";
 
 /**
  * ! Creates the Coll component

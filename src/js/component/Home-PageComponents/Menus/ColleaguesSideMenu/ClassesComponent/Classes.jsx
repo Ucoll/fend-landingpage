@@ -1,7 +1,8 @@
 import React from 'react';
 
+import Portrait from "../../../../StaticComponents/Portraits/Portrait/Portrait.jsx";
+
 import './ClassesStyles.scss';
-import Portrait from '../../../Portraits/Portrait/Portrait.jsx';
 
 /**
  * ! Classes preview section 
