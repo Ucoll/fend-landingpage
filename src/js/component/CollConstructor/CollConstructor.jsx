@@ -24,7 +24,9 @@ const CollConstructor = () => {
     video: <ContentFile fileTypes={["MP4", "AVI", "WEBM", "MOV", "MKV"]} />,
     text: <ContentText />,
     survey: "",
-    file: <ContentFile fileTypes={["DOC", "TXT", "PDF", "XLS", "ODT"]} />,
+    file: (
+      <ContentFile fileTypes={["DOC", "TXT", "PDF", "XLS", "ODT", "MP3"]} />
+    ),
   };
 
   const [contentType, setContentType] = useState();

@@ -17,7 +17,6 @@ function ContentFile(props) {
         name="file"
         types={Array.from(props.fileTypes)}
       />
-      6
     </>
   );
 }
