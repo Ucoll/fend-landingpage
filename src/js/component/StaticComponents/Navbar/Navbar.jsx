@@ -9,7 +9,7 @@ import NewPost from "../Buttons/NewPost/NewPost.jsx";
 import SearchBar from "../Buttons/SearchBar/SearchBar.jsx";
 
 import "./Navbar.scss";
-import Portrait from "../Profiles/Portrait/Portrait.jsx";
+import Portrait from "../Portraits/Portrait/Portrait.jsx";
 
 /**
  * ! Creates the Navbar component
