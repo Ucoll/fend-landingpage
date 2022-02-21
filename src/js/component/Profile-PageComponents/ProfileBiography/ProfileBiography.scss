@@ -1,4 +1,40 @@
+$tags: 6;
+
 .profile-biography {
+  width: 57rem;
+  height: 18.563rem;
   background-color: #ffeac7;
   box-shadow: 0.5rem 0.5rem 0.5rem #a9a8a8;
+  margin-left: 5rem;
+}
+
+.biography-editicon {
+  float: right;
+  padding: 1rem;
+}
+
+.biography-content p {
+  margin-top: -1rem;
+  padding-bottom: 1rem;
+  font-size: 0.9rem;
+  padding-left: 6rem;
+  padding-right: 3rem;
+  font-family: Poppins;
+  font-weight: normal;
+  float: left;
+}
+
+.biography-tags li {
+  margin-left: -3rem;
+  font-size: 0.8rem;
+  font-family: Poppins;
+  font-weight: normal;
+  position: absolute;
+  padding-top: 0.5rem; 
+}
+
+@for $i from 1 through $tags {
+  .biography-tags li:nth-child(#{$i}) {
+    transform: translateY(18rem / ($tags) * ($i - 1));
+  }
 }
