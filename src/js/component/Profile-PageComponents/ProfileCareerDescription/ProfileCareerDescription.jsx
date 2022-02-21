@@ -1,7 +1,7 @@
 import React from "react";
 // import PropTypes from "prop-types";
 import "./ProfileCareerDescription.scss";
-import ProfileEditButton from "../Buttons/ProfileEditButton/ProfileEditButton.jsx";
+import ProfileEditButton from "../../StaticComponents/Buttons/ProfileEditButton/ProfileEditButton.jsx";
 
 /**
  * ! Creates the Profile Career Description
