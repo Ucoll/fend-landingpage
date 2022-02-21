@@ -6,6 +6,7 @@ $tags: 6;
   background-color: #ffeac7;
   box-shadow: 0.5rem 0.5rem 0.5rem #a9a8a8;
   margin-left: 5rem;
+  position: relative;
 }
 
 .biography-editicon {
@@ -30,7 +31,7 @@ $tags: 6;
   font-family: Poppins;
   font-weight: normal;
   position: absolute;
-  padding-top: 0.5rem; 
+  margin-top: 0.65rem;
 }
 
 @for $i from 1 through $tags {
