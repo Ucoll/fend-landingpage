@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import ProfileBiography from "./component/Profile-PageComponents/ProfileBiography/ProfileBiography.jsx";
 
 import injectContext from "./store/appContext";
 
@@ -26,7 +25,7 @@ const Layout = () => {
           <Switch>
             {/* <Route exact path="/" component={HomePage} /> */}
             {/* TODO: <Route exact path="/profile" component={Profile} /> */}
-            <ProfileBiography/>
+            <ScrapProfile/>
           </Switch>
         </div>
       </BrowserRouter>

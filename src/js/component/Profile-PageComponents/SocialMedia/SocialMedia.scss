@@ -1,0 +1,26 @@
+.profile-socialmedia {
+  width: 17.938rem;
+  height: 2.875rem;
+  background-color: #ecf5ea;
+  box-shadow: 0.5rem 0.5rem 0.5rem #a9a8a8;
+  position: relative;
+}
+
+.button-socialmedia {
+  height: 20px;
+  width: 25px;
+}
+
+.button-socialmedia:hover {
+  cursor: pointer;
+}
+
+.socialmedia-content {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  padding-left: 1.5rem;
+  padding-right: 2rem;
+  font-family: Poppins;
+  font-weight: normal;
+  float: left;
+}
