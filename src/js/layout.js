@@ -26,7 +26,7 @@ const Layout = () => {
           <Switch>
             {/* <Route exact path="/" component={HomePage} /> */}
             {/* TODO: <Route exact path="/profile" component={Profile} /> */}
-            <ProfileBiography/>
+            <ScrapProfile/>
           </Switch>
         </div>
       </BrowserRouter>
