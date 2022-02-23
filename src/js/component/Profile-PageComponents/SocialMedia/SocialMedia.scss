@@ -1,14 +1,17 @@
 .profile-socialmedia {
-  width: 17.938rem;
-  height: 2.875rem;
+  width: 12.5rem;
+  height: 2.5rem;
   background-color: #ecf5ea;
   box-shadow: 0.5rem 0.5rem 0.5rem #a9a8a8;
   position: relative;
 }
 
 .button-socialmedia {
-  height: 20px;
-  width: 25px;
+  height: 2rem;
+  width: 2rem;
+  float: left;
+  margin-left: 1rem;
+  margin-top: 0.2rem;
 }
 
 .button-socialmedia:hover {
@@ -16,11 +19,12 @@
 }
 
 .socialmedia-content {
-  margin-top: 1rem;
-  font-size: 0.8rem;
-  padding-left: 1.5rem;
-  padding-right: 2rem;
+  font-size: 1rem;
   font-family: Poppins;
-  font-weight: normal;
-  float: left;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-left: 5rem;
+  position: absolute;
+  cursor: default;
 }
