@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import ProfileBiography from "./component/Profile-PageComponents/ProfileBiography/ProfileBiography.jsx";
 
 import injectContext from "./store/appContext";
 
