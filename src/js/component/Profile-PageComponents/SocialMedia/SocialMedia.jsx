@@ -1,4 +1,5 @@
 import React from "react";
+import { Icon } from "@iconify/react";
 // import PropTypes from "prop-types";
 import "./SocialMedia.scss";
 
@@ -10,7 +11,7 @@ import "./SocialMedia.scss";
  * TODO: It is missing to add the props to connect it with the back. At the moment, it has only test data.
  */
 
-const SocialMedia = () => {
+const ProfileSocialMedia = () => {
   return (
     <div className="profile-socialmedia">
       <Icon className="button-socialmedia" icon="akar-icons:twitter-fill" />
@@ -18,8 +19,9 @@ const SocialMedia = () => {
       <div className="socialmedia-content">
         <p>@AmSoC</p>
       </div>
+      
     </div>
   );
 };
 
-export default SocialMedia;
+export default ProfileSocialMedia;
