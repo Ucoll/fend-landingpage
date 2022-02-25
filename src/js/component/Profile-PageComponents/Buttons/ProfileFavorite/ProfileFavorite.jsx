@@ -10,7 +10,7 @@ import "./ProfileFavorite.scss";
 const ProfileFavorite = () => {
   return (
     <div className="button-profilefavorite">
-      <Icon className="button-icon"  icon="bxs:star"/>
+      <Icon className="button-iconfavorite"  icon="bxs:star"/>
       <div className="mycolls-title">Favorites</div>
     </div>
   );
