@@ -1,7 +1,7 @@
 import React from "react";
 // import PropTypes from "prop-types";
 import "./ProfileUserInfo.scss";
-import ProfileEditButton from "../ProfileEditButton/ProfileEditButton.jsx";
+import ProfileEditButton from "../../StaticComponents/Buttons/ProfileEditButton/ProfileEditButton.jsx";
 
 /**
  * ! Creates the Profile User Info
