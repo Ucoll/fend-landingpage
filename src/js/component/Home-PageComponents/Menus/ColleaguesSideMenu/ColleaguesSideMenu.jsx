@@ -5,13 +5,18 @@ import PortraitWithName from "../../../StaticComponents/Portraits/PortraitWithNa
 import Collapse from "../../../StaticComponents/Buttons/Collapse/Collapse.jsx";
 import Classes from "./ClassesComponent/Classes.jsx";
 
+const ColleaguesSideMenuPropotypes = {
+  university: PropTypes.string,
+  name: PropTypes.string,
+  className: PropTypes.string,
+}
 /**
  * ! Side Menu -> Colleagues
  * * AslanSN - 2022-02-14
  *
- * @params props {props}
+ * @params {props} props 
  */
-const ColleaguesSideMenu = () => {
+const ColleaguesSideMenu = (props) => {
   return (
     <>
       <div className="colleagues-side-menu">
@@ -20,15 +25,6 @@ const ColleaguesSideMenu = () => {
         <h4>Harvard University | Department of Science</h4>
         <div className="colleagues">
           <ul>
-            <li>
-              <PortraitWithName />
-            </li>
-            <li>
-              <PortraitWithName />
-            </li>
-            <li>
-              <PortraitWithName />
-            </li>
             <li>
               <PortraitWithName />
             </li>

@@ -6,6 +6,10 @@ import { Icon } from "@iconify/react";
 import "./ProfileSideMenu.scss";
 import Portrait from "../../../StaticComponents/Portraits/Portrait/Portrait.jsx";
 
+const ProfileSideMenuProptypes = {
+
+}
+
 /**
  * ! Create the side menu of the profile. Hover/Collapsible
  * * Keikeka (KeiliRosales) - 2022-02-07
@@ -13,27 +17,39 @@ import Portrait from "../../../StaticComponents/Portraits/Portrait/Portrait.jsx"
  * @returns React Component
  * 
  */
-
-const ProfileSideMenu = () => {
+const ProfileSideMenu = ({ ...props }) => {
   return (
     <>
-    <div className="profilesidemenu-container"> 
-    <div className="button-collapse-menu"> 
-        <div className="collapse-menu"> <Icon icon="prime:window-minimize"/></div>
-     </div>
-    <div className="profilesidemenu-avatar"> <Portrait/> </div>
-      <div className="profilesidemenu-firstsection">              
-        <p className="profile-name">Keili Rosales Ramirez</p>
-        <p className="profile-college">Universidad Alejandro de Humbold</p>
-        <p className="profile-description">Graduada en el 2010 en Publicidad.... bla bla bla t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p> 
-      </div> 
-      <br></br>
-      <div className="profile-secondsection">
-        <Link to="/profile">Profile</Link><br></br>
-        <Link to="/mycolls">Colls</Link><br></br>
-        <Link to="/myfavorites">Favorites</Link><br></br>
+      <div className="profilesidemenu-container">
+        <div className="button-collapse-menu">
+          <div className="collapse-menu">
+            {" "}
+            <Icon icon="prime:window-minimize" />
+          </div>
+        </div>
+        <div className="profilesidemenu-avatar">
+          {" "}
+          <Portrait />{" "}
+        </div>
+        <div className="profilesidemenu-firstsection">
+          <p className="profile-name">Keili Rosales Ramirez</p>
+          <p className="profile-college">Universidad Alejandro de Humbold</p>
+          <p className="profile-description">
+            Graduada en el 2010 en Publicidad.... bla bla bla t is a long
+            established fact that a reader will be distracted by the readable
+            content of a page when looking at its layout.{" "}
+          </p>
+        </div>
+        <br></br>
+        <div className="profile-secondsection">
+          <Link to="/profile">Profile</Link>
+          <br></br>
+          <Link to="/mycolls">Colls</Link>
+          <br></br>
+          <Link to="/myfavorites">Favorites</Link>
+          <br></br>
+        </div>
       </div>
-    </div>
     </>
   );
 };

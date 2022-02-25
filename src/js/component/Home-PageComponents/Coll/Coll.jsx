@@ -1,5 +1,6 @@
 import React from "react";
-import { Icon } from "@iconify/react";
+
+import * as PropTypes from "prop-types";
 
 import LikeButtons from "../../StaticComponents/Buttons/Like/LikeButtons.jsx";
 import Thread from "../../StaticComponents/Buttons/Thread/Thread.jsx";
@@ -11,88 +12,96 @@ import TicketPostIt from "../../StaticComponents/Buttons/TicketPost-It/TicketPos
 
 import "./Coll.scss";
 
+const CollPropTypes = {
+  name: PropTypes.string.isRequired,
+  studies: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  likes: PropTypes.number.isRequired,
+  content: PropTypes.string.isRequired,
+  threads: PropTypes.number.isRequired,
+  comments: PropTypes.number.isRequired,
+  favs: PropTypes.number.isRequired,
+  shares: PropTypes.number.isRequired,
+  portrait: PropTypes.string.isRequired,
+  postItColor: PropTypes.string.isRequired,
+};
+
 /**
  * ! Creates the Coll component
  * * OvidioSantoro - 2022-02-13
+ * @params props {props}
  * @returns React Component
  */
-const Coll = () => {
+const Coll = ({ ...props }) => {
   return (
     <div className="coll-container test">
-      <div className="coll-avatar"> <Portrait/> </div>
+      <div className="coll-avatar">
+        <Portrait 
+          avatar={props.portrait} 
+          alt={props.name} 
+        />
+      </div>
       <div className="coll-name">
-        <p>OvidioSantoro</p>
-        <p className="coll-secondary">Estudios Literarios</p>
-        <p className="coll-secondary">12/02/2022 20:24</p>
+        <p>{props.name}</p>
+        <p className="coll-secondary">{props.studies}</p>
+        <p className="coll-secondary">{props.date}</p>
       </div>
-      <div className="coll-title">
-        Give me your money and I will make you rich, I promise!!!
-      </div>
+      <div className="coll-title">{props.title}</div>
+       {/*props.content.title.value  */}
       <div className="coll-menu">
         <div className="coll-postit">
-          <TicketPostIt />
+          <TicketPostIt color={props.postItColor} />
         </div>
       </div>
-      <div className="coll-text">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-          veniam nihil enim eveniet aliquid necessitatibus quo deserunt
-          quibusdam natus iste, vero eos accusantium doloribus cum nemo
-          nesciunt, aspernatur obcaecati ducimus cumque! Ratione modi obcaecati
-          libero facilis totam recusandae expedita odit. Rerum commodi dolorem
-          expedita tempora molestiae neque fugiat dolorum, ad, eligendi fugit
-          repellendus similique vero, voluptatem dolore temporibus quam dolor
-          provident eum molestias est harum ipsa doloribus eaque.
-        </p>
-        <p>
-          {" "}
-          Rem minus vero dolores consectetur maiores libero beatae ducimus id!
-          Rerum, quo esse. Fugiat, repellat. Facilis repellendus distinctio sunt
-          perspiciatis amet omnis quas iste consequuntur iusto eligendi, maxime
-          corporis expedita deleniti ullam eum quod, nisi nihil blanditiis quo.
-          Possimus quos molestias ea asperiores ut corrupti illo inventore,
-          architecto tempora.
-        </p>{" "}
-        <p>
-          Ratione, assumenda excepturi? Impedit aliquam inventore accusantium
-          officia, maiores facere consequatur quibusdam, nihil qui aliquid
-          deleniti facilis maxime, repellendus corrupti odio! Porro architecto
-          odio consectetur doloremque sed commodi culpa deleniti iste ratione id
-          illo ad ipsam at adipisci aliquam voluptate eveniet fugit odit dolorum
-          quas, quia omnis? Deserunt sit doloremque corrupti non quis voluptate
-          enim soluta sequi modi! Ut fuga assumenda placeat, quos a dolor cumque
-          minima esse, ex velit voluptate!
-        </p>{" "}
-        <p>
-          Fugiat beatae nam enim unde eligendi quae. Quos odio aperiam magni. Ex
-          cum quae voluptas. Soluta libero commodi vel! Necessitatibus
-          voluptates esse qui cupiditate ab nostrum rerum similique repudiandae
-          provident voluptate rem nobis ducimus, debitis vero voluptatibus
-          eveniet vel expedita obcaecati veritatis. Necessitatibus ullam,
-          officia autem quam voluptatum eos cumque voluptas repellat nostrum
-          consectetur, error voluptate, officiis sapiente similique? Quibusdam,
-          optio totam!
-        </p>
-      </div>
+      <div className="coll-text">{props.content}</div>
       <div className="coll-like">
-        <LikeButtons />
+        <LikeButtons likes={props.likes}/>
       </div>
       <div className="coll-thread">
-        <Thread /> Thread
+        <Thread />
+        {props.thread < 1
+          ? `Thread`
+          : props.thread === 1
+          ? `${props.thread} Thread`
+          : `${props.thread} Threads`}
       </div>
       <div className="coll-comment">
         <div className="coll-comments">
-          <Comment /> <span>12 Comments</span>
+          <Comment />
+          <span>
+            {props.comments < 1
+              ? `Comments`
+              : props.comments === 1
+              ? `${props.comments} Comment`
+              : `${props.comments} Comments`}
+          </span>
         </div>
         <div className="coll-favs">
-          <Favorite /> <span className="coll-favers">8 Favs</span>
+          <Favorite />
+          <span className="coll-favers">
+            {props.favs < 1
+              ? `Favs`
+              : props.favs === 1
+              ? `${props.favs} Fav`
+              : `${props.favs} Favs`}
+          </span>
         </div>
       </div>
       <div className="coll-share">
-        <Share /> Share
+        <Share />
+        <span className="coll-sharers">
+          {props.shares < 1
+            ? `Shares`
+            : props.shares === 1
+            ? `${props.shares} Share`
+            : `${props.shares} Shares`}
+        </span>
       </div>
     </div>
   );
 };
+
+Coll.PropTypes = CollPropTypes;
 
 export default Coll;

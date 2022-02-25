@@ -15,6 +15,43 @@ import './Home-Page.scss';
  * * AslanSN - 2022-02-18
  */
 const HomeView = () => {
+  const [data, setData] = useState([]);
+  const [colls, setColls] = useState([]);
+
+  useEffect(() => {
+    fetch(url, {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => setData(data))
+      .catch((err) => setError(String(err)));
+  }, []);
+
+  /**
+   * ! Limits the number of items of the array
+   * * AslanSN - 2022-02-25
+   * ? To show more pre-loaded Colls change the last number of the splice number.
+   * @param {Array} array
+   * @returns
+   */
+  const limiter = (array) => array.splice(0, 12);
+
+  /**
+   * ! Creates a limited Array of Colls
+   * * AslanSN - 2022-02-22
+   * @param {Object} object 
+   * @returns 
+   */
+  const collArrCreator = (object) => {
+    const colls = [...object.colls];
+    const maxCollsDisplay = limiter(colls);
+
+    return maxCollsDisplay;
+  };
+
   return (
     <>
       <Navbar />
@@ -30,21 +67,6 @@ const HomeView = () => {
         <ul className="coll-ul">
           <li className="coll">
             <Coll />
-          </li>
-          <li className="coll">
-            <CompressedColl />
-          </li>
-          <li className="coll">
-            <CompressedColl />
-          </li>
-          <li className="coll">
-            <Coll />
-          </li>
-          <li className="coll">
-            <Coll />
-          </li>
-          <li className="coll">
-            <CompressedColl />
           </li>
         </ul>
         <ul className="right-collapsables">

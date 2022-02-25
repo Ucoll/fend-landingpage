@@ -1,4 +1,4 @@
-import propTypes from "prop-types";
+import * as PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
 
 import "./LikeButtonsStyle.scss";
@@ -22,7 +22,7 @@ const LikeButtons = () => {
 
   // TODO: When liked state changes, send a Fetch request to update the value on the database.
   // TODO: Update the "score" too and change the code returned to accept the value as props.
-  //useEffect(() => {}, [liked]);
+  useEffect(() => {}, [liked]);
 
   const switchLike = () => {
     liked === "unliked"
@@ -65,9 +65,7 @@ const LikeButtons = () => {
           />
         </svg>
       </div>
-      <div className="like-score">513</div>
-      {/* TODO: The line above is kept for testing reasons. Remove it and uncomment the line below for production */}
-      {/* <div className="like-score">{propTypes.score}</div> */}
+      <div className="like-score">{props.score}</div>
       <div className="button-dislike" onClick={switchDislike}>
         <svg
           width="42"
@@ -100,8 +98,8 @@ const LikeButtons = () => {
 };
 
 // TODO: Add the rest of the necessary props.
-// LikeButtons.propTypes = {
-//   score: PropTypes.number,
-// };
+LikeButtons.propTypes = {
+  score: PropTypes.number,
+};
 
 export default LikeButtons;
