@@ -45,12 +45,19 @@ const HomeView = () => {
    * @param {Object} object 
    * @returns 
    */
-  const collArrCreator = (object) => {
-    const colls = [...object.colls];
-    const maxCollsDisplay = limiter(colls);
-
-    return maxCollsDisplay;
+  const collArrCreator = (array) => {
+    const rawColls = [...array.colls];
+    setColls(limiter(rawColls));
   };
+
+  const collListee = (object) => (
+    object.type === 'file' ? 
+    <li className="compressed-coll">
+      <CompressedColl />
+    </li>
+   : 
+   <li className="coll" 
+  );
 
   return (
     <>
@@ -65,9 +72,7 @@ const HomeView = () => {
           </li>
         </ul>
         <ul className="coll-ul">
-          <li className="coll">
-            <Coll />
-          </li>
+         
         </ul>
         <ul className="right-collapsables">
           <li className="menu">
