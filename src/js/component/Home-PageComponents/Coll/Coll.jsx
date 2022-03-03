@@ -13,18 +13,18 @@ import TicketPostIt from "../../StaticComponents/Buttons/TicketPost-It/TicketPos
 import "./Coll.scss";
 
 const CollPropTypes = {
+  portrait: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   studies: PropTypes.string.isRequired,
+  postItColor: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  likes: PropTypes.number.isRequired,
-  content: PropTypes.string.isRequired,
+  like: PropTypes.object.isRequired, // Must have number of likes and if it was liked, disliked or none by the User
+  content: PropTypes.string.isRequired, // Review if it's string or object, if object ... will be needed
   threads: PropTypes.number.isRequired,
   comments: PropTypes.number.isRequired,
   favs: PropTypes.number.isRequired,
   shares: PropTypes.number.isRequired,
-  portrait: PropTypes.string.isRequired,
-  postItColor: PropTypes.string.isRequired,
 };
 
 /**
@@ -48,7 +48,6 @@ const Coll = ({ ...props }) => {
         <p className="coll-secondary">{props.date}</p>
       </div>
       <div className="coll-title">{props.title}</div>
-       {/*props.content.title.value  */}
       <div className="coll-menu">
         <div className="coll-postit">
           <TicketPostIt color={props.postItColor} />
@@ -56,7 +55,7 @@ const Coll = ({ ...props }) => {
       </div>
       <div className="coll-text">{props.content}</div>
       <div className="coll-like">
-        <LikeButtons likes={props.likes}/>
+        <LikeButtons likes={...props.like}/>
       </div>
       <div className="coll-thread">
         <Thread />

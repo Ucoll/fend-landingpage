@@ -8,7 +8,7 @@ import ResourcesMenu from "../../component/Home-PageComponents/Menus/Resources/R
 import DemoCalendar from "./CalendarSideMenuDemo.png";
 import CompressedColl from "../../component/Home-PageComponents/Coll/CompressedColl/CompressedColl.jsx";
 
-import './Home-Page.scss';
+import "./Home-Page.scss";
 
 /**
  * ! View -> Home-Page
@@ -17,6 +17,8 @@ import './Home-Page.scss';
 const HomeView = () => {
   const [data, setData] = useState([]);
   const [colls, setColls] = useState([]);
+  const [user, setUser] = useState({});
+  const [allUsers, setAllUsers] = useState([])
 
   useEffect(() => {
     fetch(url, {
@@ -30,6 +32,7 @@ const HomeView = () => {
       .catch((err) => setError(String(err)));
   }, []);
 
+
   /**
    * ! Limits the number of items of the array
    * * AslanSN - 2022-02-25
@@ -37,26 +40,68 @@ const HomeView = () => {
    * @param {Array} array
    * @returns
    */
-  const limiter = (array) => array.splice(0, 12);
+  const limiter = (array) => array.splice(array.length - 1, 12);
 
   /**
    * ! Creates a limited Array of Colls
    * * AslanSN - 2022-02-22
-   * @param {Object} object 
-   * @returns 
+   * @param {Object} object
+   * @returns
    */
-  const collArrCreator = (array) => {
-    const rawColls = [...array.colls];
-    setColls(limiter(rawColls));
-  };
+  // const collArrCreator = () => setColls(limiter([...data.Coll]));
+  
+  colls = setColls(limiter([...data.Coll]));
 
-  const collListee = (object) => (
-    object.type === 'file' ? 
-    <li className="compressed-coll">
-      <CompressedColl />
+  const userCollMatch = (dataObj, collObj) => dataObj.User.id === collObj.Coll.sender_id;
+
+  // const collCompleter = (dataArr, collsArr) =>{
+  //   const match = dataA
+  // }
+  
+
+  /**
+   * ! Listee to display colls
+   * ? To use with .map
+   * ? Differenciates colls from displayed colls
+   * * AslanSN - 2022-02-03
+   * @param {Value} object
+   * @returns Component
+   */
+  const collListener = (object) => (
+    <li className="coll">
+      {object.type === "file" ? (
+        <CompressedColl
+          portrait={object.portrait} //
+          postItColor={object.postItColor} // ?
+          name={object.name} //
+          studies={object.studies} //
+          date={object.date} //?
+          title={object.title}
+          content={object.content}
+          threads={object.threads}
+          comments={object.comments} //
+          likes={object.likes}
+          liked={object.liked}
+          favs={object.favs}
+          // shares={object.shares} 
+        />
+      ) : (
+        <Coll
+          name={object.name}
+          studies={object.studies}
+          date={object.date}
+          title={object.title}
+          likes={object.likes}
+          content={object.content}
+          threads={object.threads}
+          comments={object.comments}
+          favs={object.favs}
+          shares={object.shares}
+          portrait={object.portrait}
+          postItColor={object.postItColor}
+        />
+      )}
     </li>
-   : 
-   <li className="coll" 
   );
 
   return (
@@ -71,9 +116,7 @@ const HomeView = () => {
             <ColleaguesSideMenu />
           </li>
         </ul>
-        <ul className="coll-ul">
-         
-        </ul>
+        <ul className="coll-ul">{colls.map()}</ul>
         <ul className="right-collapsables">
           <li className="menu">
             <img src={DemoCalendar} alt="Demo Calendar Side Menu" />

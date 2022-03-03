@@ -1,21 +1,30 @@
 import React from "react";
+import * as PropTypes from "prop-types";
 
 import "./Resource.scss";
+
+ResourceProptypes = {
+  userName: PropTypes.string.isRequired,
+  classroomName: PropTypes.string,
+  file: PropTypes.string.isRequired,
+}
 
 /**
  * ! Creates the Resource component
  * * OvidioSantoro - 2022-02-15
+ * @param {props} props
  * @returns React Component
  */
-const Resource = () => {
+const Resource = props => {
   return (
     <div className="resource">
-      {/* Change hard-coded data with props sent from the back */}
-      <span className="resource-user">Ejemplito Martínez del Falo</span> shared
-      in <span className="resource-class">Biology II</span>
-      <p className="resource-file">VideoBiologyFunny.avi</p>
+      <span className="resource-user">{props.userName}</span> shared
+      in <span className="resource-class">{props.classroomName}</span>
+      <p className="resource-file">{props.file}</p>
     </div>
   );
 };
+
+Resource.PropTypes = ResourceProptypes;
 
 export default Resource;

@@ -13,22 +13,26 @@ import TicketPostIt from "../../../StaticComponents/Buttons/TicketPost-It/Ticket
 import "./CompressedColl.scss";
 
 const CompressedCollProptypes = {
-  name: PropTypes.string,
-  studies: PropTypes.string,
-  date: PropTypes.string,
-  title: PropTypes.string,
-  content: PropTypes.string,
-  threads: PropTypes.number,
-  comments: PropTypes.number,
-  favs: PropTypes.number,
-  shares: PropTypes.number,
-  postItColor: PropTypes.string,
+  portrait: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  studies: PropTypes.string.isRequired,
+  postItColor: PropTypes.string.isRequired,
+  liked: PropTypes.bool.isRequired,
+  date: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  likes: PropTypes.number.isRequired,
+  content: PropTypes.string.isRequired, // Review if it's string or object, if object ... will be needed
+  threads: PropTypes.number.isRequired,
+  comments: PropTypes.number.isRequired,
+  favs: PropTypes.number.isRequired,
+  shares: PropTypes.number.isRequired,
 };
 
 /**
  * ! Creates the Compressed Coll component
  * * OvidioSantoro - 2022-02-16
- * @returns React Component
+ * @param {props} props - Properties for a compressed Coll 
+ * @returns {Component} - React Component
  */
 const CompressedColl = ({ ...props }) => {
   return (
@@ -49,7 +53,7 @@ const CompressedColl = ({ ...props }) => {
       </div>
       <div className="compressed-text">{props.content}</div>
       <div className="compressed-like">
-        <LikeButtons />
+        <LikeButtons {...props.liked}/>
       </div>
       <div className="compressed-thread">
         <Thread />

@@ -7,38 +7,36 @@ import Portrait from "../../../../StaticComponents/Portraits/Portrait/Portrait.j
 
 import "./ClassesStyles.scss";
 
-
-const ClasesProptypes = {
-  class: PropTypes.string.isRequired,
+const ClassesPreviewProptypes = {
+  className: PropTypes.string.isRequired,
+  classColleagues: PropTypes.object.isRequired, //Must all colleagues of the class (5 Colleagues max?)
 };
 
 /**
  * ! Classes preview section
  * ? for the Colleagues side menu
  * * AslanSN - 2022-02-15
- *
- * @params props {props}
+ * @param {props} props
+ * @returns {Component} Classes Preview React Component
  */
 const ClassesPreview = (props) => {
-  const [classColleagues, setClassColleagues] = useState([]);
-  const [error, setError]= useState("");
 
-
-
+  // TODO: CONDITION -> if more than 4 portraits display a + icon
+  
   const portraitsListing = (props) => (
-      <li>
-          <Portrait avatar={props.colleague} className="classes-portrait" />
-      </li>
+    <li>
+      <Portrait avatar={props.portrait} className="classes-portrait" />
+    </li>
   );
 
   return (
     <div className="classes-container">
       <span>{props.class}</span>
-      <ul></ul>
+      <ul>{...props.classColleagues}</ul> {/* //TODO: Listing algorithm */}
     </div>
   );
 };
 
-Portrait.PropTypes = PortraitProptypes;
+ClassesPreview.propTypes = ClassesPreviewProptypes;
 
 export default ClassesPreview;

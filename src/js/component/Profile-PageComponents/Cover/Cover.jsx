@@ -1,27 +1,36 @@
 import React from "react";
+import * as PropTypes from "prop-types";
 
-import CoverBackground from "./Cover Background.jpg";
+// import CoverBackground from "./Cover Background.jpg";
 import Portrait from "../../StaticComponents/Portraits/Portrait/Portrait.jsx";
 
 import './Cover.scss';
 
+const CoverPropTypes = {
+  backgroundCoverImage: PropTypes.string,
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+};
+
 /**
  * ! Cover with Portrait 
  * * AslanSN - 2022-02-16
- * TODO: @params props {props}
+ * @param {props} props 
  */
-const Cover = () => {
+const Cover = props => {
   return (
     <>
       <div className="cover">
         <div className="container">
-          <img src={CoverBackground} alt="Background Cover" />
+          <img src={props.backgroundCoverImage} alt="Background Cover" />
         </div>
-        <Portrait/>
-        <h1> Sosa de la Costa</h1>
+        <Portrait {...props.avatar}/>
+        <h1> {props.name}</h1>
       </div>
     </>
   );
 };
+
+Cover.PropTypes = CoverPropTypes;
 
 export default Cover;

@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 import "./InterestTagStyled.scss";
 
 const InteresTagProptypes = {
-  class: PropTypes.string,
-}
+  interest: PropTypes.string,
+};
 
 const InterestTag = (props) => {
   return (
@@ -23,7 +23,7 @@ const InterestTag = (props) => {
         />
       </svg>
       <div className="span-container">
-        <span>{props.class}</span>
+        <span>{props.interest}</span>
       </div>
     </div>
   );

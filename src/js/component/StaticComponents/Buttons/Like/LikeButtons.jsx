@@ -3,6 +3,10 @@ import React, { useState, useEffect } from "react";
 
 import "./LikeButtonsStyle.scss";
 
+const LikeButtonsPropTypes = {
+  liked: PropTypes.string.isRequired,
+  likes: PropTypes.string.isRequired,
+} 
 /**
  * ! Like & Dislike buttons with a "score" counter
  * * AslanSN & OvidioSantoro
@@ -10,7 +14,7 @@ import "./LikeButtonsStyle.scss";
  * @params props {props}
  * @returns React Component
  */
-const LikeButtons = () => {
+const LikeButtons = props => {
   const [liked, setLiked] = useState([""]);
   const [disliked, setDisliked] = useState([""]);
 
