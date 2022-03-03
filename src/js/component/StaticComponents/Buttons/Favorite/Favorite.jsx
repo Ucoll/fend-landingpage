@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from "react";
+import * as PropTypes from "prop-types";
 
 import "./Favorite.scss";
+
+const FavoritePropTypes = {
+  favorites: PropTypes.bool.isRequired, // TODO: Discus if boolean or string
+}
 
 /**
  * ! Creates the Favorite Button
  * * Keikeka (KeiliRosales) & OvidioSantoro
  * * 2022-02-13
- * @params props {props}
+ * @param {props} props 
  * @returns React Component
  */
-const Favorite = () => {
-  const [favorite, setFavorite] = useState([""]);
+const Favorite = props => {
+  const [favorite, setFavorite] = useState(props.favorited);
 
   // TODO: On component load, send a Fetch request to get the actual value. Remove the hard-coded values.
   useEffect(() => {
@@ -48,5 +53,7 @@ const Favorite = () => {
     </div>
   );
 };
+
+Favorite.PropTypes = FavoritePropTypes;
 
 export default Favorite;

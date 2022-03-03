@@ -3,8 +3,8 @@ import * as PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 
-import "./ProfileSideMenu.scss";
 import Portrait from "../../../StaticComponents/Portraits/Portrait/Portrait.jsx";
+import "./ProfileSideMenu.scss";
 
 const ProfileSideMenuProptypes = {
   name: PropTypes.string.isRequired,

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
-
 import * as PropTypes from "prop-types";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 import Portrait from "../../../../StaticComponents/Portraits/Portrait/Portrait.jsx";
 

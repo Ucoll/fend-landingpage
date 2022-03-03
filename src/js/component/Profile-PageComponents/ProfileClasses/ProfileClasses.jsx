@@ -1,5 +1,4 @@
 import React from "react";
-
 import * as PropTypes from "prop-types";
 
 import ProfileEditButton from "../ProfileEditButton/ProfileEditButton.jsx";
@@ -18,42 +17,34 @@ const ProfileClassesPropTypes = {
  * @param {props} Props 
  */
 const ProfileClasses = props => {
-  // const [subjects, setSubjects] = useState([])
-  // const [leftSubjects, setLeftSubjects] = useState([]);
-  // const [rightSubjects, setRightSubjects] = useState([]);
+  const [subjects, setSubjects] = useState(props.subjects)
+  const [leftSubjects, setLeftSubjects] = useState([]);
+  const [rightSubjects, setRightSubjects] = useState([]);
   
   /**
    * TODO: Complete algorithm
-   * @param {array} props
+   * @param {value} Subject
    */
-  const leftSubjectsListener = (props) => {
-    <>
-      <p>subject</p>
-      <p>subject</p>
-      <p>subject</p>
-    </>;
-  };
+  const leftSubjectsListener = (value) => (
+      <p>{value}</p>   
+  );
+
+  /**
+   * TODO: Complete algorithm
+   * @param {value} Subject
+   */
+  const rightSubjectsListener = (value) => (
+      <p>{value}</p>
+  );
 
   /**
    * TODO: Complete algorithm
    * @param {array} props
    */
-  const rightSubjectsListener = (props) => {
+  const subjectsListener = () => {
     <>
-      <p>subject</p>
-      <p>subject</p>
-      <p>subject</p>
-    </>;
-  };
-
-  /**
-   * TODO: Complete algorithm
-   * @param {array} props
-   */
-  const subjectsListener = (props) => {
-    <>
-      <div class="col-6 courses">{leftSubjectsListener(props)}</div>
-      <div class="col-6 courses">{rightSubjectsListener(props)}</div>
+      <div class="col-6 courses">{leftSubjects.map(leftSubjectsListener)}</div>
+      <div class="col-6 courses">{rightSubjects.map(rightSubjectsListener)}</div>
     </>;
   };
 
@@ -67,13 +58,13 @@ const ProfileClasses = props => {
       </div>
       <div className="courses-classes">
         <div class="row">
-          {subjectsListener(props.subjects)} //TODO: Add Listing and sorting of props
+          {subjectsListener()} {/*//TODO: Add Listing and sorting of props and conditions maybe*/}
         </div>
       </div>
     </div>
   );
 };
 
-
+ProfileClasses.PropTypes = ProfileClassesPropTypes;
 
 export default ProfileClasses;

@@ -5,8 +5,9 @@ import "./LikeButtonsStyle.scss";
 
 const LikeButtonsPropTypes = {
   liked: PropTypes.string.isRequired,
-  likes: PropTypes.string.isRequired,
+  likes: PropTypes.number.isRequired,
 } 
+
 /**
  * ! Like & Dislike buttons with a "score" counter
  * * AslanSN & OvidioSantoro
@@ -16,7 +17,7 @@ const LikeButtonsPropTypes = {
  */
 const LikeButtons = props => {
   const [liked, setLiked] = useState([""]);
-  const [disliked, setDisliked] = useState([""]);
+  const [disliked, setDisliked] = useState([""]);  // ?  Needs to be an array of empty strings?
 
   // TODO: On component load, send a Fetch request to get the actual value. Remove the hard-coded values.
   useEffect(() => {
@@ -101,9 +102,6 @@ const LikeButtons = props => {
   );
 };
 
-// TODO: Add the rest of the necessary props.
-LikeButtons.propTypes = {
-  score: PropTypes.number,
-};
+LikeButtons.PropTypes = LikeButtonsPropTypes;
 
 export default LikeButtons;

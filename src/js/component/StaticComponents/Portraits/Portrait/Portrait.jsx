@@ -2,11 +2,10 @@ import React from 'react';
 
 import * as PropTypes from 'prop-types';
 
-
 import './PortraitStyles.scss';
 
 const PortraitProptypes = {
-  avatar: PropTypes.string,
+  avatar: PropTypes.string, //TODO: Even if there's no portrait it's stored in BEND?
   name: PropTypes.string,
 }
 

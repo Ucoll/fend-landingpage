@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import * as PropTypes from "prop-types";
-import "./ColleaguesSideMenuStyles.scss";
+
 import PortraitWithName from "../../../StaticComponents/Portraits/PortraitWithName/PortraitWithName.jsx";
 import Collapse from "../../../StaticComponents/Buttons/Collapse/Collapse.jsx";
 import Classes from "./ClassesComponent/Classes.jsx";
+
+import "./ColleaguesSideMenuStyles.scss";
 
 const ColleaguesSideMenuPropotypes = {
   university: PropTypes.string,

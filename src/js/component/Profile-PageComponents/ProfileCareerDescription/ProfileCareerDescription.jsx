@@ -1,8 +1,9 @@
 import React from "react";
 import * as PropTypes from "prop-types";
-import "./ProfileCareerDescription.scss";
 
 import ProfileEditButton from "../../StaticComponents/Buttons/ProfileEditButton/ProfileEditButton.jsx";
+
+import "./ProfileCareerDescription.scss";
 
 const ProfileCareerDescriptionPropTypes = {
   university: PropTypes.string,

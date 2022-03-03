@@ -1,10 +1,10 @@
 import React from "react";
 import * as PropTypes from "prop-types";
-import "./ProfileBiography.scss";
 
 import ProfileEditButton from "../../StaticComponents/Buttons/ProfileEditButton/ProfileEditButton.jsx";
-
 import InterestTag from "../../Profile-PageComponents/Tags/InterestTag.jsx";
+
+import "./ProfileBiography.scss";
 
 const ProfileBiographyPropTypes = {
   profileBiographyContent: PropTypes.string,
