@@ -84,21 +84,11 @@ const HomeView = () => {
           liked={object.liked}
           favs={object.favs}
           // shares={object.shares} 
+          // * Alternate version: {...object}
         />
       ) : (
         <Coll
-          name={object.name}
-          studies={object.studies}
-          date={object.date}
-          title={object.title}
-          likes={object.likes}
-          content={object.content}
-          threads={object.threads}
-          comments={object.comments}
-          favs={object.favs}
-          shares={object.shares}
-          portrait={object.portrait}
-          postItColor={object.postItColor}
+          {...object}
         />
       )}
     </li>
