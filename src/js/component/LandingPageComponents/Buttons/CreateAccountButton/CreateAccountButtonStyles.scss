@@ -1,0 +1,23 @@
+/*
+! Create Account Button Styles
+* AslanSN - 2022-03-05
+*/
+
+.create-account-button{
+  width: 38.0625rem;
+  height: 7.8125rem;
+  background-color: #E6A561;
+  border-radius: 1.25rem;
+  border: none;
+  font-size: 3rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.create-account-button:hover {
+    background-color: #db9850;
+}
+
+.create-account-button:active {
+    box-shadow: inset 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
+}
