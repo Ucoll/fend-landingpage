@@ -4,7 +4,7 @@ import ProfileBiography from "./component/Profile-PageComponents/ProfileBiograph
 
 import injectContext from "./store/appContext";
 
-import HomePage from "./views/Home-Page/Home-Page.jsx";
+import HomePage from "./views/HomePage/Home-Page.jsx.js";
 import Profile from "./views/Profile/Profile.jsx";
 import ScrapProfile from "./views/Profile/ScrapProfileView/ScrapProfile.jsx";
 
@@ -26,7 +26,7 @@ const Layout = () => {
           <Switch>
             {/* <Route exact path="/" component={HomePage} /> */}
             {/* TODO: <Route exact path="/profile" component={Profile} /> */}
-            <ScrapProfile/>
+            {/* <ScrapProfile/> */}
           </Switch>
         </div>
       </BrowserRouter>
