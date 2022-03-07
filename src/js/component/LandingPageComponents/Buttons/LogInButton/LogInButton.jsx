@@ -5,7 +5,7 @@ import "./LogInButtonStyles.scss";
 /**
  * ! Button -> Log-In
  * * AslanSN - 2022-03-05
- * @returns React Component
+ * @returns React Component 
  */
 const LogInButton = () => {
   return ( 

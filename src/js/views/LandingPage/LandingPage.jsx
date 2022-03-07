@@ -1,6 +1,6 @@
 import React from "react";
-import CreateAccountButton from "../../component/LandingPageComponents/Buttons/CreateAccountButton/CreateAccountButton.jsx";
-import LogInButton from "../../component/LandingPageComponents/Buttons/LogInButton/LogInButton.jsx";
+
+import LoginCard from "../../component/LandingPageComponents/LogInCard/LoginCard.jsx";
 import UCollLogo from "../../component/StaticComponents/Buttons/UCollLogo/UCollLogo.jsx";
 
 import './LandingPageStyles.scss'
@@ -13,8 +13,7 @@ const LandingPage = () => {
     <>
       <div className="landing-page">
         <UCollLogo />
-        <LogInButton />
-        <CreateAccountButton/>
+        <LoginCard/>
       </div>
     </>
   );
