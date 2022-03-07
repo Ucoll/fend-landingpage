@@ -1,12 +1,13 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import ProfileBiography from "./component/Profile-PageComponents/ProfileBiography/ProfileBiography.jsx";
+// import ProfileBiography from "./component/Profile-PageComponents/ProfileBiography/ProfileBiography.jsx";
 
 import injectContext from "./store/appContext";
 
-import HomePage from "./views/Home-Page/Home-Page.jsx";
-import Profile from "./views/Profile/Profile.jsx";
-import ScrapProfile from "./views/Profile/ScrapProfileView/ScrapProfile.jsx";
+// import HomePage from "./views/HomePage/Home-Page.jsx.js";
+import LandingPage from "./views/LandingPage/LandingPage.jsx";
+// import Profile from "./views/Profile/Profile.jsx";
+// import ScrapProfile from "./views/Profile/ScrapProfileView/ScrapProfile.jsx";
 
 
 /**
@@ -26,7 +27,8 @@ const Layout = () => {
           <Switch>
             {/* <Route exact path="/" component={HomePage} /> */}
             {/* TODO: <Route exact path="/profile" component={Profile} /> */}
-            <ScrapProfile/>
+            {/* <ScrapProfile/> */}
+            <LandingPage/>
           </Switch>
         </div>
       </BrowserRouter>
