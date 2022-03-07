@@ -1,13 +1,9 @@
 import React from "react";
 // import PropTypes from "prop-types";
 import "./ProfileBiography.scss";
-<<<<<<< HEAD
-import ProfileEditButton from "../../StaticComponents/Buttons/ProfileEditButton/ProfileEditButton.jsx";
-=======
 
 import ProfileEditButton from "../../StaticComponents/Buttons/ProfileEditButton/ProfileEditButton.jsx";
 
->>>>>>> 344c18855d248403c5eb69a5f2852c69c67b9440
 import InterestTag from "../../Profile-PageComponents/Tags/InterestTag.jsx";
 
 /**
