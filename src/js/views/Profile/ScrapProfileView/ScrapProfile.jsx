@@ -3,6 +3,8 @@ import React from "react";
 import Cover from "../../../component/Profile-PageComponents/Cover/Cover.jsx";
 import ProfileBiography from "../../../component/Profile-PageComponents/ProfileBiography/ProfileBiography.jsx";
 import ProfileCareerDescription from "../../../component/Profile-PageComponents/ProfileCareerDescription/ProfileCareerDescription.jsx";
+import SocialMedia from "../../../component/Profile-PageComponents/SocialMedia/SocialMedia.jsx";
+import ProfileSocialMediaText from "../../../component/Profile-PageComponents/SocialMedia/SocialMediaText.jsx";
 import InterestTags from "../../../component/Profile-PageComponents/Tags/InterestTag.jsx";
 import ProfileClasses from "../../../component/Profile-PageComponents/ProfileClasses/ProfileClasses.jsx";
 import ProfileUserInfo from "../../../component/Profile-PageComponents/ProfileUserInfo/ProfileUserInfo.jsx";
@@ -22,6 +24,8 @@ const ScrapProfile = () => {
       <ProfileFavorite/>
       <ProfileCareerDescription />
       <InterestTags />
+      <SocialMedia />
+      <ProfileSocialMediaText />
       <ProfileBiography/>
       <ProfileClasses />
       <ProfileUserInfo />
