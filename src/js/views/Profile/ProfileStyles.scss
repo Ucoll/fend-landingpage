@@ -1,4 +1,104 @@
 /**
 * ! VIEW STYLES file -> Profile View 
-* * AslanSN - 2022-02-18
+* * AslanSN - 2022-02-18 - Keili Rosales 2022-02-24
 */
+
+body {
+  overflow-x: hidden;
+  background-color: #fff7f3;
+}
+
+body::-webkit-scrollbar {
+  width: 0.7rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #053539;
+  border-radius: 1.25rem;
+  border: none;
+}
+
+.view-profile {
+  background-color: #fff7f3;
+  height: 100%; 
+  display: flex;      
+  width: 100%;
+}
+
+.view-cover{
+  position: absolute; 
+  margin-top: 1rem;
+  margin-left: 9rem;  
+}
+
+.leftpostit {
+  position: relative; 
+  margin-top: 10rem;
+}
+
+.left-careerdescription {
+  display: block;
+  position: absolute;
+  margin-top: 10rem;
+  margin-left: 19rem;
+}
+
+.left-biography {
+  display: block;
+  position: absolute;
+  margin-top: 25rem;
+  margin-left: 12rem;
+}
+
+.left-socialmedia {
+  display: flex;  
+  margin-top: 46rem;  
+  margin-left: 10rem;  
+  margin-right: -8rem;
+  align-content: left;
+}
+
+.rightpostit { 
+  position: relative;
+  margin-top: 16rem; 
+}
+
+.right-buttonmycolls {
+  align-content: right;
+  margin-left: 32rem;
+  
+}
+.right-buttonfavorites {
+  align-content: right;
+  margin-top: 0rem;
+  margin-left: 1rem;  
+  
+}
+
+.right-userinfo {
+  position: absolute;
+  align-content: right;
+  margin-top: 5rem;
+  margin-left: 10rem;  
+  
+}
+
+.right-classes {
+  position: absolute;
+  align-content: right;
+  margin-top: 15rem;
+  margin-left: 18rem;  
+  
+}
+
+.right-classestwo {
+  position: absolute;
+  align-content: right;
+  margin-top: 28rem;
+  margin-left: 18rem;  
+  
+}
