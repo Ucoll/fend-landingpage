@@ -1,7 +1,12 @@
-import React from 'react';
+import React from "react";
+import RegisterCard from "../../../component/LandingPageComponents/RegisterSubviewComponents/RegisterCard/RegisterCard.jsx";
 
 const Register = () => {
-  return(<></>);
-}
+  return (
+    <>
+      <RegisterCard />
+    </>
+  );
+};
 
 export default Register;

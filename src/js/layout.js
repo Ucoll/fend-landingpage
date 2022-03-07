@@ -6,6 +6,7 @@ import injectContext from "./store/appContext";
 
 // import HomePage from "./views/HomePage/Home-Page.jsx.js";
 import LandingPage from "./views/LandingPage/LandingPage.jsx";
+import Register from "./views/LandingPage/RegisterSubview/Register.jsx";
 // import Profile from "./views/Profile/Profile.jsx";
 // import ScrapProfile from "./views/Profile/ScrapProfileView/ScrapProfile.jsx";
 
@@ -28,7 +29,8 @@ const Layout = () => {
             {/* <Route exact path="/" component={HomePage} /> */}
             {/* TODO: <Route exact path="/profile" component={Profile} /> */}
             {/* <ScrapProfile/> */}
-            <LandingPage/>
+            {/* <LandingPage/> */}
+            <Register/>
           </Switch>
         </div>
       </BrowserRouter>
