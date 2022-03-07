@@ -18,14 +18,14 @@ const LoginCard = () => {
       <div className="login-card">
         <div className="container">
           <input
-            type="text"
+            type="email"
             id="email-input"
             name="email-input"
             placeholder="Email"
             required
           />
           <input
-            type="text"
+            type="password"
             id="password-input"
             name="password-input"
             placeholder="Password"

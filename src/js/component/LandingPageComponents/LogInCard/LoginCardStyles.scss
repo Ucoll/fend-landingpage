@@ -15,7 +15,7 @@
     margin: auto;
     margin-top: 1rem;
 
-    & input[type="text"] {
+    & input[type="email"], input[type="password"] {
       border: none;
       border-radius: 1.25rem;
       width: 38.0625rem;
