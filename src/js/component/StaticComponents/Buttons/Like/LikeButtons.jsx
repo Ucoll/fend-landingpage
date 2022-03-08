@@ -15,7 +15,7 @@ const LikeButtonsPropTypes = {
  * @params props {props}
  * @returns React Component
  */
-const LikeButtons = props => {
+const LikeButtons = ({...props}) => {
   const [liked, setLiked] = useState([""]);
   const [disliked, setDisliked] = useState([""]);  // ?  Needs to be an array of empty strings?
 

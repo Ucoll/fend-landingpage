@@ -55,7 +55,7 @@ const Coll = ({ ...props }) => {
       </div>
       <div className="coll-text">{props.content}</div>
       <div className="coll-like">
-        <LikeButtons likes={...props.like}/>
+        <LikeButtons likes={props.like}/>
       </div>
       <div className="coll-thread">
         <Thread />

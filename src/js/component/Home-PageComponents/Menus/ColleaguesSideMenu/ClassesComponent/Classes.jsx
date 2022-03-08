@@ -18,7 +18,7 @@ const ClassesPreviewProptypes = {
  * @param {props} props
  * @returns {Component} Classes Preview React Component
  */
-const ClassesPreview = (props) => {
+const ClassesPreview = ({...props}) => {
 
   // TODO: CONDITION -> if more than 4 portraits display a + icon
   
@@ -31,7 +31,7 @@ const ClassesPreview = (props) => {
   return (
     <div className="classes-container">
       <span>{props.class}</span>
-      <ul>{...props.classColleagues}</ul> {/* //TODO: Listing algorithm */}
+      <ul>{props.classColleagues}</ul> {/* //TODO: Listing algorithm */}
     </div>
   );
 };
