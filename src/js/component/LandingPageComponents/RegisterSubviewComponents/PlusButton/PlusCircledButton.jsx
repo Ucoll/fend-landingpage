@@ -1,13 +1,14 @@
 import React from "react";
 
+import './PlusCircledButton.scss';
 /**
  * !Plus Button
  * * AslanSN - 2022-03-07
  * @returns {svg} Icon - Plus Button - React Component
  */
-const PlusButton = () => {
+const PlusCircledButton = () => {
   return (
-    <buton className="plus-buton">
+    <buton className="plus-circled-button">
       <svg
         width="37"
         height="37"
@@ -24,4 +25,4 @@ const PlusButton = () => {
   );
 }
 
-export default PlusButton;
+export default PlusCircledButton;
