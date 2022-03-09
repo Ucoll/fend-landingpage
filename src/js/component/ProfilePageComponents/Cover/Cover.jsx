@@ -2,6 +2,7 @@ import React from "react";
 
 import CoverBackground from "./Cover Background.jpg";
 import Portrait from "../../StaticComponents/Portraits/Portrait/Portrait.jsx";
+import ProfileEditButton from "../../StaticComponents/Buttons/ProfileEditButton/ProfileEditButton.jsx";
 
 import './Cover.scss';
 
@@ -19,6 +20,9 @@ const Cover = () => {
         </div>
         <Portrait/>
         <h1> Sosa de la Costa</h1>
+        <div className="cover-editicon">
+        <ProfileEditButton />
+      </div>
       </div>
     </>
   );

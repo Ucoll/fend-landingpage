@@ -4,6 +4,7 @@
   background-color: #ecf5ea;
   box-shadow: 0.5rem 0.5rem 0.5rem #a9a8a8;
   position: relative;
+  cursor: pointer;
 }
 
 .button-socialmedia {
@@ -12,10 +13,6 @@
   float: left;
   margin-left: 1rem;
   margin-top: 0.2rem;
-}
-
-.button-socialmedia:hover {
-  cursor: pointer;
 }
 
 .socialmedia-content {

@@ -4,7 +4,7 @@ import "./ProfileBiography.scss";
 
 import ProfileEditButton from "../../StaticComponents/Buttons/ProfileEditButton/ProfileEditButton.jsx";
 
-import InterestTag from "../../Profile-PageComponents/Tags/InterestTag.jsx";
+import InterestTag from "../../ProfilePageComponents/Tags/InterestTag.jsx";
 
 /**
  * ! Creates the Profile Biography

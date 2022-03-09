@@ -9,7 +9,7 @@ import LandingPage from "./views/LandingPage/LandingPage.jsx";
 import Register from "./views/LandingPage/RegisterSubview/Register.jsx";
 import Messages from "./views/Messages/Messages.jsx";
 // import Profile from "./views/Profile/Profile.jsx";
-// import ScrapProfile from "./views/Profile/ScrapProfileView/ScrapProfile.jsx";
+import ScrapProfile from "./views/Profile/ScrapProfileView/ScrapProfile.jsx";
 
 
 /**
@@ -29,10 +29,9 @@ const Layout = () => {
           <Switch>
             {/* <Route exact path="/" component={HomePage} /> */}
             {/* TODO: <Route exact path="/profile" component={Profile} /> */}
-            {/* <ScrapProfile/> */}
+            <ScrapProfile/>
             {/* <LandingPage/> */}
             {/* <Register/> */}
-            <Messages/>
           </Switch>
         </div>
       </BrowserRouter>
