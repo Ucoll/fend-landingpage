@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 import "./Favorite.scss";
+
+const FavoritePropTypes = {
+  widht: PropTypes.string,
+  height: PropTypes.string,
+};
 
 /**
  * ! Creates the Favorite Button
  * * Keikeka (KeiliRosales) & OvidioSantoro
  * * 2022-02-13
- * @params props {props}
+ * @param {props} props - Width and Height properties 
  * @returns React Component
  */
-const Favorite = () => {
+const Favorite = (props) => {
   const [favorite, setFavorite] = useState([""]);
 
   // TODO: On component load, send a Fetch request to get the actual value. Remove the hard-coded values.
@@ -30,8 +36,8 @@ const Favorite = () => {
   return (
     <div className="button-favorite" onClick={switchFavorite}>
       <svg
-        width="35"
-        height="30"
+        width={!props.width ? "35" : props.width}
+        height={!props.height ? "30" : props.height}
         viewBox="0 0 553 528"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -48,5 +54,7 @@ const Favorite = () => {
     </div>
   );
 };
+
+Favorite.PropTypes = FavoritePropTypes;
 
 export default Favorite;
