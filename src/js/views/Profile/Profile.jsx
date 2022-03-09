@@ -1,14 +1,15 @@
 import React from "react";
 
 import Navbar from "../../component/StaticComponents/Navbar/Navbar.jsx";
-import Cover from "../../component/Profile-PageComponents/Cover/Cover.jsx";
-import ProfileCareerDescription from "../../component/Profile-PageComponents/ProfileCareerDescription/ProfileCareerDescription.jsx";
-import ProfileBiography from "../../component/Profile-PageComponents/ProfileBiography/ProfileBiography.jsx";
-import SocialMedia from "../../component/Profile-PageComponents/SocialMedia/SocialMedia.jsx";
+import Cover from "../../component/ProfilePageComponents/Cover/Cover.jsx";
+import ProfileCareerDescription from "../../component/ProfilePageComponents/ProfileCareerDescription/ProfileCareerDescription.jsx";
+import ProfileBiography from "../../component/ProfilePageComponents/ProfileBiography/ProfileBiography.jsx";
+import SocialMedia from "../../component/ProfilePageComponents/SocialMedia/SocialMedia.jsx";
 import MyColls from "../../component/StaticComponents/Buttons/MyColls/MyColls.jsx";
-import ProfileFavorite from "../../component/Profile-PageComponents/Buttons/ProfileFavorite/ProfileFavorite.jsx";
-import ProfileClasses from "../../component/Profile-PageComponents/ProfileClasses/ProfileClasses.jsx";
-import ProfileUserInfo from "../../component/Profile-PageComponents/ProfileUserInfo/ProfileUserInfo.jsx"
+import ProfileFavorite from "../../component/ProfilePageComponents/Buttons/ProfileFavorite/ProfileFavorite.jsx";
+import ProfileClasses from "../../component/ProfilePageComponents/ProfileClasses/ProfileClasses.jsx";
+import ProfileUserInfo from "../../component/ProfilePageComponents/ProfileUserInfo/ProfileUserInfo.jsx"
+
 
 import "../Profile/ProfileStyles.scss";
 
@@ -22,9 +23,7 @@ const Profile = () => {
     <>
       <Navbar />
       <div className="view-profile">
-        <div className="view-cover"><Cover /></div>
-        
-
+        <div className="view-cover"><Cover /></div>        
         <ul className="leftpostit">
           <li className="left-careerdescription">
             <ProfileCareerDescription />

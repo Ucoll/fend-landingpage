@@ -1,7 +1,7 @@
 import React from "react";
 
 import Profile from "../Profile.jsx";
-import HomeView from "../../Home-Page/Home-Page.jsx";
+// import HomeView from "../../Home-Page/Home-Page.jsx";
 
 /**
  * ! View -> Scrap Profile View

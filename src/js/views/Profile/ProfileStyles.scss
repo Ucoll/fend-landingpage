@@ -24,9 +24,13 @@ body::-webkit-scrollbar-thumb {
 
 .view-profile {
   background-color: #fff7f3;
-  height: 100%; 
+  width: 100vw;
+  height: 8.7vh;
   display: flex;      
-  width: 100%;
+}
+
+.view-profile ul li {
+  list-style: none;
 }
 
 .view-cover{
@@ -35,70 +39,70 @@ body::-webkit-scrollbar-thumb {
   margin-left: 9rem;  
 }
 
-.leftpostit {
+ul.leftpostit-ul {
+  display: block;
   position: relative; 
   margin-top: 10rem;
 }
 
-.left-careerdescription {
+li.left-careerdescription {
+  margin-top: 20rem;
+  margin-left: 17rem;  
+}
+
+li.left-biography {
+  margin-top: 2rem;
+  margin-left: 9rem;
+}
+
+li.left-socialmedia {
+  display: inline-flex;  
+  margin-top: 3rem;  
+  margin-left: 8rem;  
+  margin-right: -3rem;  
+}
+
+ul.rightpostit-ul { 
   display: block;
-  position: absolute;
-  margin-top: 10rem;
-  margin-left: 19rem;
-}
-
-.left-biography {
-  display: block;
-  position: absolute;
-  margin-top: 25rem;
-  margin-left: 12rem;
-}
-
-.left-socialmedia {
-  display: flex;  
-  margin-top: 46rem;  
-  margin-left: 10rem;  
-  margin-right: -8rem;
-  align-content: left;
-}
-
-.rightpostit { 
   position: relative;
-  margin-top: 16rem; 
-}
-
-.right-buttonmycolls {
-  align-content: right;
-  margin-left: 32rem;
-  
-}
-.right-buttonfavorites {
-  align-content: right;
-  margin-top: 0rem;
-  margin-left: 1rem;  
   
 }
 
-.right-userinfo {
+li.right-buttonmycolls {
   position: absolute;
   align-content: right;
-  margin-top: 5rem;
-  margin-left: 10rem;  
+  margin-top: 15rem;
+  margin-left: 15rem;
+   
+}
+li.right-buttonfavorites {
+  position: absolute;
+  align-content: right;
+  margin-top: 15rem;
+  margin-left: 25rem;  
+  
+}
+
+li.right-userinfo {
+  position: absolute;
+  align-content: right;
+  margin-top: 20rem;
+  margin-left: -10rem;  
   
 }
 
 .right-classes {
   position: absolute;
   align-content: right;
-  margin-top: 15rem;
-  margin-left: 18rem;  
+  margin-top: 29rem;
+  margin-left: 1rem;  
   
 }
 
 .right-classestwo {
   position: absolute;
   align-content: right;
-  margin-top: 28rem;
-  margin-left: 18rem;  
+  margin-top: 42rem;
+  margin-left: 1rem;  
   
 }
