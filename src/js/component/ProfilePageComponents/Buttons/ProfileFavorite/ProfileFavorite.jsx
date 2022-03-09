@@ -11,7 +11,7 @@ const ProfileFavorite = () => {
   return (
     <div className="button-profilefavorite">
       <Icon className="button-iconfavorite"  icon="bxs:star"/>
-      <div className="mycolls-title">Favorites</div>
+      <div className="profilefavorite-title">Favorites</div>
     </div>
   );
 };
