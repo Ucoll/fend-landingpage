@@ -2,12 +2,15 @@
  * ! Global Styles for the buttons
  * * OvidioSantoro - 2022-02-01
  */
+body {
+  background-color: #ffeac7;
 
-/**
-* ! DELETE THIS - TESTING DIV
-*/
-.testing-div {
-  margin: 25%;
+  &::selection,
+  &::-moz-selection,
+  &::-webkit-selection {
+    background-color: rgba(3, 63, 89, 1);
+    color: #fff;
+  }
 }
 
 .button-coll {

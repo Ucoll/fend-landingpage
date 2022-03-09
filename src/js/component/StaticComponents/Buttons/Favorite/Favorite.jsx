@@ -5,17 +5,19 @@ import "./Favorite.scss";
 
 const FavoritePropTypes = {
   favorites: PropTypes.bool.isRequired, // TODO: Discus if boolean or string
-}
+  width: PropTypes.string,
+  height: PropTypes.string,
+};
 
 /**
  * ! Creates the Favorite Button
  * * Keikeka (KeiliRosales) & OvidioSantoro
  * * 2022-02-13
- * @param {props} props 
+ * @param {props} props - Width and Height properties 
  * @returns React Component
  */
-const Favorite = props => {
-  const [favorite, setFavorite] = useState(props.favorited);
+const Favorite = (props) => {
+  const [favorite, setFavorite] = useState([""]);
 
   // TODO: On component load, send a Fetch request to get the actual value. Remove the hard-coded values.
   useEffect(() => {
@@ -35,8 +37,8 @@ const Favorite = props => {
   return (
     <div className="button-favorite" onClick={switchFavorite}>
       <svg
-        width="35"
-        height="30"
+        width={!props.width ? "35" : props.width}
+        height={!props.height ? "30" : props.height}
         viewBox="0 0 553 528"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

@@ -1,12 +1,12 @@
 import React from "react";
 
 import Navbar from "../../component/StaticComponents/Navbar/Navbar.jsx";
-import Coll from "../../component/Home-PageComponents/Coll/Coll.jsx";
-import ProfileSideMenu from "../../component/Home-PageComponents/Menus/ProfileSideMenu/ProfileSideMenu.jsx";
-import ColleaguesSideMenu from "../../component/Home-PageComponents/Menus/ColleaguesSideMenu/ColleaguesSideMenu.jsx";
-import ResourcesMenu from "../../component/Home-PageComponents/Menus/Resources/ResourcesMenu.jsx";
+import Coll from "../../component/HomePageComponents/Coll/Coll.jsx";
+import ProfileSideMenu from "../../component/HomePageComponents/Menus/ProfileSideMenu/ProfileSideMenu.jsx";
+import ColleaguesSideMenu from "../../component/HomePageComponents/Menus/ColleaguesSideMenu/ColleaguesSideMenu.jsx";
+import ResourcesMenu from "../../component/HomePageComponents/Menus/Resources/ResourcesMenu.jsx";
 import DemoCalendar from "./CalendarSideMenuDemo.png";
-import CompressedColl from "../../component/Home-PageComponents/Coll/CompressedColl/CompressedColl.jsx";
+import CompressedColl from "../../component/HomePageComponents/Coll/CompressedColl/CompressedColl.jsx";
 
 import "./Home-Page.scss";
 
