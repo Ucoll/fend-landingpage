@@ -7,6 +7,7 @@ import injectContext from "./store/appContext";
 // import HomePage from "./views/HomePage/Home-Page.jsx.js";
 import LandingPage from "./views/LandingPage/LandingPage.jsx";
 import Register from "./views/LandingPage/RegisterSubview/Register.jsx";
+import Messages from "./views/Messages/Messages.jsx";
 // import Profile from "./views/Profile/Profile.jsx";
 import ScrapProfile from "./views/Profile/ScrapProfileView/ScrapProfile.jsx";
 
