@@ -1,0 +1,23 @@
+.button-ucolllogohorizontal {
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 5px #eeeaea;
+  border-radius: 1rem;
+  width: 16rem;
+  cursor: pointer;
+}
+
+.button-ucolllogohorizontal:hover {
+  box-shadow: 5px 5px 5px #eeeaea;
+  width: 16rem;
+}
+
+.button-ucolllogohorizontal:active {
+  box-shadow: inset 3px 3px #eeeaea;
+}
+
+.button-ucolllogohorizontal img {
+  width: 25vh;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
