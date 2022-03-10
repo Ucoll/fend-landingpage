@@ -3,6 +3,7 @@ import * as PropTypes from "prop-types";
 
 // import CoverBackground from "./Cover Background.jpg";
 import Portrait from "../../StaticComponents/Portraits/Portrait/Portrait.jsx";
+import ProfileEditButton from "../../StaticComponents/Buttons/ProfileEditButton/ProfileEditButton.jsx";
 
 import './Cover.scss';
 
@@ -26,6 +27,9 @@ const Cover = props => {
         </div>
         <Portrait {...props.avatar}/>
         <h1> {props.name}</h1>
+        <div className="cover-editicon">
+        <ProfileEditButton />
+      </div>
       </div>
     </>
   );

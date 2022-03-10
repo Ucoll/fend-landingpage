@@ -12,7 +12,7 @@
 }
 
 .userinfo-email p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding: 1rem;
   font-family: Poppins;
   font-weight: normal;
@@ -22,13 +22,13 @@
 
 .userinfo-container {
   margin-top: 1rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding-left: 1.5rem;
   padding-right: 2rem;
   font-family: Poppins;
   font-weight: normal;
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1.5fr 1fr 1fr;
+  grid-template-columns: 2fr 1.5fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas: "member date . karma counter";
 }
