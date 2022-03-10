@@ -16,7 +16,6 @@ const Checkbox = props => {
   return (
     <label className="checkbox-container">
       <input type="checkbox" name="checkbox" className="checkbox" />
-      {/* <Icon icon="akar-icons:check" /> */}
       <span className="checkmark" />
       {props.text}
     </label>
