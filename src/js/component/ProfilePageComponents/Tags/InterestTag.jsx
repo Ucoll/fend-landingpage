@@ -1,13 +1,13 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 
 import "./InterestTagStyled.scss";
 
 const InterestTagPropTypes = {
-  width: PropTypes.string,
-  heigth: PropTypes.string,
-  color: PropTypes.string,
-  value: PropTypes.string.isRequired,
+  width: propTypes.string,
+  heigth: propTypes.string,
+  color: propTypes.string,
+  value: propTypes.string.isRequired,
 };
 
 /**

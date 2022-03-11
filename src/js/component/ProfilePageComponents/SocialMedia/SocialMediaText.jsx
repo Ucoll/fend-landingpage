@@ -1,27 +1,31 @@
 import React from "react";
-// import PropTypes from "prop-types";
+import * as propTypes from "prop-types";
 import "./SocialMediaText.scss";
+
+ProfileSocialMediaPropTypes = {
+  socialMediaName: propTypes.string,
+  socialMediaLink: propTypes.string,
+};
 
 /**
  * ! Creates the Profile Social Media Text
  * * Keili Rosales - 2022-02-23
- * @returns React Component
- * @params Props {props}
- * TODO: It is missing to add the props to connect it with the back. At the moment, it has only test data.
+ * @param {props} Props 
+ * @return React Component
  */
-
-const ProfileSocialMediaText = () => {
+const ProfileSocialMediaText = props => {
   return (
-    <div className="profile-socialmediatext">      
+    <div className="profile-socialmediatext">
       <div className="socialmediatext">
-        <p>VKontakte:</p>
+        <p>{props.socialMediaName}</p>
       </div>
       <div className="socialmediatext-content">
-        <p>vk.com/sosaamy</p>
+        <p>{props.socialMediaLink}</p>
       </div>
-      
     </div>
   );
 };
+
+ProfileSocialMediaText.propTypes = ProfileSocialMediaPropTypes;
 
 export default ProfileSocialMediaText;

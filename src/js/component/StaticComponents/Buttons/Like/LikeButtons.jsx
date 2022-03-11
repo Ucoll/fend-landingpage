@@ -1,7 +1,12 @@
-import propTypes from "prop-types";
+import * as propTypes from "prop-types";
 import React, { useState, useEffect } from "react";
 
 import "./LikeButtonsStyle.scss";
+
+const LikeButtonsPropTypes = {
+  liked: propTypes.string.isRequired,
+  likes: propTypes.number.isRequired,
+} 
 
 /**
  * ! Like & Dislike buttons with a "score" counter
@@ -10,9 +15,9 @@ import "./LikeButtonsStyle.scss";
  * @params props {props}
  * @returns React Component
  */
-const LikeButtons = () => {
+const LikeButtons = ({...props}) => {
   const [liked, setLiked] = useState([""]);
-  const [disliked, setDisliked] = useState([""]);
+  const [disliked, setDisliked] = useState([""]);  // ?  Needs to be an array of empty strings?
 
   // TODO: On component load, send a Fetch request to get the actual value. Remove the hard-coded values.
   useEffect(() => {
@@ -22,7 +27,7 @@ const LikeButtons = () => {
 
   // TODO: When liked state changes, send a Fetch request to update the value on the database.
   // TODO: Update the "score" too and change the code returned to accept the value as props.
-  //useEffect(() => {}, [liked]);
+  useEffect(() => {}, [liked]);
 
   const switchLike = () => {
     liked === "unliked"
@@ -65,9 +70,7 @@ const LikeButtons = () => {
           />
         </svg>
       </div>
-      <div className="like-score">513</div>
-      {/* TODO: The line above is kept for testing reasons. Remove it and uncomment the line below for production */}
-      {/* <div className="like-score">{propTypes.score}</div> */}
+      <div className="like-score">{props.score}</div>
       <div className="button-dislike" onClick={switchDislike}>
         <svg
           width="42"
@@ -99,9 +102,6 @@ const LikeButtons = () => {
   );
 };
 
-// TODO: Add the rest of the necessary props.
-// LikeButtons.propTypes = {
-//   score: PropTypes.number,
-// };
+LikeButtons.propTypes = LikeButtonsPropTypes;
 
 export default LikeButtons;
