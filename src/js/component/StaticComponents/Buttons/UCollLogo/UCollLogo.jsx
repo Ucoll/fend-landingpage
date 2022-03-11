@@ -1,5 +1,5 @@
 import React from "react";
-import UCollLogoLogoVertical from "./UCollLogoVertical.png";
+import UCollLogoVertical from "../../Buttons/UCollLogo/UcollLogo.png";
 import "./UCollLogo.scss";
 
 /**
@@ -11,7 +11,7 @@ import "./UCollLogo.scss";
 const UCollLogo = () => {
   return (
     <div className="button-ucolllogo">
-      <img src={UCollLogoLogoVertical} alt="Image ucolllogo Button" />
+      <img src={UCollLogoVertical} alt="Image ucolllogo Button" />
     </div>
   );
 };

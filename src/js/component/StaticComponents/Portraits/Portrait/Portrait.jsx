@@ -1,12 +1,12 @@
 import React from 'react';
 
-import * as PropTypes from 'prop-types';
+import * as propTypes from 'prop-types';
 
 import './PortraitStyles.scss';
 
-const PortraitProptypes = {
-  avatar: PropTypes.string, //TODO: Even if there's no portrait it's stored in BEND?
-  name: PropTypes.string,
+const PortraitPropTypes = {
+  avatar: propTypes.string, //TODO: Even if there's no portrait it's stored in BEND?
+  name: propTypes.string,
 }
 
 /**
@@ -22,6 +22,6 @@ const Portrait = (props) => {
     );
 }
 
-Portrait.PropTypes = PortraitProptypes;
+Portrait.propTypes = PortraitPropTypes;
 
 export default Portrait;

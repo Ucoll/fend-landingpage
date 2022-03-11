@@ -1,7 +1,7 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 
-import UCollLogo from "../Buttons/UCollLogo/UCollLogo.jsx";
+import UCollLogoHorizontal from "../Buttons/UCollLogoHorizontal/UCollLogoHorizontal.jsx";
 import FeedClass from "../Buttons/Feed/FeedClass.jsx";
 import FeedCollege from "../Buttons/Feed/FeedCollege.jsx";
 import FeedGlobal from "../Buttons/Feed/FeedGlobal.jsx";
@@ -22,7 +22,7 @@ const Navbar = () => {
       <div className="navbar-home">
         <div className="navbar-logo-div">
           {/* TODO: Solve the responsiveness problem when zooming in & out */}
-          <UCollLogo className="navbar-logo" />
+          <UCollLogoHorizontal className="navbar-logo" />
         </div>
       </div>
       <div className="navbar-filters">

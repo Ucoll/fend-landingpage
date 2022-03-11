@@ -8,6 +8,12 @@ const FavoritePropTypes = {
   favorites: PropTypes.bool.isRequired,
 };
 
+const FavoritePropTypes = {
+  favorites: propTypes.bool.isRequired, // TODO: Discus if boolean or string
+  width: propTypes.string,
+  height: propTypes.string,
+};
+
 /**
  * ! Creates the Favorite Button
  * * Keikeka (KeiliRosales) & OvidioSantoro

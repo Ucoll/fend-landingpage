@@ -1,0 +1,35 @@
+.button-profilefavorite {
+  height: 45px;
+  width: 150px;
+  border-radius: 0.5rem;
+  text-align: left;
+  padding: 8px;
+  background-color: rgba(115, 115, 115, 0.25);
+  cursor: pointer;
+}
+
+.button-iconfavorite {
+  height: 100%;
+  width: auto;
+  color: #ffc737;
+  stroke: #053539;
+  margin-left: 0.5rem;
+}
+
+.button-profilefavorite:hover {
+  box-shadow: 0.2rem 0.2rem 0.2rem #929292;
+}
+
+.button-profilefavorite:active {
+  background-color: #a9a8a8;
+}
+
+.profilefavorite-title {
+  font-family: Poppins;
+  font-weight: bold;
+  text-align: center;
+  color: #3d3c3c;
+  display: inline-flex;
+  vertical-align: bottom;
+  margin-left: 0.5rem;
+}
