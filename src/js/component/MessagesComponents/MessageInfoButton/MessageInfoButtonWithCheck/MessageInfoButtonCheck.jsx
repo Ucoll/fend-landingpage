@@ -1,17 +1,21 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-import './MessageInfoButtonStyles.scss';
+import Checkbox from "../../../StaticComponents/Buttons/Checkbox/Checkbox.jsx";
 
-const MessageInfoButtonPropTypes = {
+import "./MessageInfoButtonCheckStyles.scss";
+
+const MessageInfoButtonCheckPropTypes = {
   name: PropTypes.string.isRequired,
   about: PropTypes.string,
   date: PropTypes.string.isRequired,
-};
+}
 
-const MessageInfoButton = (props) => {
+const MessageInfoButtonCheck = (props) => {
   return (
     <button className="message-info-button-container">
       <div className="name-container">
+        <Checkbox />
         <div className="name">{props.name}</div>
       </div>
       <div className="about">{props.about}</div>
@@ -20,6 +24,6 @@ const MessageInfoButton = (props) => {
   );
 };
 
-MessageInfoButton.PropTypes = MessageInfoButtonPropTypes;
+MessageInfoButtonCheck.PropTypes = MessageInfoButtonCheckPropTypes;
 
-export default MessageInfoButton;
+export default MessageInfoButtonCheck;
