@@ -1,0 +1,47 @@
+.cover {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.cover .container {
+  height: 13.375rem;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  min-width: 102.5rem;
+}
+
+.cover .container img {
+  width: 102.5rem;
+}
+
+.cover .portrait {
+  position: absolute;
+  height: 13.375rem;
+}
+
+.cover .circular-portrait {
+  height: 13.375rem;
+  width: 13.375rem;
+  transform: translate(4rem, -9rem);
+  & img {
+    width: 13.375rem;
+  }
+}
+
+.cover h1 {
+    position: absolute;
+    transform: translate(18rem,-12.4rem);
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cover-editicon {
+  position: absolute;
+  margin-left: 44rem;
+  margin-top: -11.5rem;
+}

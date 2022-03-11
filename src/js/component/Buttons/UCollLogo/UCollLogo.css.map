@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,iBAAiB,CAAC;EACd,MAAM,EAAC,KAAK;EACZ,KAAK,EAAE,KAAK;EACZ,UAAU,EAAE,MAAM;EAClB,aAAa,EAAE,IAAI;EACnB,gBAAgB,EAAG,OAAO;EAC1B,UAAU,EAAE,oBAAoB;CACnC;;AAED,AAAA,iBAAiB,AAAA,MAAM,CAAA;EACnB,UAAU,EAAE,oBAAoB;CACnC;;AAED,AAAA,iBAAiB,AAAA,OAAO,CAAA;EACpB,UAAU,EAAE,qBAAqB;CACpC",
-    "sources": [
-        "UCollLogo.scss"
-    ],
-    "names": [],
-    "file": "UCollLogo.css"
-}
