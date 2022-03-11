@@ -1,11 +1,11 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 
 import "./RightArrowButtonStyles.scss";
 
 const RightArrowButtonPropTypes = {
-  height: PropTypes.string,
-  width: PropTypes.string,
+  height: propTypes.string,
+  width: propTypes.string,
 };
 
 const RightArrowButton = (props) => {
@@ -27,6 +27,6 @@ const RightArrowButton = (props) => {
   );
 };
 
-RightArrowButton.PropTypes = RightArrowButtonPropTypes;
+RightArrowButton.propTypes = RightArrowButtonPropTypes;
 
 export default RightArrowButton;
