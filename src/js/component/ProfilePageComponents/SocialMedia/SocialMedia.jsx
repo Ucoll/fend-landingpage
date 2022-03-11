@@ -1,7 +1,13 @@
 import React from "react";
+import * as propTypes from "prop-types";
 import { Icon } from "@iconify/react";
-// import PropTypes from "prop-types";
+
 import "./SocialMedia.scss";
+
+const ProfileSocialMediaPropTypes = {
+  socialMediaIcon: propTypes.string,
+  socialMediaUser: propTypes.string,
+}
 
 /**
  * ! Creates the Profile Social Media
@@ -10,18 +16,20 @@ import "./SocialMedia.scss";
  * @params Props {props}
  * TODO: It is missing to add the props to connect it with the back. At the moment, it has only test data.
  */
-
-const ProfileSocialMedia = () => {
+const ProfileSocialMedia = props => {
   return (
     <div className="profile-socialmedia">
       <Icon className="button-socialmedia" icon="akar-icons:twitter-fill" />
+      {props.socialMediaIcon}
 
       <div className="socialmedia-content">
-        <p>@AmSoC</p>
+        <p>{props.socialMediaUser}</p>
       </div>
       
     </div>
   );
 };
+
+ProfileSocialMedia.propTypes = ProfileSocialMediaPropTypes;
 
 export default ProfileSocialMedia;

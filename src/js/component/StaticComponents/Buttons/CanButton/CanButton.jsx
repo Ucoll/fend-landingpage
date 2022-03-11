@@ -1,13 +1,11 @@
 import React from "react";
-import PropTypes from "prop-types";
-
-import { Icon } from "@iconify/react";
+import propTypes from "prop-types";
 
 import "./CanButtonSytled.scss";
 
 const CanButtonPropTypes = {
-  widht: PropTypes.string,
-  height: PropTypes.string,
+  widht: propTypes.string,
+  height: propTypes.string,
 };
 /**
  * ! Can button Icon
@@ -39,5 +37,5 @@ const CanButton = (props) => {
   );
 };
 
-CanButton.PropTypes = CanButtonPropTypes;
+CanButton.propTypes = CanButtonPropTypes;
 export default CanButton;
