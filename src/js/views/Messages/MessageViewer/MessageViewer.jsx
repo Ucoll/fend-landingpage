@@ -44,14 +44,14 @@ const MessageViewer = () => {
             </div>
             <div className="info">
               <MessageInfoButton
-                name="Benito del Toro" //TODO:PROPS
-                about="Anything is right" //TODO:PROPS
-                date="10:32 | 03/10" //TODO:PROPS
+                name="Benito del Toro" //{/*//TODO:PROPS*/}
+                about="Anything is right" //{/*//TODO:PROPS*/}
+                date="10:32 | 03/10" //{//TODO:...PROPS */}
               />
             </div>
           </div>
           <div className="row-2">
-            <MessageDisplay text="" /> //TODO:PROPS
+            <MessageDisplay text="" /> {/*//TODO:PROPS */}
           </div>
         </div>
       </div>
