@@ -12,5 +12,8 @@ import "../static/Fonts/Poppins-Regular.ttf";
 //import your own components
 import Layout from "./layout";
 
+//Database URL route
+export const database = "http://192.168.1.107:3702"
+
 //render your react application
 ReactDOM.render(<Layout />, document.querySelector("#app"));

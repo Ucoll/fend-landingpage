@@ -11,7 +11,7 @@ const ColleaguesSideMenuPropotypes = {
   university: PropTypes.string,
   name: PropTypes.string,
   classes: PropTypes.object, // Must have all the classes of the User
-  colleagues: Proptypes.object, //This object must have the 3 most closer colleagues
+  colleagues: PropTypes.object, //This object must have the 3 most closer colleagues
 };
 
 /**

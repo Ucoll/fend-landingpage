@@ -2,11 +2,13 @@ import * as PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
 
 import "./LikeButtonsStyle.scss";
+import { database } from "../../../../index.js";
 
 const LikeButtonsPropTypes = {
   liked: PropTypes.string.isRequired,
   likes: PropTypes.number.isRequired,
-} 
+  id: PropTypes.number.isRequired,
+};
 
 /**
  * ! Like & Dislike buttons with a "score" counter
@@ -15,30 +17,86 @@ const LikeButtonsPropTypes = {
  * @params props {props}
  * @returns React Component
  */
-const LikeButtons = ({...props}) => {
-  const [liked, setLiked] = useState([""]);
-  const [disliked, setDisliked] = useState([""]);  // ?  Needs to be an array of empty strings?
+const LikeButtons = ({ ...props }) => {
+  const [liked, setLiked] = useState("unliked");
+  const [disliked, setDisliked] = useState("undisliked");
+  const [likes, setLikes] = useState(0);
 
-  // TODO: On component load, send a Fetch request to get the actual value. Remove the hard-coded values.
   useEffect(() => {
-    setLiked("unliked");
-    setDisliked("undisliked");
-  }, []);
+    // ! Checks if the current user has liked or disliked the Coll
+    //TODO: CurrentUser must be stored or something. Remove HARDCODED USERNAME ("HarryPotter")
+    for (let i = 0; i < props.likes.length; i++) {
+      if ("HarryPotter" in props.likes[i]) {
+        if (props.likes[i].HarryPotter) {
+          setLiked("liked");
+        } else {
+          setDisliked("disliked");
+        }
+      }
+    }
 
-  // TODO: When liked state changes, send a Fetch request to update the value on the database.
-  // TODO: Update the "score" too and change the code returned to accept the value as props.
-  useEffect(() => {}, [liked]);
+    // ! Tracks the "score" (+1 for each like, -1 for each dislike)
+    let score = 0;
+    for (let i = 0; i < props.likes.length; i++) {
+      if (Object.values(props.likes[i])[0]) {
+        score++;
+      } else {
+        score--;
+      }
+      setLikes(score)
+    }
+  }, []);
 
   const switchLike = () => {
     liked === "unliked"
-      ? (setLiked("liked"), setDisliked("undisliked"))
-      : setLiked("unliked");
+      ? disliked === "undisliked"
+        ? (setLiked("liked"), setLikes(likes + 1))
+        : (setLiked("liked"), setDisliked("undisliked"), setLikes(likes + 2))
+      : (setLiked("unliked"), setLikes(likes - 1));
+
+    fetch(`${database}/colls/${props.id}/like`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ like: true }),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed with HTTP code " + response.status);
+        }
+        return response;
+      })
+      .then((response) => console.log(response.json()))
+      .catch((err) => {
+        console.error(err);
+      });
   };
 
   const switchDislike = () => {
     disliked === "undisliked"
-      ? (setDisliked("disliked"), setLiked("unliked"))
-      : setDisliked("undisliked");
+      ? liked === "unliked"
+        ? (setDisliked("disliked"), setLikes(likes - 1))
+        : (setDisliked("disliked"), setLiked("unliked"), setLikes(likes - 2))
+      : (setDisliked("undisliked"), setLikes(likes + 1));
+
+    fetch(`${database}/colls/${props.id}/like`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ like: false }),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed with HTTP code " + response.status);
+        }
+        return response;
+      })
+      .then((response) => console.log(response.json()))
+      .catch((err) => {
+        console.error(err);
+      });
   };
 
   return (
@@ -70,7 +128,7 @@ const LikeButtons = ({...props}) => {
           />
         </svg>
       </div>
-      <div className="like-score">{props.score}</div>
+      <div className="like-score">{likes}</div>
       <div className="button-dislike" onClick={switchDislike}>
         <svg
           width="42"

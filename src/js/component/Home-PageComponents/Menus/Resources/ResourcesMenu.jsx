@@ -6,7 +6,7 @@ import Collapse from "../../../StaticComponents/Buttons/Collapse/Collapse.jsx";
 
 import "./ResourcesMenu.scss";
 
-ResourcesMenuPropTypes = {
+const ResourcesMenuPropTypes = {
   files: PropTypes.arrayOf(PropTypes.string).isRequired, //must contain all the info needed at the Resource component 
 }
 
@@ -36,7 +36,7 @@ const ResourcesMenu = props => {
       <hr />
       <div className="resources-container">
         <div className="resources-list">
-          {props.files.map(resourceListener)} {/** TO REVIEW //TODO: if null add placeholder*/}
+          {/* {props.files.map(resourceListener)} * TO REVIEW //TODO: if null add placeholder */}
         </div>
       </div>
       <hr className="resources-hr" />

@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import injectContext from "./store/appContext";
 
-import HomePage from "./views/Home-Page/Home-Page.jsx";
+import HomeView from "./views/Home-Page/Home-Page.jsx";
 
 /**
  * ! Layout component for the views
@@ -16,7 +16,7 @@ const Layout = () => {
       <BrowserRouter basename="/">
         <div>
           <Switch>
-            <Route exact path="/" component={HomePage} />
+            <Route exact path="/" component={HomeView} />
           </Switch>
         </div>
       </BrowserRouter>

@@ -3,7 +3,7 @@ import * as PropTypes from "prop-types";
 
 import "./Resource.scss";
 
-ResourceProptypes = {
+const ResourceProptypes = {
   userName: PropTypes.string.isRequired,
   classroomName: PropTypes.string,
   file: PropTypes.string.isRequired,
