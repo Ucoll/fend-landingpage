@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-// import ProfileBiography from "./component/Profile-PageComponents/ProfileBiography/ProfileBiography.jsx";
 
 import injectContext from "./store/appContext";
 
@@ -9,6 +8,7 @@ import LandingPage from "./views/LandingPage/LandingPage.jsx";
 import Register from "./views/LandingPage/RegisterSubview/Register.jsx";
 import Messages from "./views/Messages/Messages.jsx";
 import Profile from "./views/Profile/Profile.jsx";
+
 
 /**
  * ! Layout component for the views
