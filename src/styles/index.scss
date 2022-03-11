@@ -3,12 +3,14 @@
  * * OvidioSantoro - 2022-02-01
  */
 
-/**
+/**--------------------------------
+* TODO: DELETE
 * ! DELETE THIS - TESTING DIV
 */
 .testing-div {
   margin: 25%;
 }
+// ---------------------------------
 
 .button-coll {
   height: 30px;
@@ -51,12 +53,13 @@
 }
 
 .button-new {
-  height: 52px;
-  width: 52px;
+  height: 4.25rem;
+  width: 4.25rem;
   border-radius: 10px;
   text-align: center;
-  padding: 5px;
+  padding: 0.3125rem;
   border: 2px dotted black;
+  margin: 1rem 0 1rem 0;
 }
 
 .button-new .button-icon {

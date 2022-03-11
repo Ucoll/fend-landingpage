@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import injectContext from "./store/appContext";
 
 import HomeView from "./views/Home-Page/Home-Page.jsx";
+import CollConstructor from "./component/CollConstructor/CollConstructor.jsx";
 
 /**
  * ! Layout component for the views
@@ -15,6 +16,7 @@ const Layout = () => {
     <div>
       <BrowserRouter basename="/">
         <div>
+          <CollConstructor />
           <Switch>
             <Route exact path="/" component={HomeView} />
           </Switch>
