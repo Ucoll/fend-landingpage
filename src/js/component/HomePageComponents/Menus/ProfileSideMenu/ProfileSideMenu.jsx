@@ -1,16 +1,16 @@
 import React from "react";
-import * as PropTypes from "prop-types";
+import * as propTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 
 import Portrait from "../../../StaticComponents/Portraits/Portrait/Portrait.jsx";
 import "./ProfileSideMenu.scss";
 
-const ProfileSideMenuProptypes = {
-  name: PropTypes.string.isRequired,
-  university: PropTypes.string,
-  profileDescription: PropTypes.string,
-  avatar: PropTypes.string,
+const ProfileSideMenuPropTypes = {
+  name: propTypes.string, //.isRequired
+  university: propTypes.string,
+  profileDescription: propTypes.string,
+  avatar: propTypes.string,
 }
 
 /**
@@ -52,6 +52,6 @@ const ProfileSideMenu = props => {
   );
 };
 
-ProfileSideMenu.PropTypes = ProfileSideMenuProptypes;
+ProfileSideMenu.propTypes = ProfileSideMenuPropTypes;
 
 export default ProfileSideMenu;

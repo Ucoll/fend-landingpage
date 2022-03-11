@@ -1,5 +1,5 @@
 import React from "react";
-import * as PropTypes from "prop-types";
+import * as propTypes from "prop-types";
 
 import ProfileEditButton from "../../StaticComponents/Buttons/ProfileEditButton/ProfileEditButton.jsx";
 
@@ -8,8 +8,8 @@ import InterestTag from "../../ProfilePageComponents/Tags/InterestTag.jsx";
 import "./ProfileBiography.scss";
 
 const ProfileBiographyPropTypes = {
-  profileBiographyContent: PropTypes.string,
-  interests: PropTypes.arrayOf(PropTypes.string)
+  profileBiographyContent: propTypes.string,
+  interests: propTypes.arrayOf(propTypes.string)
 };
 
 /**
@@ -35,13 +35,13 @@ const ProfileBiography = props => {
       </div>
       <div className="biography-tags">
         <ul>
-          {props.interests.map(InterestTagListener)}
+          {/* {props.interests.map(InterestTagListener)} */}
         </ul>
       </div>
     </div>
   );
 };
 
-ProfileBiography.PropTypes = ProfileBiographyPropTypes;
+ProfileBiography.propTypes = ProfileBiographyPropTypes;
 
 export default ProfileBiography;

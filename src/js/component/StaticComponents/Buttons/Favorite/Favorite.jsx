@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import * as PropTypes from "prop-types";
+import * as propTypes from "prop-types";
 
 import "./Favorite.scss";
 
 const FavoritePropTypes = {
-  favorites: PropTypes.bool.isRequired, // TODO: Discus if boolean or string
-  width: PropTypes.string,
-  height: PropTypes.string,
+  favorites: propTypes.bool.isRequired, // TODO: Discus if boolean or string
+  width: propTypes.string,
+  height: propTypes.string,
 };
 
 /**
@@ -56,6 +56,6 @@ const Favorite = (props) => {
   );
 };
 
-Favorite.PropTypes = FavoritePropTypes;
+Favorite.propTypes = FavoritePropTypes;
 
 export default Favorite;

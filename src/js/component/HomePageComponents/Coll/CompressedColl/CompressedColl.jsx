@@ -1,6 +1,6 @@
 import React from "react";
 
-import * as PropTypes from "prop-types";
+import * as propTypes from "prop-types";
 
 import LikeButtons from "../../../StaticComponents/Buttons/Like/LikeButtons.jsx";
 import Thread from "../../../StaticComponents/Buttons/Thread/Thread.jsx";
@@ -12,20 +12,20 @@ import TicketPostIt from "../../../StaticComponents/Buttons/TicketPost-It/Ticket
 
 import "./CompressedColl.scss";
 
-const CompressedCollProptypes = {
-  portrait: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  studies: PropTypes.string.isRequired,
-  postItColor: PropTypes.string.isRequired,
-  liked: PropTypes.bool.isRequired,
-  date: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  likes: PropTypes.number.isRequired,
-  content: PropTypes.string.isRequired, // Review if it's string or object, if object ... will be needed
-  threads: PropTypes.number.isRequired,
-  comments: PropTypes.number.isRequired,
-  favs: PropTypes.number.isRequired,
-  shares: PropTypes.number.isRequired,
+const CompressedCollPropTypes = {
+  portrait: propTypes.string.isRequired,
+  name: propTypes.string.isRequired,
+  studies: propTypes.string.isRequired,
+  postItColor: propTypes.string.isRequired,
+  liked: propTypes.bool.isRequired,
+  date: propTypes.string.isRequired,
+  title: propTypes.string.isRequired,
+  likes: propTypes.number.isRequired,
+  content: propTypes.string.isRequired, // Review if it's string or object, if object ... will be needed
+  threads: propTypes.number.isRequired,
+  comments: propTypes.number.isRequired,
+  favs: propTypes.number.isRequired,
+  shares: propTypes.number.isRequired,
 };
 
 /**
@@ -99,6 +99,6 @@ const CompressedColl = ({ ...props }) => {
   );
 };
 
-CompressedColl.propTypes = CompressedCollProptypes;
+CompressedColl.propTypes = CompressedCollPropTypes;
 
 export default CompressedColl;

@@ -1,14 +1,14 @@
 import React from "react";
-import * as PropTypes from "prop-types";
+import * as propTypes from "prop-types";
 
 import ProfileEditButton from "../../StaticComponents/Buttons/ProfileEditButton/ProfileEditButton.jsx";
 
 import "./ProfileCareerDescription.scss";
 
 const ProfileCareerDescriptionPropTypes = {
-  university: PropTypes.string,
-  faculty: PropTypes.string,
-  careerDescription: PropTypes.string,
+  university: propTypes.string,
+  faculty: propTypes.string,
+  careerDescription: propTypes.string,
 }
 
 /**
@@ -33,6 +33,6 @@ const ProfileCareerDescription = props => {
   );
 };
 
-ProfileCareerDescription.PropTypes = ProfileCareerDescriptionPropTypes;
+ProfileCareerDescription.propTypes = ProfileCareerDescriptionPropTypes;
 
 export default ProfileCareerDescription;

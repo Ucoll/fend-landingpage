@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import * as PropTypes from "prop-types";
+import * as propTypes from "prop-types";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 import Portrait from "../../../../StaticComponents/Portraits/Portrait/Portrait.jsx";
 
 import "./ClassesStyles.scss";
 
-const ClassesPreviewProptypes = {
-  className: PropTypes.string.isRequired,
-  classColleagues: PropTypes.object.isRequired, //Must all colleagues of the class (5 Colleagues max?)
+const ClassesPreviewPropTypes = {
+  className: propTypes.string.isRequired,
+  classColleagues: propTypes.object.isRequired, //Must all colleagues of the class (5 Colleagues max?)
 };
 
 /**
@@ -36,6 +36,6 @@ const ClassesPreview = ({...props}) => {
   );
 };
 
-ClassesPreview.propTypes = ClassesPreviewProptypes;
+ClassesPreview.propTypes = ClassesPreviewPropTypes;
 
 export default ClassesPreview;

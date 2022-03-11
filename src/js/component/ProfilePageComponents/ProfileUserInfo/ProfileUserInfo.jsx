@@ -1,14 +1,14 @@
 import React from "react";
-import * as PropTypes from "prop-types";
+import * as propTypes from "prop-types";
 
 import ProfileEditButton from "../../StaticComponents/Buttons/ProfileEditButton/ProfileEditButton.jsx";
 
 import "./ProfileUserInfo.scss";
 
 const ProfileUserInfoPropTypes = {
-  userEmail: PropTypes.string,
-  profileCreationDate: PropTypes.string.isRequired,
-  karma: PropTypes.number.isRequired,
+  userEmail: propTypes.string,
+  profileCreationDate: propTypes.string,//.isRequired,
+  karma: propTypes.number,//.isRequired,
 }
 
 /**
@@ -44,6 +44,6 @@ const ProfileUserInfo = props => {
   );
 };
 
-ProfileUserInfo.PropTypes = ProfileUserInfoPropTypes;
+ProfileUserInfo.propTypes = ProfileUserInfoPropTypes;
 
 export default ProfileUserInfo;

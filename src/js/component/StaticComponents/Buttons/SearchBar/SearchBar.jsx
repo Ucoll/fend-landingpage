@@ -10,7 +10,7 @@ import "./SearchBar.scss";
  */
 const SearchBar = () => {
   return (
-    <div class="button-feed searchbar">
+    <div className="button-feed searchbar">
       <Icon
         className="button-icon"
         icon="foundation:magnifying-glass"

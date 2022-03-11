@@ -1,12 +1,12 @@
 import React from "react";
-import * as PropTypes from "prop-types";
+import * as propTypes from "prop-types";
 
 import "./Resource.scss";
 
-ResourceProptypes = {
-  userName: PropTypes.string.isRequired,
-  classroomName: PropTypes.string,
-  file: PropTypes.string.isRequired,
+const ResourcePropTypes = {
+  userName: propTypes.string.isRequired,
+  classroomName: propTypes.string,
+  file: propTypes.string.isRequired,
 }
 
 /**
@@ -25,6 +25,6 @@ const Resource = props => {
   );
 };
 
-Resource.PropTypes = ResourceProptypes;
+Resource.propTypes = ResourcePropTypes;
 
 export default Resource;

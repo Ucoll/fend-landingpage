@@ -1,12 +1,12 @@
 import React from "react";
-import * as PropTypes from "prop-types";
+import * as propTypes from "prop-types";
 
 // import portrait2 from './NewFaceNewEdition.png'
 import "./PortraitWithNameStyles.scss";
 
 const ProtraitWithNamePropTypes = {
-  avatar: PropTypes.string,
-  name: PropTypes.string,
+  avatar: propTypes.string,
+  name: propTypes.string,
 };
 
 /**
@@ -26,6 +26,6 @@ const PortraitWithName = (props) => {
   );
 };
 
-PortraitWithName.PropTypes = ProtraitWithNamePropTypes;
+PortraitWithName.propTypes = ProtraitWithNamePropTypes;
 
 export default PortraitWithName;

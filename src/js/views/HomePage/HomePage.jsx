@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 
 import Navbar from "../../component/StaticComponents/Navbar/Navbar.jsx";
 import Coll from "../../component/HomePageComponents/Coll/Coll.jsx";
@@ -8,11 +8,13 @@ import ResourcesMenu from "../../component/HomePageComponents/Menus/Resources/Re
 import DemoCalendar from "./CalendarSideMenuDemo.png";
 import CompressedColl from "../../component/HomePageComponents/Coll/CompressedColl/CompressedColl.jsx";
 
-import "./Home-Page.scss";
+import "./HomePage.scss";
 
 /**
  * ! View -> Home-Page
  * * AslanSN - 2022-02-18
+ * @param {data} - Back-End Data
+ * @return React VIEW Component
  */
 const HomeView = () => {
   const [data, setData] = useState([]);
@@ -20,17 +22,17 @@ const HomeView = () => {
   const [user, setUser] = useState({});
   const [allUsers, setAllUsers] = useState([])
 
-  useEffect(() => {
-    fetch(url, {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => setData(data))
-      .catch((err) => setError(String(err)));
-  }, []);
+  // useEffect(() => {
+  //   fetch(url, {
+  //     method: "GET",
+  //     headers: {
+  //       Accept: "application/json",
+  //     },
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => setData(data))
+  //     .catch((err) => setError(String(err)));
+  // }, []);
 
 
   /**
@@ -50,7 +52,7 @@ const HomeView = () => {
    */
   // const collArrCreator = () => setColls(limiter([...data.Coll]));
   
-  colls = setColls(limiter([...data.Coll]));
+  // colls = setColls(limiter([...data.Coll]));
 
   const userCollMatch = (dataObj, collObj) => dataObj.User.id === collObj.Coll.sender_id;
 
@@ -106,7 +108,7 @@ const HomeView = () => {
             <ColleaguesSideMenu />
           </li>
         </ul>
-        <ul className="coll-ul">{colls.map()}</ul>
+        {/* <ul className="coll-ul">{colls.map()}</ul> */}
         <ul className="right-collapsables">
           <li className="menu">
             <img src={DemoCalendar} alt="Demo Calendar Side Menu" />

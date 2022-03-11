@@ -1,13 +1,13 @@
-import React from "react";
-import * as PropTypes from "prop-types";
+import React, {useState}from "react";
+import * as propTypes from "prop-types";
 
 import ProfileEditButton from "../../StaticComponents/Buttons/ProfileEditButton/ProfileEditButton.jsx";
 
 import "./ProfileClasses.scss";
 
 const ProfileClassesPropTypes = {
-  degree: PropTypes.string,
-  subjects: PropTypes.arrayOf(PropTypes.string),
+  degree: propTypes.string,
+  subjects: propTypes.arrayOf(propTypes.string),
 };
 
 /**
@@ -43,8 +43,8 @@ const ProfileClasses = props => {
    */
   const subjectsListener = () => {
     <>
-      <div class="col-6 courses">{leftSubjects.map(leftSubjectsListener)}</div>
-      <div class="col-6 courses">{rightSubjects.map(rightSubjectsListener)}</div>
+      <div className="col-6 courses">{leftSubjects.map(leftSubjectsListener)}</div>
+      <div className="col-6 courses">{rightSubjects.map(rightSubjectsListener)}</div>
     </>;
   };
 
@@ -57,14 +57,14 @@ const ProfileClasses = props => {
         <p>{props.degree}</p>
       </div>
       <div className="courses-classes">
-        <div class="row">
-          {subjectsListener()} {/*//TODO: Add Listing and sorting of props and conditions maybe*/}
+        <div className="row">
+          {/* {subjectsListener()} //TODO: Add Listing and sorting of props and conditions maybe */}
         </div>
       </div>
     </div>
   );
 };
 
-ProfileClasses.PropTypes = ProfileClassesPropTypes;
+ProfileClasses.propTypes = ProfileClassesPropTypes;
 
 export default ProfileClasses;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import * as PropTypes from "prop-types";
+import * as propTypes from "prop-types";
 
 import PortraitWithName from "../../../StaticComponents/Portraits/PortraitWithName/PortraitWithName.jsx";
 import Collapse from "../../../StaticComponents/Buttons/Collapse/Collapse.jsx";
@@ -7,11 +7,11 @@ import Classes from "./ClassesComponent/Classes.jsx";
 
 import "./ColleaguesSideMenuStyles.scss";
 
-const ColleaguesSideMenuPropotypes = {
-  university: PropTypes.string,
-  name: PropTypes.string,
-  classes: PropTypes.object, // Must have all the classes of the User
-  colleagues: Proptypes.object, //This object must have the 3 most closer colleagues
+const ColleaguesSideMenuPropTypes = {
+  university: propTypes.string,
+  name: propTypes.string,
+  classes: propTypes.object, // Must have all the classes of the User
+  colleagues: propTypes.object, //This object must have the 3 most closer colleagues
 };
 
 /**
@@ -27,7 +27,7 @@ const ColleaguesSideMenu = props => {
     </li>
   );
 
-  const classListener = (props) => (
+  const classListener = () => (
     <>
       <li>
         <Classes {...props.classes} />
@@ -58,6 +58,6 @@ const ColleaguesSideMenu = props => {
   );
 };
 
-ColleaguesSideMenu.PropTypes = ColleaguesSideMenuPropotypes;
+ColleaguesSideMenu.propTypes = ColleaguesSideMenuPropTypes;
 
 export default ColleaguesSideMenu;

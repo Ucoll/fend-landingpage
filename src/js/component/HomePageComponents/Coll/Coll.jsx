@@ -1,6 +1,6 @@
 import React from "react";
 
-import * as PropTypes from "prop-types";
+import * as propTypes from "prop-types";
 
 import LikeButtons from "../../StaticComponents/Buttons/Like/LikeButtons.jsx";
 import Thread from "../../StaticComponents/Buttons/Thread/Thread.jsx";
@@ -13,18 +13,18 @@ import TicketPostIt from "../../StaticComponents/Buttons/TicketPost-It/TicketPos
 import "./Coll.scss";
 
 const CollPropTypes = {
-  portrait: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  studies: PropTypes.string.isRequired,
-  postItColor: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  like: PropTypes.object.isRequired, // Must have number of likes and if it was liked, disliked or none by the User
-  content: PropTypes.string.isRequired, // Review if it's string or object, if object ... will be needed
-  threads: PropTypes.number.isRequired,
-  comments: PropTypes.number.isRequired,
-  favs: PropTypes.number.isRequired,
-  shares: PropTypes.number.isRequired,
+  portrait: propTypes.string.isRequired,
+  name: propTypes.string.isRequired,
+  studies: propTypes.string.isRequired,
+  postItColor: propTypes.string.isRequired,
+  date: propTypes.string.isRequired,
+  title: propTypes.string.isRequired,
+  like: propTypes.object.isRequired, // Must have number of likes and if it was liked, disliked or none by the User
+  content: propTypes.string.isRequired, // Review if it's string or object, if object ... will be needed
+  threads: propTypes.number.isRequired,
+  comments: propTypes.number.isRequired,
+  favs: propTypes.number.isRequired,
+  shares: propTypes.number.isRequired,
 };
 
 /**
@@ -101,6 +101,6 @@ const Coll = ({ ...props }) => {
   );
 };
 
-Coll.PropTypes = CollPropTypes;
+Coll.propTypes = CollPropTypes;
 
 export default Coll;

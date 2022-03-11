@@ -1,12 +1,12 @@
 import React from "react";
-import * as PropTypes from "prop-types";
+import * as propTypes from "prop-types";
 import { Icon } from "@iconify/react";
 
 import "./SocialMedia.scss";
 
-ProfileSocialMediaPropTypes = {
-  socialMediaIcon: PropTypes.string,
-  socialMediaUser: PropTypes.string,
+const ProfileSocialMediaPropTypes = {
+  socialMediaIcon: propTypes.string,
+  socialMediaUser: propTypes.string,
 }
 
 /**
@@ -30,6 +30,6 @@ const ProfileSocialMedia = props => {
   );
 };
 
-ProfileSocialMedia.PropTypes = ProfileSocialMediaPropTypes;
+ProfileSocialMedia.propTypes = ProfileSocialMediaPropTypes;
 
 export default ProfileSocialMedia;

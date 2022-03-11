@@ -1,5 +1,5 @@
 import React from "react";
-import * as PropTypes from "prop-types";
+import * as propTypes from "prop-types";
 
 // import CoverBackground from "./Cover Background.jpg";
 import Portrait from "../../StaticComponents/Portraits/Portrait/Portrait.jsx";
@@ -8,9 +8,9 @@ import ProfileEditButton from "../../StaticComponents/Buttons/ProfileEditButton/
 import './Cover.scss';
 
 const CoverPropTypes = {
-  backgroundCoverImage: PropTypes.string,
-  avatar: PropTypes.string,
-  name: PropTypes.string,
+  backgroundCoverImage: propTypes.string,
+  avatar: propTypes.string,
+  name: propTypes.string,
 };
 
 /**
@@ -35,6 +35,6 @@ const Cover = props => {
   );
 };
 
-Cover.PropTypes = CoverPropTypes;
+Cover.propTypes = CoverPropTypes;
 
 export default Cover;

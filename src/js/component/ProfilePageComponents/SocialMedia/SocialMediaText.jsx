@@ -1,10 +1,10 @@
 import React from "react";
-import * as PropTypes from "prop-types";
+import * as propTypes from "prop-types";
 import "./SocialMediaText.scss";
 
 ProfileSocialMediaPropTypes = {
-  socialMediaName: PropTypes.string,
-  socialMediaLink: PropTypes.string,
+  socialMediaName: propTypes.string,
+  socialMediaLink: propTypes.string,
 };
 
 /**
@@ -26,6 +26,6 @@ const ProfileSocialMediaText = props => {
   );
 };
 
-ProfileSocialMediaText.PropTypes = ProfileSocialMediaPropTypes;
+ProfileSocialMediaText.propTypes = ProfileSocialMediaPropTypes;
 
 export default ProfileSocialMediaText;

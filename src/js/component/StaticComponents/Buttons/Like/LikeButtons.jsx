@@ -1,11 +1,11 @@
-import * as PropTypes from "prop-types";
+import * as propTypes from "prop-types";
 import React, { useState, useEffect } from "react";
 
 import "./LikeButtonsStyle.scss";
 
 const LikeButtonsPropTypes = {
-  liked: PropTypes.string.isRequired,
-  likes: PropTypes.number.isRequired,
+  liked: propTypes.string.isRequired,
+  likes: propTypes.number.isRequired,
 } 
 
 /**
@@ -102,6 +102,6 @@ const LikeButtons = ({...props}) => {
   );
 };
 
-LikeButtons.PropTypes = LikeButtonsPropTypes;
+LikeButtons.propTypes = LikeButtonsPropTypes;
 
 export default LikeButtons;
