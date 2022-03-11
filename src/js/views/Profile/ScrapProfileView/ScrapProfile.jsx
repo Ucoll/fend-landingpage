@@ -1,6 +1,6 @@
 import React from "react";
 
-import Profile from "../Profile.jsx";
+import Coll from "../../../component/HomePageComponents/Coll/Coll.jsx";
 // import HomeView from "../../Home-Page/Home-Page.jsx";
 
 /**
@@ -11,7 +11,7 @@ import Profile from "../Profile.jsx";
 const ScrapProfile = () => {
   return (
     <>
-      <Profile />
+      <Coll/>
       {/* <HomeView /> */}
     </>
   );

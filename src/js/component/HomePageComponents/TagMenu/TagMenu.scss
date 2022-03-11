@@ -1,0 +1,44 @@
+.container-tag {
+  background-color: transparent;
+  position: absolute;
+}
+
+.dropdown-toggle {
+  background-color: transparent;
+  color: transparent;
+  height: 4.6rem;
+  width: 2.4rem;
+}
+
+.dropdown-toggle:hover {
+  color: transparent;
+}
+
+.dropdown-toggle:active {
+  color: transparent;
+}
+
+.dropdown-menu {
+  background-color: #ecf5ea;
+}
+
+.dropdown-menu:active {
+  color: #ecf5ea;
+}
+
+.dropdown-item {
+  background-color: #ecf5ea;
+  font-size: 0.8rem;
+  font-family: Poppins;
+  font-weight: normal;
+  text-align: left;
+  padding: auto;
+}
+
+.dropdown-item:hover {
+  background-color: #c5dcc1;
+}
+
+.dropdown-item:active {
+  color: #053539;
+}
