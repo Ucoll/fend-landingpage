@@ -2,7 +2,7 @@
 ! STYLES -> Message Info Button Styles
 * AslanSN - 2022-03-08
 */
-.message-info-button-container {
+.message-info-button-check-container {
   font-size: 2.25rem;
   width: 88rem;
   height: min-content;
@@ -41,6 +41,3 @@
   }
 }
 
-//    .checkbox-container input[type="checkbox"]:checked ~ .message-info-button-container{
-//   background-color:rgba(154, 197, 195, 1);
-// }

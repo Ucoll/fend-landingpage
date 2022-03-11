@@ -8,6 +8,7 @@ import HomePage from "./views/HomePage/HomePage.jsx";
 import LandingPage from "./views/LandingPage/LandingPage.jsx";
 import Register from "./views/LandingPage/RegisterSubview/Register.jsx";
 import Messages from "./views/Messages/Messages.jsx";
+import MessageViewer from "./views/Messages/MessageViewer/MessageViewer.jsx";
 import Profile from "./views/Profile/Profile.jsx";
 
 /**
@@ -26,7 +27,8 @@ const Layout = () => {
             {/* TODO: <Route exact path="/profile" component={Profile} /> */}
             {/* <Profile /> */}
             {/* <Register/> */}
-            <Messages/>
+            {/* <Messages/> */}
+            <MessageViewer/>
           </Switch>
         </div>
       </BrowserRouter>

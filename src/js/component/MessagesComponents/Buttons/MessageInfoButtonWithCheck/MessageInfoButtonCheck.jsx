@@ -13,7 +13,7 @@ const MessageInfoButtonCheckPropTypes = {
 
 const MessageInfoButtonCheck = (props) => {
   return (
-    <button className="message-info-button-container">
+    <button className="message-info-button-check-container">
       <div className="name-container">
         <Checkbox />
         <div className="name">{props.name}</div>

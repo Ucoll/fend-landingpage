@@ -1,6 +1,6 @@
 import React from "react";
 
-import MessageInfoButton from "../../component/MessagesComponents/MessageInfoButton/MessageInfoButtonWithCheck/MessageInfoButtonCheck.jsx";
+import MessageInfoButtonCheck from "../../component/MessagesComponents/Buttons/MessageInfoButtonWithCheck/MessageInfoButtonCheck.jsx";
 import MessagesSearchBar from "../../component/MessagesComponents/MessagesSearchBar/MessagesSearchBar.jsx";
 import UCollLogo from "../../component/StaticComponents/Buttons/UCollLogo/UCollLogo.jsx";
 import InterestTags from "../../component/ProfilePageComponents/Tags/InterestTag.jsx";
@@ -10,12 +10,13 @@ import LeftArrowButton from "../../component/StaticComponents/Buttons/Arrows/Lef
 import RightArrowButton from "../../component/StaticComponents/Buttons/Arrows/RightArrow/RightArrowButton.jsx";
 
 import "./MessagesStyles.scss";
+import NewMessageButton from "../../component/MessagesComponents/Buttons/NewMessage/NewMessageButton.jsx";
 /**
  * ! VIEW -> MESSAGES
  * * AslanSN - 2022-03-08
  * TODO: Add clicked option to the side tags menu and to the Messages info Button
  * TODO: Add Fetch
- * @param {props} props 
+ * @param {props} props
  * @returns React View
  */
 const Messages = () => {
@@ -26,7 +27,7 @@ const Messages = () => {
         <div className="header">
           <div className="row-1">
             <MessagesSearchBar />
-            <button className="new-message">New Message</button>
+            <NewMessageButton />
           </div>
 
           <div className="row-2">
@@ -50,37 +51,37 @@ const Messages = () => {
         </div>
 
         <div className="messages-container">
-          <MessageInfoButton
+          <MessageInfoButtonCheck
             name="Kelly Watson"
             about="Appointment"
             date="18:45 | 03/08"
           />
-          <MessageInfoButton
+          <MessageInfoButtonCheck
             name="Kelly Watson"
             about="Appointment"
             date="18:45 | 03/08"
           />
-          <MessageInfoButton
+          <MessageInfoButtonCheck
             name="Kelly Watson"
             about="Appointment"
             date="18:45 | 03/08"
           />
-          <MessageInfoButton
+          <MessageInfoButtonCheck
             name="Kelly Watson"
             about="Appointment"
             date="18:45 | 03/08"
           />
-          <MessageInfoButton
+          <MessageInfoButtonCheck
             name="Kelly Watson"
             about="Appointment"
             date="18:45 | 03/08"
           />
-          <MessageInfoButton
+          <MessageInfoButtonCheck
             name="Kelly Watson"
             about="Appointment"
             date="18:45 | 03/08"
           />
-          <MessageInfoButton
+          <MessageInfoButtonCheck
             name="Kelly Watson"
             about="Appointment"
             date="18:45 | 03/08"
