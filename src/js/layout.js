@@ -1,20 +1,37 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import injectContext from "./store/appContext";
 
-import Favorite from "./component/Buttons/Favorite/Favorite.jsx";
+import HomePage from "./views/HomePage/HomePage.jsx";
+import LandingPage from "./views/LandingPage/LandingPage.jsx";
+import Register from "./views/LandingPage/RegisterSubview/Register.jsx";
+import Messages from "./views/Messages/Messages.jsx";
+import MessageViewer from "./views/Messages/MessageViewer/MessageViewer.jsx";
+import Profile from "./views/Profile/Profile.jsx";
 
-//create your first component
+
+/**
+ * ! Layout component for the views
+ * * Template Component
+ */
 const Layout = () => {
-  //the basename is used when your project is published in a subdirectory and not in the root of the domain
-  // you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
-  const basename = process.env.BASENAME || "";
-
   return (
     <div>
-      <BrowserRouter basename={basename}>
-        <Favorite />
+      <BrowserRouter basename="/">
+        <div>
+          <CollConstructor />
+          <Switch>
+            {/* <Route exact path="/" component={HomePage} /> */}
+            {/* <LandingPage/> */}
+            {/* <HomePage/> */}
+            {/* TODO: <Route exact path="/profile" component={Profile} /> */}
+            {/* <Profile /> */}
+            {/* <Register/> */}
+            {/* <Messages/> */}
+            <MessageViewer/>
+          </Switch>
+        </div>
       </BrowserRouter>
     </div>
   );

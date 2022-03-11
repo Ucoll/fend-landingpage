@@ -1,0 +1,63 @@
+.navbar {
+  width: 100vw;
+  height: 8.7vh;
+  position: sticky;
+  top: 0%;
+  z-index: 99;
+  padding: 0.3%;
+  background-color: #fafafa;
+  display: grid;
+  grid-template-columns: 1fr 2.8fr 2.8fr 1fr;
+  grid-template-areas: "logo filters action settings";
+}
+
+.navbar-home {
+  grid-area: logo;
+  height: 100%;
+  text-align: -webkit-right;
+}
+
+.navbar-logo-div {
+  width: 5.775vw;
+}
+
+.navbar-filters {
+  grid-area: filters;
+  display: inline-flex;
+  align-self: center;
+  justify-self: end;
+  margin-right: 3vw;
+}
+
+.navbar-action {
+  grid-area: action;
+  display: inline-flex;
+  align-self: center;
+  justify-self: start;
+  margin-left: 3vw;
+}
+
+.navbar-avatar {
+  // Placeholder until the avatar component is fixed
+  grid-area: settings;
+  aspect-ratio: 1/1;
+  width: 8vh;
+  justify-self: center;
+  align-self: center;
+  background-color: transparent;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.navbar-avatar .circular-portrait {
+    width: 8vh;
+    height: 8vh;
+    aspect-ratio: 1/1;
+    background-color: transparent;
+}
+
+.navbar-avatar .circular-portrait img.portrait-img{
+    width: 8vh;
+    height: max-content;
+    aspect-ratio: 1/1;
+}

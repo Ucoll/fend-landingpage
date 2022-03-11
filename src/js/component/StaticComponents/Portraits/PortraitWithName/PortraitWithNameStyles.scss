@@ -1,0 +1,31 @@
+.colleague-img-container {
+    width: 4.735rem;;
+    align-items: center;
+    margin: 0.25rem;
+    display: table-cell;
+    height: min-content;
+}
+
+.circular-portrait-menu {
+    display: block;
+    position: relative;
+    width: 4.735rem;
+    height: 4.735rem;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: transparent;
+    margin: 0.25rem;
+}
+
+img.colleague-img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.colleague-img-container .colleague-name {
+    font-size:0.75rem;
+    font-family: 'Quicksand';
+    cursor: pointer;
+    
+}
