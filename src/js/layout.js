@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-// import ProfileBiography from "./component/Profile-PageComponents/ProfileBiography/ProfileBiography.jsx";
 
 import injectContext from "./store/appContext";
 
@@ -11,6 +10,7 @@ import Messages from "./views/Messages/Messages.jsx";
 import MessageViewer from "./views/Messages/MessageViewer/MessageViewer.jsx";
 import Profile from "./views/Profile/Profile.jsx";
 
+
 /**
  * ! Layout component for the views
  * * Template Component
@@ -20,6 +20,7 @@ const Layout = () => {
     <div>
       <BrowserRouter basename="/">
         <div>
+          <CollConstructor />
           <Switch>
             {/* <Route exact path="/" component={HomePage} /> */}
             {/* <LandingPage/> */}
