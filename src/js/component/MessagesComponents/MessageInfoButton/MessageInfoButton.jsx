@@ -1,12 +1,13 @@
 import React from "react";
+import propTypes from "prop-types";
 
 import './MessageInfoButtonStyles.scss';
 
 const MessageInfoButtonPropTypes = {
-  name: PropTypes.string.isRequired,
-  about: PropTypes.string,
-  date: PropTypes.string.isRequired,
-};
+  name: propTypes.string.isRequired,
+  about: propTypes.string,
+  date: propTypes.string.isRequired,
+}
 
 const MessageInfoButton = (props) => {
   return (
@@ -20,6 +21,6 @@ const MessageInfoButton = (props) => {
   );
 };
 
-MessageInfoButton.PropTypes = MessageInfoButtonPropTypes;
+MessageInfoButton.propTypes = MessageInfoButtonPropTypes;
 
 export default MessageInfoButton;

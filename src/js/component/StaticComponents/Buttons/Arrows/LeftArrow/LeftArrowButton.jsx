@@ -1,11 +1,11 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 
 import "./LeftArrowButtonStyles.scss";
 
 const LeftArrowButtonPropTypes = {
-  height: PropTypes.string,
-  width: PropTypes.string,
+  height: propTypes.string,
+  width: propTypes.string,
 };
 
 const LeftArrowButton = (props) => {
@@ -27,6 +27,6 @@ const LeftArrowButton = (props) => {
   );
 };
 
-LeftArrowButton.PropTypes = LeftArrowButtonPropTypes;
+LeftArrowButton.propTypes = LeftArrowButtonPropTypes;
 
 export default LeftArrowButton;
