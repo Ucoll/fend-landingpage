@@ -1,15 +1,7 @@
 import React from "react";
-import * as propTypes from "prop-types";
+import * as PropTypes from "prop-types";
 
 import ProfileEditButton from "../../StaticComponents/Buttons/ProfileEditButton/ProfileEditButton.jsx";
-
-import "./ProfileUserInfo.scss";
-
-const ProfileUserInfoPropTypes = {
-  userEmail: propTypes.string,
-  profileCreationDate: propTypes.string,//.isRequired,
-  karma: propTypes.number,//.isRequired,
-}
 
 import "./ProfileUserInfo.scss";
 

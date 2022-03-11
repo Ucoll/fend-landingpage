@@ -10,11 +10,6 @@ const LikeButtonsPropTypes = {
   id: PropTypes.number.isRequired,
 };
 
-const LikeButtonsPropTypes = {
-  liked: propTypes.string.isRequired,
-  likes: propTypes.number.isRequired,
-} 
-
 /**
  * ! Like & Dislike buttons with a "score" counter
  * * AslanSN & OvidioSantoro

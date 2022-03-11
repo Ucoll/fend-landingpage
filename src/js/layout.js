@@ -19,11 +19,11 @@ const Layout = () => {
     <div>
       <BrowserRouter basename="/">
         <div>
-          <CollConstructor />
+          {/* <CollConstructor /> */}
           <Switch>
-            {/* <Route exact path="/" component={HomePage} /> */}
+            <Route exact path="/" component={HomePage} />
             {/* <LandingPage/> */}
-            {/* <HomePage/> */}
+            <HomePage/>
             {/* TODO: <Route exact path="/profile" component={Profile} /> */}
             {/* <Profile /> */}
             {/* <Register/> */}
