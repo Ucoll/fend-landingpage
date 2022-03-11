@@ -117,6 +117,7 @@ const HomeView = () => {
               <Coll
                 key={item.id}
                 id={item.id}
+                type={item.type}
                 portrait={item.portrait}
                 name={item.sender}
                 studies={item.studies[0]}

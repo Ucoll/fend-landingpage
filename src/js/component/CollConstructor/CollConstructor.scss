@@ -133,14 +133,12 @@
 
 .coll-constructor-cancel {
   grid-area: cancel;
-  cursor: pointer;
   width: 10.875rem;
   height: 3.25rem;
   border-radius: 0.5rem;
   text-align: center;
   align-self: center;
   background-color: #e45518;
-  line-height: 3.25rem;
   font-size: 1.3rem;
   font-weight: bolder;
   color: white;
@@ -149,14 +147,12 @@
 
 .coll-constructor-send {
   grid-area: send;
-  cursor: pointer;
   width: 10.875rem;
   height: 3.25rem;
   border-radius: 0.5rem;
   text-align: center;
   align-self: center;
   background-color: #1fa459;
-  line-height: 3.25rem;
   font-size: 1.3rem;
   font-weight: bolder;
   color: white;

@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import injectContext from "./store/appContext";
 
+import CollConstructor from "./component/CollConstructor/CollConstructor.jsx"
 import HomePage from "./views/HomePage/HomePage.jsx";
 import LandingPage from "./views/LandingPage/LandingPage.jsx";
 import Register from "./views/LandingPage/RegisterSubview/Register.jsx";
@@ -19,7 +20,7 @@ const Layout = () => {
     <div>
       <BrowserRouter basename="/">
         <div>
-          {/* <CollConstructor /> */}
+          <CollConstructor />
           <Switch>
             <Route exact path="/" component={HomePage} />
             {/* <LandingPage/> */}

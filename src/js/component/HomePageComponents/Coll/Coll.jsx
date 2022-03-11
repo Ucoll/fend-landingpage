@@ -13,6 +13,7 @@ import "./Coll.scss";
 
 const CollPropTypes = {
   portrait: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   studies: PropTypes.string.isRequired,
   postItColor: PropTypes.string.isRequired,
@@ -33,13 +34,6 @@ const CollPropTypes = {
  * @returns React Component
  */
 const Coll = ({ ...props }) => {
-  const [faved, setFaved] = useState("unfaved");
-  const [favs, setFavs] = useState(0);
-
-  useEffect(() => {
-    // ! Tracks the amount of favs of the Coll
-    setFavs(props.favs.length);
-  }, []);
 
   return (
     <div className="coll-container test">
