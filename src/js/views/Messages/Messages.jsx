@@ -22,7 +22,7 @@ import NewMessageButton from "../../component/MessagesComponents/Buttons/NewMess
 const Messages = () => {
   return (
     <>
-      <div className="message-view-container">
+      <div className="messages-view-container">
         <UCollLogo />
         <div className="header">
           <div className="row-1">
