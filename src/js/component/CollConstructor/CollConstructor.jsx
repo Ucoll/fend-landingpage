@@ -58,34 +58,43 @@ const CollConstructor = () => {
     const title = document.getElementById("title").value;
     const _class = document.getElementById("_class").value;
     const type = collType;
+    let content = ""
     if (collType === "text") {
-      const content = document.getElementsByClassName("ql-editor")[0].innerHTML;
+      content = document.getElementsByClassName("ql-editor")[0].innerHTML;
     } else if (collType === "link") {
-      const content = document.getElementById("contentLink").value;
+      content = document.getElementById("contentLink").value;
     } else {
-      const content = files.files[0];
+      content = files.files[0];
     }
 
-    console.log("SUBMITTED");
-    console.log(files.files[0]);
+    console.log(title)
+    console.log(_class)
+    console.log(type)
+    console.log(content)
 
-    // fetch(`${database}/colls`, {
-    //   method: "POST",
-    //   // headers: {
-    //   //   "Content-Type": "multipart/form-data"
-    //   // },
-    //   body: FormData,
-    // })
-    //   .then((response) => {
-    //     if (!response.ok) {
-    //       throw new Error("Failed with HTTP code " + response.status);
-    //     }
-    //     return response;
-    //   })
-    //   .then((response) => console.log(response.json()))
-    //   .catch((err) => {
-    //     console.error(err);
-    //   });
+    fetch(`${database}/colls`, {
+      method: "POST",
+      mode: "no-cors", // TODO: Necessary?
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        "title": title,
+        "_class": _class,
+        "type": type,
+        "content": content
+      }),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed with HTTP code " + response.status);
+        }
+        return response;
+      })
+      .then((response) => console.log(response.json()))
+      .catch((err) => {
+        console.error(err);
+      });
   };
 
   const contentTypes = {
