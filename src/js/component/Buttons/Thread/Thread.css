@@ -1,0 +1,15 @@
+.button-thread {
+  height: 20px;
+  width: 25px;
+  color: rgba(3, 63, 89, 0.8);
+}
+
+.button-thread:hover {
+  color: #033f59;
+  cursor: pointer;
+}
+
+.button-thread:active {
+  color: black;
+}
+/*# sourceMappingURL=Thread.css.map */
