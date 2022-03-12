@@ -1,0 +1,43 @@
+/*
+! STYLES -> Message Info Button Styles
+* AslanSN - 2022-03-08
+*/
+.message-info-button-check-container {
+  font-size: 2.25rem;
+  width: 88rem;
+  height: min-content;
+  padding: 0.5rem;
+  background-color: rgba(206, 226, 203, 1);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+  cursor: pointer;
+  outline: none;
+  border: none;
+
+  & .name-container {
+    margin-left: 2rem;
+    & .name {
+      padding-left: 3.5rem;
+    }
+  }
+
+  & .date {
+    margin-right: 2rem;
+  }
+
+  &:hover,
+  &::selection {
+    background-color: rgba(154, 197, 195, 1);
+  }
+
+  & .checkbox-container {
+    & span {
+      top: 0.7rem;
+    }
+  }
+}
+
