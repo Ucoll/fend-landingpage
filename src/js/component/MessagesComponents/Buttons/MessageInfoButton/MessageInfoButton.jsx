@@ -1,7 +1,7 @@
 import React from "react";
 import propTypes from "prop-types";
 
-import Checkbox from "../../StaticComponents/Buttons/Checkbox/Checkbox.jsx";
+import Checkbox from "../../../StaticComponents/Buttons/Checkbox/Checkbox.jsx";
 
 import "./MessageInfoButtonStyles.scss";
 

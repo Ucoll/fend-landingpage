@@ -8,6 +8,7 @@ import LandingPage from "./views/LandingPage/LandingPage.jsx";
 import Register from "./views/LandingPage/RegisterSubview/Register.jsx";
 import Messages from "./views/Messages/Messages.jsx";
 import Profile from "./views/Profile/Profile.jsx";
+import MessageEditor from "./views/Messages/MessageEditor/MessageEditor.jsx";
 
 
 /**
@@ -19,7 +20,7 @@ const Layout = () => {
     <div>
       <BrowserRouter basename="/">
         <div>
-          <CollConstructor />
+          {/* <CollConstructor /> */}
           <Switch>
             {/* <Route exact path="/" component={HomePage} /> */}
             {/* <LandingPage/> */}
@@ -28,6 +29,7 @@ const Layout = () => {
             {/* <Profile /> */}
             {/* <Register/> */}
             {/* <Messages/> */}
+            <MessageEditor />
           </Switch>
         </div>
       </BrowserRouter>

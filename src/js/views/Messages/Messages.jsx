@@ -1,6 +1,6 @@
 import React from "react";
 
-import MessageInfoButton from "../../component/MessagesComponents/MessageInfoButton/MessageInfoButton.jsx";
+import MessageInfoButton from "../../component/MessagesComponents/Buttons/MessageInfoButton/MessageInfoButton.jsx";
 import MessagesSearchBar from "../../component/MessagesComponents/MessagesSearchBar/MessagesSearchBar.jsx";
 import UCollLogo from "../../component/StaticComponents/Buttons/UCollLogo/UCollLogo.jsx";
 import InterestTags from "../../component/ProfilePageComponents/Tags/InterestTag.jsx";
