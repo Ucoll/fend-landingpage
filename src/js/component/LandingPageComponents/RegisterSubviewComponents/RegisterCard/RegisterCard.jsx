@@ -1,30 +1,98 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import PlusButton from "../PlusButton/PlusCircledButton.jsx";
 import CreateAccountButton from "../../Buttons/CreateAccountButton/CreateAccountButton.jsx";
 
 import "./RegisterCardStyles.scss";
+import { database } from "../../../../index.js";
 
 /**
  * !CARD -> Register
- * * AslanSN - 2022-03-07
+ * * AslanSN - 2022-03-07 & OvidioSantoro 2022-03-12
  * @param {props} props
  * @returns React component
  */
 const RegisterCard = ({ ...props }) => {
-  /**
-   * TODO
-   */
-  const facultyOptionsListener = () => {};
+  const [collegeList, setCollegeList] = useState([]);
+  const [facultyList, setFacultyList] = useState([]);
+  const [classesList, setClassesList] = useState([]);
 
-  /**
-   * TODO
-   */
-  const degreeOptionsListener = () => {};
+  const [college, setCollege] = useState();
+  const [faculty, setFaculty] = useState([]);
+  const [classes, setClasses] = useState([]);
+
+  useEffect(() => {
+    fetch(`${database}/colleges`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed with HTTP code " + response.status);
+        }
+        return response;
+      })
+      .then((response) => response.json())
+      .then((data) => setCollegeList(data))
+      .catch((err) => {
+        console.error(err);
+      });
+  }, []);
+
+  useEffect(() => {
+    fetch(`${database}/faculties/college/${college}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed with HTTP code " + response.status);
+        }
+        return response;
+      })
+      .then((response) => response.json())
+      .then((data) => setFacultyList(data))
+      .then(setFaculty())
+      .catch((err) => {
+        console.error(err);
+      });
+  }, [college]);
+
+  useEffect(() => {
+    fetch(`${database}/classes/faculty/${faculty}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed with HTTP code " + response.status);
+        }
+        return response;
+      })
+      .then((response) => response.json())
+      .then((data) => setClassesList(data))
+      .catch((err) => {
+        console.error(err);
+      });
+  }, [faculty]);
+
+  const collegeListener = () =>{
+    let selectedCollege = document.getElementById("college").value
+    document.getElementById("faculty").value = ""
+    document.getElementById("class").value = ""
+    setCollege(selectedCollege)
+  }
+
+  const facultyListener = () =>{
+    let selectedFaculty = document.getElementById("faculty").value
+    setFaculty(selectedFaculty)
+    document.getElementById("class").value = ""
+  }
+
+  const registerUser = (ev) => {
+    ev.preventDefault(); // TODO: Do we need to prevent the default behaviour?
+    console.log("REGISTER");
+    console.log(`College Id: ${college}`);
+    console.log(`Faculty Id: ${faculty}`);
+  };
 
   return (
     <div className="register-card-view">
-      <form className="register-card-container">
+      <form
+        className="register-card-container"
+        onSubmit={(ev) => registerUser(ev)}
+      >
         <h1>Register</h1>
 
         <input
@@ -57,25 +125,16 @@ const RegisterCard = ({ ...props }) => {
             <select
               className="select"
               name="university"
-              defaultValue="College or University"
               id="college"
+              required
+              onChange={collegeListener}
             >
-              College or University
-              {/* //!HARDCODED */}
-              <option disabled value="College or University">
-                College or University
+              <option hidden selected className="hidden-selected" value="">
+                College
               </option>
-              <option value="Harvard University">Harvard University</option>
-              <option value="MIT">MIT</option>
-              <option value="Stanford University">Stanford University</option>
-              <option value="Yale University">Yale University</option>
-              <option value="Columbia University">Columbia University</option>
-              <option value="University of Chicago">
-                University of Chicago
-              </option>
-              <option value="Dartmouth College">Dartmouth College</option>
-              <option value="Duke University">Duke University</option>
-              <option value="CIT">CIT</option>
+              {collegeList.map((item) => (
+                <option value={item.id}>{item.name}</option>
+              ))}
             </select>
           </label>
 
@@ -83,34 +142,38 @@ const RegisterCard = ({ ...props }) => {
             <select
               className="select"
               name="faculty"
-              defaultValue="Faculty"
               id="faculty"
+              required
+              onChange={facultyListener}
             >
-              <option disabled value="Faculty">
+              <option hidden selected className="hidden-selected" value="">
                 Faculty
               </option>
-              {facultyOptionsListener} //TODO
+              {facultyList.map((item) => (
+                <option value={item.id}>{item.name}</option>
+              ))}
             </select>
           </label>
         </div>
 
         <label className="custom-selector">
-          {/* //TODO: FILL WITH DEGREES */}
           <select
             className="select"
-            name="degree"
-            id="degree"
-            defaultValue="Choose your degree"
+            name="class"
+            id="class"
+            required
+            onChange={console.log("CHANGED CLASS")}
           >
-            <option disabled value="Choose your degree">
-              Choose your Degree
-            </option>
-            {degreeOptionsListener} //TODO
+            <option hidden selected className="hidden-selected" value="">
+                Select your classes
+              </option>
+              {classesList.map((item) => (
+                <option value={item.id}>{item.name}</option>
+              ))}
           </select>
         </label>
 
         <PlusButton />
-
         <CreateAccountButton />
       </form>
     </div>
