@@ -19,24 +19,18 @@ import { database } from "../../../js/index.js";
  * @returns React Component
  */
 const CollConstructor = () => {
-  const contentTypes = {
-    link: <ContentLink />,
-    photo: <ContentFile fileTypes={["JPG", "PNG", "GIF"]} />,
-    video: <ContentFile fileTypes={["MP4", "AVI", "WEBM", "MOV", "MKV"]} />,
-    text: <ContentText />,
-    file: (
-      <ContentFile fileTypes={["DOC", "TXT", "PDF", "XLS", "ODT", "MP3"]} />
-    ),
-  };
-
   const [contentType, setContentType] = useState();
-  const [collType, setCollType] = useState("")
+  const [collType, setCollType] = useState("");
   const [user, setUser] = useState();
   const [classes, setClasses] = useState([]);
+  const [files, setFiles] = useState({ files: [] });
+
+  const updateUploadedFiles = (files) =>
+    setFiles({ ...files, files: files });
 
   // TODO: This might be received via props in order to use this for the "Edit Coll" option
   useEffect(() => {
-    setCollType("text")
+    setCollType("text");
     setContentType(contentTypes.text);
 
     //TODO: Change route to "/me" once the register is up & running
@@ -55,30 +49,25 @@ const CollConstructor = () => {
   }, []);
 
   const switchContent = (fileType) => {
-    setCollType(fileType)
+    setCollType(fileType);
     setContentType(contentTypes[fileType]);
   };
 
   const newColl = (ev) => {
     ev.preventDefault(); // TODO: Do we need to prevent the default behaviour?
-    if (collType === "text"){
-      const title = document.getElementById("title").value
-      const content = document.getElementsByClassName("ql-editor")[0].innerHTML
-      const _class = document.getElementById("_class").value
-      const type = collType
-    } else if (collType === "link"){
-        const title = document.getElementById("title").value
-        const content = document.getElementById("contentLink").value
-        const _class = document.getElementById("_class").value
-        const type = collType
-    } else{
-      const title = document.getElementById("title").value
-      //const content = document.getElementsByClassName("sc-bdvvtL iciELI")[0].innerHTML
-      const content = document.getElementById("file")
-      const _class = document.getElementById("_class").value
-      const type = collType
-      console.log(content)
+    const title = document.getElementById("title").value;
+    const _class = document.getElementById("_class").value;
+    const type = collType;
+    if (collType === "text") {
+      const content = document.getElementsByClassName("ql-editor")[0].innerHTML;
+    } else if (collType === "link") {
+      const content = document.getElementById("contentLink").value;
+    } else {
+      const content = files.files[0];
     }
+
+    console.log("SUBMITTED");
+    console.log(files.files[0]);
 
     // fetch(`${database}/colls`, {
     //   method: "POST",
@@ -97,6 +86,29 @@ const CollConstructor = () => {
     //   .catch((err) => {
     //     console.error(err);
     //   });
+  };
+
+  const contentTypes = {
+    link: <ContentLink />,
+    photo: (
+      <ContentFile
+        accept=".jpg,.png,.jpeg"
+        updateFilesCb={updateUploadedFiles}
+      />
+    ),
+    video: (
+      <ContentFile
+        accept=".jpg,.png,.jpeg"
+        updateFilesCb={updateUploadedFiles}
+      />
+    ),
+    text: <ContentText />,
+    file: (
+      <ContentFile
+        accept=".jpg,.png,.jpeg"
+        updateFilesCb={updateUploadedFiles}
+      />
+    ),
   };
 
   // TODO: Delete Test class (Margin to view the component better)
