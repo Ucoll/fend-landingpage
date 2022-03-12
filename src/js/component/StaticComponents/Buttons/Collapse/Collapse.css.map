@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA;;;;GAIG;AAEH,AAAA,gBAAgB,CAAC;EACf,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;CACZ;;AAED,AAAA,gBAAgB,AAAA,MAAM,CAAC;EACrB,MAAM,EAAE,OAAO;CAChB",
-    "sources": [
-        "Collapse.scss"
-    ],
-    "names": [],
-    "file": "Collapse.css"
-}
