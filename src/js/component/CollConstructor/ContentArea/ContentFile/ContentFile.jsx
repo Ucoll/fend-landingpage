@@ -13,6 +13,9 @@ function ContentFile(props) {
       <FileUploader
         handleChange={handleChange}
         name="file"
+        multiple="false"
+        hoverTitle="Upload File"
+        maxSize="20"
         types={Array.from(props.fileTypes)}
       />
     </>

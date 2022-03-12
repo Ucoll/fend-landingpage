@@ -13,7 +13,6 @@ import NewPostDocument from "../StaticComponents/Buttons/NewPostButtons/NewPostD
 import "./CollConstructor.scss";
 import { database } from "../../../js/index.js";
 
-
 /**
  * ! Creates the Coll component
  * * OvidioSantoro - 2022-02-16
@@ -31,9 +30,13 @@ const CollConstructor = () => {
   };
 
   const [contentType, setContentType] = useState();
-  const [user, setUser] = useState()
+  const [collType, setCollType] = useState("")
+  const [user, setUser] = useState();
+  const [classes, setClasses] = useState([]);
+
   // TODO: This might be received via props in order to use this for the "Edit Coll" option
   useEffect(() => {
+    setCollType("text")
     setContentType(contentTypes.text);
 
     //TODO: Change route to "/me" once the register is up & running
@@ -45,26 +48,44 @@ const CollConstructor = () => {
         return response;
       })
       .then((response) => response.json())
-      .then((data) => setUser(data))
+      .then((data) => (setUser(data), setClasses(data.classes)))
       .catch((err) => {
         console.error(err);
       });
   }, []);
 
   const switchContent = (fileType) => {
+    setCollType(fileType)
     setContentType(contentTypes[fileType]);
   };
 
   const newColl = (ev) => {
-    ev.preventDefault() // TODO: Do we need to prevent the default behaviour?
-    console.log(user.classes[0].name)
+    ev.preventDefault(); // TODO: Do we need to prevent the default behaviour?
+    if (collType === "text"){
+      const title = document.getElementById("title").value
+      const content = document.getElementsByClassName("ql-editor")[0].innerHTML
+      const _class = document.getElementById("_class").value
+      const type = collType
+    } else if (collType === "link"){
+        const title = document.getElementById("title").value
+        const content = document.getElementById("contentLink").value
+        const _class = document.getElementById("_class").value
+        const type = collType
+    } else{
+      const title = document.getElementById("title").value
+      //const content = document.getElementsByClassName("sc-bdvvtL iciELI")[0].innerHTML
+      const content = document.getElementById("file")
+      const _class = document.getElementById("_class").value
+      const type = collType
+      console.log(content)
+    }
 
     // fetch(`${database}/colls`, {
     //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({ like: true }),
+    //   // headers: {
+    //   //   "Content-Type": "multipart/form-data"
+    //   // },
+    //   body: FormData,
     // })
     //   .then((response) => {
     //     if (!response.ok) {
@@ -76,23 +97,33 @@ const CollConstructor = () => {
     //   .catch((err) => {
     //     console.error(err);
     //   });
-  }
+  };
 
   // TODO: Delete Test class (Margin to view the component better)
   return (
-    <form action="" className="coll-constructor test" onSubmit={(ev) => newColl(ev)}>
+    <form
+      id="CollConstructor"
+      className="coll-constructor test"
+      onSubmit={(ev) => newColl(ev)}
+    >
       <div className="coll-constructor-title">
         <input
           type="text"
-          name="collTitle"
-          id="collTitle"
+          name="title"
+          id="title"
           placeholder="Think of a good title!"
         />
       </div>
-      {/* TODO: think of a good way to implement the icon next to the name. NOT PRIORITARY - FOR THE FINAL PRESENTATION */}
-      <div className="coll-constructor-selector"> <option value="volvo">Volvo</option>
-        <select name="classSelector" id="classSelector">
-        {user.map((_class) => (<option value="volvo">Volvo</option>))}
+      <div className="coll-constructor-selector">
+        <select required name="_class" id="_class">
+          <option hidden selected className="hidden-selected" value="">
+            Choose a Class
+          </option>
+          <option value="1">Global</option>
+          <hr />
+          {classes.map((_class) => (
+            <option value={_class.id}>{_class.name}</option>
+          ))}
         </select>
       </div>
       <div className="coll-constructor-buttons">
@@ -120,8 +151,12 @@ const CollConstructor = () => {
         {contentType}
       </div>
       {/* TODO: Onclick, close the Coll constructor */}
-      <input type="button" className="coll-constructor-cancel" value={"CANCEL"} />
-      <input type="submit" className="coll-constructor-send" value={"SEND"}/>
+      <input
+        type="button"
+        className="coll-constructor-cancel"
+        value={"CANCEL"}
+      />
+      <input type="submit" className="coll-constructor-send" value={"SEND"} />
     </form>
   );
 };

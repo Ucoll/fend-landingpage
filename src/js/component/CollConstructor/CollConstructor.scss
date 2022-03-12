@@ -111,7 +111,7 @@
     padding: 1rem;
     font-size: 1.5rem;
   }
-
+  
   iframe,
   .contentlink-nolink {
     margin-left: 11.47rem;
@@ -157,4 +157,13 @@
   font-weight: bolder;
   color: white;
   margin: auto;
+}
+
+select:required:invalid {
+  color: #7a7979;
+}
+
+option {
+  color: black;
+  font-weight: bold;
 }
