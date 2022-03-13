@@ -1,0 +1,44 @@
+.message-constructor {
+  height: 40rem;
+  width: 86.75rem;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background-color: #dbf2d8;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25));
+}
+
+.message-display-content {
+  background-color: #fff4e2;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  border: none;
+
+  .ql-toolbar {
+    height: 2.75rem;
+    background-color: #9ac5c3;
+    border-radius: 0.5rem 0.5rem 0 0;
+    text-align: center;
+  }
+
+  .quill {
+    height: 33.5rem;
+    border-radius: 0.5rem;
+    border: none;
+  }
+
+  .ql-editor {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .iciELI {
+    max-width: 64.1rem;
+    width: 64.1rem;
+    height: 31.5rem;
+
+    svg {
+      margin-left: 24rem;
+    }
+  }
+}

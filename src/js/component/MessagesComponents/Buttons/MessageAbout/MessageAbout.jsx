@@ -1,21 +1,21 @@
 import React from "react";
-// import propTypes from "prop-types";
+import propTypes from "prop-types";
 
 import "./MessageAbout.scss";
 
-const MessageToPropTypes = {
-  about: propTypes.string,
+const MessageAboutPropTypes = {
+  about: propTypes.string.isRequired,
 };
 
 const MessageAbout = (props) => {
   return (
-    <button className="message-about">
+    <div on className="message-about">
       <div className="space-about">About:</div>
       <div className="about">{props.about}</div>
-    </button>
+    </div>
   );
 };
 
-// MessageAbout.propTypes = MessageAboutPropTypes;
+MessageAbout.propTypes = MessageAboutPropTypes;
 
 export default MessageAbout;

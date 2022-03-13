@@ -30,7 +30,8 @@ const Layout = () => {
             {/* <Profile /> */}
             {/* <Register/> */}
             {/* <Messages/> */}
-            <MessageViewer/>
+            {/* <MessageViewer/> */}
+            <MessageEditor/>
           </Switch>
         </div>
       </BrowserRouter>

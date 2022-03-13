@@ -1,5 +1,5 @@
 import React from "react";
-// import propTypes from "prop-types";
+import propTypes from "prop-types";
 
 import "./MessageTo.scss";
 
@@ -9,13 +9,13 @@ const MessageToPropTypes = {
 
 const MessageTo = (props) => {
   return (
-    <button className="message-to">
+    <div className="message-to">
       <div className="space-to">To:</div>
-      <div className="name">Maya Africaans</div>
-    </button>
+      <div className="name">{props.name}</div>
+    </div>
   );
 };
 
-// MessageTo.propTypes = MessageToPropTypes;
+MessageTo.propTypes = MessageToPropTypes;
 
 export default MessageTo;
