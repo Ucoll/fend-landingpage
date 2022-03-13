@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import * as PropTypes from "prop-types";
+import Microlink from "@microlink/react";
 
 import LikeButtons from "../../StaticComponents/Buttons/Like/LikeButtons.jsx";
 import Comment from "../../StaticComponents/Buttons/Comment/Comment.jsx";
@@ -51,7 +52,12 @@ const Coll = ({ ...props }) => {
           <TicketPostIt color={props.postItColor} />
         </div>
       </div>
-      <div className="coll-text">{props.content}</div>
+      {props.type === "text"
+        ? <div className="coll-text" dangerouslySetInnerHTML={{__html: props.content}}></div>
+        : props.type === "photo"
+          ? <p>PHOTO</p>
+          : <iframe className="coll-iframe" src={props.content}></iframe>   
+      }
       <div className="coll-like">
         <LikeButtons likes={props.like} id={props.id} />
       </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-import * as propTypes from "prop-types";
+import * as PropTypes from "prop-types";
 
 import LikeButtons from "../../../StaticComponents/Buttons/Like/LikeButtons.jsx";
 import Thread from "../../../StaticComponents/Buttons/Thread/Thread.jsx";
@@ -13,24 +13,24 @@ import TicketPostIt from "../../../StaticComponents/Buttons/TicketPost-It/Ticket
 import "./CompressedColl.scss";
 
 const CompressedCollPropTypes = {
-  portrait: propTypes.string.isRequired,
-  name: propTypes.string.isRequired,
-  studies: propTypes.string.isRequired,
-  postItColor: propTypes.string.isRequired,
-  liked: propTypes.bool.isRequired,
-  date: propTypes.string.isRequired,
-  title: propTypes.string.isRequired,
-  likes: propTypes.number.isRequired,
-  content: propTypes.string.isRequired, // Review if it's string or object, if object ... will be needed
-  threads: propTypes.number.isRequired,
-  comments: propTypes.number.isRequired,
-  favs: propTypes.number.isRequired,
-  shares: propTypes.number.isRequired,
+  portrait: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  studies: PropTypes.string.isRequired,
+  postItColor: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  like: PropTypes.object.isRequired,
+  content: PropTypes.string.isRequired,
+  threads: PropTypes.number.isRequired,
+  comments: PropTypes.number.isRequired,
+  favs: PropTypes.number.isRequired,
+  shares: PropTypes.number.isRequired,
 };
 
 /**
  * ! Creates the Compressed Coll component
- * * OvidioSantoro - 2022-02-16
+ * * OvidioSantoro - 2022-02-16 + 2022-03-13
  * @param {props} props - Properties for a compressed Coll 
  * @returns {Component} - React Component
  */
@@ -53,15 +53,7 @@ const CompressedColl = ({ ...props }) => {
       </div>
       <div className="compressed-text">{props.content}</div>
       <div className="compressed-like">
-        <LikeButtons {...props.liked}/>
-      </div>
-      <div className="compressed-thread">
-        <Thread />
-        {props.thread < 1
-          ? `Thread`
-          : props.thread === 1
-          ? `${props.thread} Thread`
-          : `${props.thread} Threads`}
+        <LikeButtons likes={props.like} id={props.id}/>
       </div>
       <div className="compressed-comment">
         <div className="compressed-comments">
@@ -75,25 +67,11 @@ const CompressedColl = ({ ...props }) => {
           </span>
         </div>
         <div className="compressed-favs">
-          <Favorite />
-          <span className="compressed-favers">
-            {props.favs < 1
-              ? `Favs`
-              : props.favs === 1
-              ? `${props.favs} Fav`
-              : `${props.favs} Favs`}
-          </span>
+          <Favorite favs={props.favs} collId={props.id} />
         </div>
       </div>
       <div className="compressed-share">
         <Share />
-        <span className="compressed-sharers">
-          {props.shares < 1
-            ? `Shares`
-            : props.shares === 1
-            ? `${props.shares} Share`
-            : `${props.shares} Shares`}
-        </span>
       </div>
     </div>
   );
