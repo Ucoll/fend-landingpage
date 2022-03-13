@@ -91,6 +91,7 @@ const RegisterCard = ({ ...props }) => {
     <div className="register-card-view">
       <form
         className="register-card-container"
+        id="register-form"
         onSubmit={(ev) => registerUser(ev)}
       >
         <h1>Register</h1>
@@ -160,6 +161,7 @@ const RegisterCard = ({ ...props }) => {
           <select
             className="select"
             name="class"
+            form="register-form"
             id="class"
             required
             onChange={console.log("CHANGED CLASS")}
