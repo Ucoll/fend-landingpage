@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { Context } from "../../../store/appContext.js";
 
 import CreateAccountButton from "../Buttons/CreateAccountButton/CreateAccountButton.jsx";
 import LogInButton from "../Buttons/LogInButton/LogInButton.jsx";
 import Checkbox from "../../StaticComponents/Buttons/Checkbox/Checkbox.jsx";
 
 import "./LoginCardStyles.scss";
+
 
 /**
  * ! CARD - Log In and Account Creation
@@ -14,17 +17,24 @@ import "./LoginCardStyles.scss";
  */
 const LoginCard = () => {
 
-  const [email, setemail] = useState("")
-  const [password, setPassword] = useState("")
+  const {store, actions} = useContext(Context)
+  const history = useHistory()
 
   const loginHandler = (ev) => {
-    ev.prevent
+    ev.preventDefault()
+
+    const email = document.getElementById("email-input").value
+    const password = document.getElementById("password-input").value
+
+    actions.login(email, password).then(() =>{
+      history.push("/home")
+    })
   }
 
   return (
     <>
-      <form onSubmit={(ev) => loginHandler(ev)} className="login-card">
-        <div className="container">
+      <div className="login-card">
+        <form onSubmit={(ev) => loginHandler(ev)} className="container">
           <input
             type="email"
             id="email-input"
@@ -47,9 +57,10 @@ const LoginCard = () => {
             <Checkbox text="Remember me" />
           </div>
           <hr />
-          <CreateAccountButton />
-        </div>
-      </form>
+        </form>
+        {/* TODO: Make the redirect */}
+        <CreateAccountButton />
+      </div>
     </>
   );
 };
