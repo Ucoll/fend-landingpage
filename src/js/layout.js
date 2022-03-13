@@ -24,14 +24,13 @@ const Layout = () => {
           {/* <CollConstructor /> */}
           <Switch>
             {/* <Route exact path="/" component={HomePage} /> */}
-            {/* <LandingPage/> */}
+            <LandingPage/>
             {/* <HomePage/> */}
             {/* TODO: <Route exact path="/profile" component={Profile} /> */}
             {/* <Profile /> */}
-            {/* <Register/> */}
+            <Register/>
             {/* <Messages/> */}
             {/* <MessageViewer/> */}
-            <MessageEditor/>
           </Switch>
         </div>
       </BrowserRouter>

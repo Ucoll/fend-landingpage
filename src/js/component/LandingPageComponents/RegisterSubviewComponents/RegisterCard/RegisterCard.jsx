@@ -1,30 +1,159 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import PlusButton from "../PlusButton/PlusCircledButton.jsx";
 import CreateAccountButton from "../../Buttons/CreateAccountButton/CreateAccountButton.jsx";
+import Select from "react-select";
+import makeAnimated from "react-select/animated";
 
 import "./RegisterCardStyles.scss";
+import { database } from "../../../../index.js";
 
 /**
  * !CARD -> Register
- * * AslanSN - 2022-03-07
+ * * AslanSN - 2022-03-07 & OvidioSantoro 2022-03-12
  * @param {props} props
  * @returns React component
  */
 const RegisterCard = ({ ...props }) => {
-  /**
-   * TODO
-   */
-  const facultyOptionsListener = () => {};
+  const [collegeList, setCollegeList] = useState([]);
+  const [facultyList, setFacultyList] = useState([]);
+  const [classesList, setClassesList] = useState([]);
 
-  /**
-   * TODO
-   */
-  const degreeOptionsListener = () => {};
+  const [college, setCollege] = useState();
+  const [faculty, setFaculty] = useState([]);
+  const [classes, setClasses] = useState([]);
+
+  useEffect(() => {
+    fetch(`${database}/colleges`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed with HTTP code " + response.status);
+        }
+        return response;
+      })
+      .then((response) => response.json())
+      .then((data) => setCollegeList(data))
+      .catch((err) => {
+        console.error(err);
+      });
+  }, []);
+
+  useEffect(() => {
+    fetch(`${database}/faculties/college/${college}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed with HTTP code " + response.status);
+        }
+        return response;
+      })
+      .then((response) => response.json())
+      .then((data) => setFacultyList(data))
+      .then(setFaculty())
+      .catch((err) => {
+        console.error(err);
+      });
+  }, [college]);
+
+  useEffect(() => {
+    fetch(`${database}/classes/faculty/${faculty}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed with HTTP code " + response.status);
+        }
+        return response;
+      })
+      .then((response) => response.json())
+      .then((data) => setClassesList(data))
+      .catch((err) => {
+        console.error(err);
+      });
+  }, [faculty]);
+
+  const collegeListener = () => {
+    let selectedCollege = document.getElementById("college").value;
+    document.getElementById("faculty").value = "";
+    // TODO: CORRECT THIS SO IT ERASES THE SELECT WHEN CHANGED
+    //document.getElementById("class").value = null;
+    setCollege(selectedCollege);
+  };
+
+  const facultyListener = () => {
+    let selectedFaculty = document.getElementById("faculty").value;
+    setFaculty(selectedFaculty);
+    //document.getElementById("class").value = null;
+  };
+
+  function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = jQuery.trim(cookies[i]);
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+  const registerUser = (ev) => {
+    ev.preventDefault(); // TODO: Do we need to prevent the default behaviour?
+    let username = document.getElementById("username").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let confirmation = document.getElementById("confirm-password").value;
+    let userClasses = classes.map((item) => (String(item.value)))
+
+    fetch(`${database}/register`, {
+      method: "POST",
+      headers: {
+        "X-CSRFToken": getCookie("csrftoken"),
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: username,
+        email: email,
+        password: password,
+        confirmation: confirmation,
+        faculty: faculty,
+        classes: userClasses,
+      }),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed with HTTP code " + response.status);
+        }
+        return response;
+      })
+      .then((response) => console.log(response.json()))
+      .catch((err) => {
+        console.error(err);
+      });
+  };
+
+  const animatedComponents = makeAnimated();
+
+  const handleChange = (classesList) => {
+    setClasses(classesList);
+  };
+
+  const customStyles = {
+    menu: (provided, state) => ({
+      ...provided,
+      backgroundColor: "#e4e4e4",
+    }),
+  };
 
   return (
     <div className="register-card-view">
-      <form className="register-card-container">
+      <form
+        className="register-card-container"
+        id="register-form"
+        onSubmit={(ev) => registerUser(ev)}
+      >
         <h1>Register</h1>
 
         <input
@@ -57,25 +186,16 @@ const RegisterCard = ({ ...props }) => {
             <select
               className="select"
               name="university"
-              defaultValue="College or University"
               id="college"
+              required
+              onChange={collegeListener}
             >
-              College or University
-              {/* //!HARDCODED */}
-              <option disabled value="College or University">
-                College or University
+              <option hidden selected className="hidden-selected" value="">
+                College
               </option>
-              <option value="Harvard University">Harvard University</option>
-              <option value="MIT">MIT</option>
-              <option value="Stanford University">Stanford University</option>
-              <option value="Yale University">Yale University</option>
-              <option value="Columbia University">Columbia University</option>
-              <option value="University of Chicago">
-                University of Chicago
-              </option>
-              <option value="Dartmouth College">Dartmouth College</option>
-              <option value="Duke University">Duke University</option>
-              <option value="CIT">CIT</option>
+              {collegeList.map((item) => (
+                <option value={item.id}>{item.name}</option>
+              ))}
             </select>
           </label>
 
@@ -83,33 +203,33 @@ const RegisterCard = ({ ...props }) => {
             <select
               className="select"
               name="faculty"
-              defaultValue="Faculty"
               id="faculty"
+              required
+              onChange={facultyListener}
             >
-              <option disabled value="Faculty">
+              <option hidden selected className="hidden-selected" value="">
                 Faculty
               </option>
-              {facultyOptionsListener} //TODO
+              {facultyList.map((item) => (
+                <option value={item.id}>{item.name}</option>
+              ))}
             </select>
           </label>
         </div>
 
-        <label className="custom-selector">
-          {/* //TODO: FILL WITH DEGREES */}
-          <select
-            className="select"
-            name="degree"
-            id="degree"
-            defaultValue="Choose your degree"
-          >
-            <option disabled value="Choose your degree">
-              Choose your Degree
-            </option>
-            {degreeOptionsListener} //TODO
-          </select>
-        </label>
-
-        <PlusButton />
+        <Select
+          closeMenuOnSelect={false}
+          id="class"
+          placeholder="Classes"
+          components={animatedComponents}
+          isMulti
+          onChange={handleChange}
+          styles={customStyles}
+          options={classesList.map((item) => ({
+            value: item.id,
+            label: item.name,
+          }))}
+        />
 
         <CreateAccountButton />
       </form>
