@@ -10,10 +10,15 @@
   height: 0.7rem;
   background-color: transparent;
   transform: translateY(3.7rem);
-  overflow: hidden;
-  cursor: pointer;
+  overflow: hidden;  
 }
 
 .ticket .menu-coll {
-  transform: scale(2.2) translate(0.32rem, -0.25rem);
+  transform: scale(2) translate(0.35rem, -0.25rem);
+}
+
+.colltag-menu {
+  position: absolute;
+  margin-top: 2.5rem;
+  margin-left: 1rem;
 }
