@@ -27,7 +27,7 @@ const Layout = () => {
             {/* <HomePage/> */}
             {/* TODO: <Route exact path="/profile" component={Profile} /> */}
             {/* <Profile /> */}
-            {/* <Register/> */}
+            <Register/>
             {/* <Messages/> */}
             {/* <MessageViewer/> */}
           </Switch>
