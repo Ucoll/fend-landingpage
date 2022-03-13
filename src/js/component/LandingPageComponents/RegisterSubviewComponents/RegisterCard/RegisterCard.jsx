@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 
 import PlusButton from "../PlusButton/PlusCircledButton.jsx";
 import CreateAccountButton from "../../Buttons/CreateAccountButton/CreateAccountButton.jsx";
+import Select from "react-select";
+import makeAnimated from "react-select/animated";
 
 import "./RegisterCardStyles.scss";
 import { database } from "../../../../index.js";
@@ -67,24 +69,82 @@ const RegisterCard = ({ ...props }) => {
       });
   }, [faculty]);
 
-  const collegeListener = () =>{
-    let selectedCollege = document.getElementById("college").value
-    document.getElementById("faculty").value = ""
-    document.getElementById("class").value = ""
-    setCollege(selectedCollege)
-  }
+  const collegeListener = () => {
+    let selectedCollege = document.getElementById("college").value;
+    document.getElementById("faculty").value = "";
+    // TODO: CORRECT THIS SO IT ERASES THE SELECT WHEN CHANGED
+    //document.getElementById("class").value = null;
+    setCollege(selectedCollege);
+  };
 
-  const facultyListener = () =>{
-    let selectedFaculty = document.getElementById("faculty").value
-    setFaculty(selectedFaculty)
-    document.getElementById("class").value = ""
-  }
+  const facultyListener = () => {
+    let selectedFaculty = document.getElementById("faculty").value;
+    setFaculty(selectedFaculty);
+    //document.getElementById("class").value = null;
+  };
+
+  function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = jQuery.trim(cookies[i]);
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
 
   const registerUser = (ev) => {
     ev.preventDefault(); // TODO: Do we need to prevent the default behaviour?
-    console.log("REGISTER");
-    console.log(`College Id: ${college}`);
-    console.log(`Faculty Id: ${faculty}`);
+    let username = document.getElementById("username").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let confirmation = document.getElementById("confirm-password").value;
+    let userClasses = classes.map((item) => (String(item.value)))
+
+    fetch(`${database}/register`, {
+      method: "POST",
+      headers: {
+        "X-CSRFToken": getCookie("csrftoken"),
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: username,
+        email: email,
+        password: password,
+        confirmation: confirmation,
+        faculty: faculty,
+        classes: userClasses,
+      }),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed with HTTP code " + response.status);
+        }
+        return response;
+      })
+      .then((response) => console.log(response.json()))
+      .catch((err) => {
+        console.error(err);
+      });
+  };
+
+  const animatedComponents = makeAnimated();
+
+  const handleChange = (classesList) => {
+    setClasses(classesList);
+  };
+
+  const customStyles = {
+    menu: (provided, state) => ({
+      ...provided,
+      backgroundColor: "#e4e4e4",
+    }),
   };
 
   return (
@@ -157,25 +217,20 @@ const RegisterCard = ({ ...props }) => {
           </label>
         </div>
 
-        <label className="custom-selector">
-          <select
-            className="select"
-            name="class"
-            form="register-form"
-            id="class"
-            required
-            onChange={console.log("CHANGED CLASS")}
-          >
-            <option hidden selected className="hidden-selected" value="">
-                Select your classes
-              </option>
-              {classesList.map((item) => (
-                <option value={item.id}>{item.name}</option>
-              ))}
-          </select>
-        </label>
+        <Select
+          closeMenuOnSelect={false}
+          id="class"
+          placeholder="Classes"
+          components={animatedComponents}
+          isMulti
+          onChange={handleChange}
+          styles={customStyles}
+          options={classesList.map((item) => ({
+            value: item.id,
+            label: item.name,
+          }))}
+        />
 
-        <PlusButton />
         <CreateAccountButton />
       </form>
     </div>

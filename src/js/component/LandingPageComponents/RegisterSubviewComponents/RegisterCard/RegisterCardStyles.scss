@@ -107,8 +107,8 @@
         flex: 1;
         font-family: "Quicksand", sans-serif;
 
-        &.select:hover{
-        background-color: #dadada;
+        &.select:hover {
+          background-color: #dadada;
         }
       }
     }
@@ -121,4 +121,29 @@ select:required:invalid {
 
 option {
   color: black;
+}
+
+.css-b62m3t-container,
+.css-1pahdxg-control,
+.css-1s2u09g-control {
+  width: 42.5rem;
+  display: inline-flex;
+  font-size: 2rem;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 1.25rem;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  flex: 1;
+  font-family: "Quicksand", sans-serif;
+}
+
+.css-319lph-ValueContainer,
+.css-1hb7zxy-IndicatorsContainer,
+.css-g1d714-ValueContainer {
+  background-color: #e4e4e4;
 }
