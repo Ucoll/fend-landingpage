@@ -3,7 +3,6 @@ import React from "react";
 import * as PropTypes from "prop-types";
 
 import LikeButtons from "../../../StaticComponents/Buttons/Like/LikeButtons.jsx";
-import Thread from "../../../StaticComponents/Buttons/Thread/Thread.jsx";
 import Comment from "../../../StaticComponents/Buttons/Comment/Comment.jsx";
 import Favorite from "../../../StaticComponents/Buttons/Favorite/Favorite.jsx";
 import Share from "../../../StaticComponents/Buttons/Share/Share.jsx";

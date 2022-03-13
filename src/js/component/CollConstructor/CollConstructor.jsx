@@ -25,6 +25,9 @@ const CollConstructor = () => {
   const [classes, setClasses] = useState([]);
   const [files, setFiles] = useState({ files: [] });
 
+  const claudinary_cloud = "https://api.cloudinary.com/v1_1/oaksoft/upload"
+  const claudinary_upload_preset = "r2qcwrqm"
+
   const updateUploadedFiles = (files) =>
     setFiles({ ...files, files: files });
 
@@ -62,9 +65,28 @@ const CollConstructor = () => {
     if (collType === "text") {
       content = document.getElementsByClassName("ql-editor")[0].innerHTML;
     } else if (collType === "link") {
-      content = document.getElementById("contentLink").value;
+      content = document.getElementById("contentLink").value.replace("watch?v=", "embed/");
     } else {
-      content = files.files[0];
+      const formData = new FormData()
+      formData.append("file", files.files[0])
+      formData.append("cloud_name", "oaksoft")
+      formData.append("upload_preset", claudinary_upload_preset)
+
+      // TODO: Receive back the URL after uploading a file
+      content = fetch(`${claudinary_cloud}`, {
+        method: "POST",
+        body: formData
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Failed with HTTP code " + response.status);
+          }
+          return response;
+        })
+        .then((response) => response.json())
+        .catch((err) => {
+          console.error(err);
+        });
     }
 
     console.log(title)
@@ -74,7 +96,6 @@ const CollConstructor = () => {
 
     fetch(`${database}/colls`, {
       method: "POST",
-      mode: "no-cors", // TODO: Necessary?
       headers: {
         "Content-Type": "application/json"
       },
