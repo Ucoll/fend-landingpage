@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 import CreateAccountButton from "../Buttons/CreateAccountButton/CreateAccountButton.jsx";
@@ -13,9 +13,17 @@ import "./LoginCardStyles.scss";
  * @returns React Component and props to BEND
  */
 const LoginCard = () => {
+
+  const [email, setemail] = useState("")
+  const [password, setPassword] = useState("")
+
+  const loginHandler = (ev) => {
+    ev.prevent
+  }
+
   return (
     <>
-      <div className="login-card">
+      <form onSubmit={(ev) => loginHandler(ev)} className="login-card">
         <div className="container">
           <input
             type="email"
@@ -41,7 +49,7 @@ const LoginCard = () => {
           <hr />
           <CreateAccountButton />
         </div>
-      </div>
+      </form>
     </>
   );
 };
