@@ -27,10 +27,11 @@ const Layout = () => {
             {/* <LandingPage/> */}
             {/* <HomePage/> */}
             {/* TODO: <Route exact path="/profile" component={Profile} /> */}
-            <Profile />
+            {/* <Profile /> */}
             {/* <Register/> */}
             {/* <Messages/> */}
             {/* <MessageViewer/> */}
+            {/* <MessageEditor /> */}
           </Switch>
         </div>
       </BrowserRouter>
