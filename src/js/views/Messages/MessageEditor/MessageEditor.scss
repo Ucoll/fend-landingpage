@@ -1,0 +1,112 @@
+.message-editor-supercontainer {
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff4e2;
+
+  & .message-editor-container {
+    display: grid;
+    grid-template-columns: 20vw 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 90vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas:
+      "button header"
+      "tags container"
+      ". buttons";
+
+    & .button-ucolllogo {
+      grid-area: button;
+      width: 17rem;
+      height: 11.375rem;
+      border-radius: 3rem;
+      box-shadow: 0px 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+    }
+
+    & .header-message {
+      display: grid;
+      width: 88.75rem;
+      grid-template-columns: 10vw 1fr 10vw;
+    }
+
+    & .row-1 {
+      display: inline-grid;
+      grid-template-rows: 1fr;
+      grid-template-areas: "messageto" "messageabout";
+      width: 88.75rem;
+    }
+
+    & .col-1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      width: auto;
+    }
+
+    & .messages-tags {
+      grid-area: tags;
+      grid-column-start: 1;
+      height: 30rem;
+      width: min-content;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+
+      & .tag-shape {
+        & .span-container {
+          cursor: pointer;
+          top: 2rem;
+          left: -0.1rem;
+          border-radius: 10%;
+          width: 14.5rem;
+          height: 5.5625rem;
+          display: flex;
+          justify-content: center;
+
+          &:hover {
+            //TODO: Change this attribute and do it by JSX
+            background-color: rgba(2, 123, 123, 0.7);
+          }
+        }
+
+        & span {
+          font-size: 2.25rem;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          align-content: center;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+
+    & .message-buttons {
+      grid-area: buttons;
+      position: relative;
+      justify-self: right;
+    }
+
+    & .row-2 {
+      display: inline-grid;
+      grid-template-rows: 1fr;
+      grid-template-areas: "cancel" "send";
+      width: 60rem;
+      margin: auto;
+    }
+
+    & .col-2 {
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: auto;
+      margin-right: 10rem;
+      margin-left: 15rem;
+    }
+  }
+}

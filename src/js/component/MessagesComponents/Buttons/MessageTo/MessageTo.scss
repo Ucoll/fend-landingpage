@@ -1,0 +1,25 @@
+.message-to {
+  font-size: 2.25rem;
+  width: 37.688rem;
+  height: min-content;
+  padding: 0.5rem;
+  background-color: #9ac5c3;
+  border-radius: 1.5rem;
+  display: flex;
+
+  & .name {
+    padding-left: 2rem;
+    background-color: #fff4e2;
+    width: 30.313rem;
+    border-radius: 1rem;
+  }
+
+  & .space-to {
+    margin: auto;
+  }
+
+  // &:hover,
+  // &::selection {
+  //   background-color: rgba(154, 197, 195, 1);
+  // }
+}
