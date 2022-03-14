@@ -24,11 +24,11 @@ const Layout = () => {
           {/* <CollConstructor /> */}
           <Switch>
             {/* <Route exact path="/" component={HomePage} /> */}
-            <LandingPage/>
+            {/* <LandingPage/> */}
             {/* <HomePage/> */}
             {/* TODO: <Route exact path="/profile" component={Profile} /> */}
-            {/* <Profile /> */}
-            <Register/>
+            <Profile />
+            {/* <Register/> */}
             {/* <Messages/> */}
             {/* <MessageViewer/> */}
           </Switch>
