@@ -44,11 +44,11 @@ const ColleaguesSideMenu = props => {
           {props.university} | {props.class}
         </h4>
         <div className="colleagues">
-          <ul>{props.colleagues}</ul>
+          <ul className="colleagues-side-ul">{props.colleagues}</ul>
         </div>
         <hr />
         <div className="classes">
-          <ul>{props.classes}</ul>
+          <ul className="colleagues-side-ul">{props.classes}</ul>
           {/* //TODO: ADD -> listing func by MAP method or so for the classes*/}
           {/* //TODO: CONDITION -> classes =< 2 ? + "<ul>{props.classes}</ul>"  and so in PAIRS!*/}
         </div>
